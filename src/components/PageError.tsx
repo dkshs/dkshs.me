@@ -9,12 +9,12 @@ interface PageErrorProps {
 }
 
 export function PageError({ title, description }: PageErrorProps) {
+  const pageTitle = `${title} · ${SITE_NAME}`;
+
   return (
     <>
       <Head>
-        <title>
-          {title} · {SITE_NAME}
-        </title>
+        <title>{pageTitle}</title>
       </Head>
       <main className="flex flex-col items-center justify-center text-center">
         <h1 className="mb-2 pt-10 text-2xl">{title}</h1>
@@ -23,7 +23,7 @@ export function PageError({ title, description }: PageErrorProps) {
           Voltar para a{" "}
           <Link
             href="/"
-            className="text-blue-600 underline-offset-2 hover:text-blue-800 hover:underline active:opacity-70"
+            className="text-blue-600 underline-offset-2 hover:text-blue-400 hover:underline active:opacity-80"
           >
             {" "}
             página inicial
