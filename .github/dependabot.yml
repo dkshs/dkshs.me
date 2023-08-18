@@ -10,6 +10,9 @@ updates:
       interval: "daily"
     labels:
       - "update"
+    commit-message:
+      include: scope
+      prefix: update
 
   # Update npm packages
   - package-ecosystem: "npm"
