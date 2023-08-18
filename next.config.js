@@ -6,6 +6,9 @@ const nextConfig = {
     SITE_LOCALE: process.env.SITE_LOCALE || "pt-br",
     SITE_BASEURL: process.env.SITE_BASEURL || "http://localhost:3000",
   },
+  images: {
+    domains: ["github.com"],
+  },
 };
 
 module.exports = nextConfig;

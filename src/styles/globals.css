@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply selection:bg-violet-600/60;
+  @apply selection:bg-violet-600/40;
 }
 
 body {

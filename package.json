@@ -13,9 +13,12 @@
     "lint:fix": "eslint --fix . && prettier . -w"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "next": "13.4.18",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@dkshs/eslint-config": "^1.3.2",

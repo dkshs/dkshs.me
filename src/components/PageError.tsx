@@ -23,7 +23,7 @@ export function PageError({ title, description }: PageErrorProps) {
           Voltar para a{" "}
           <Link
             href="/"
-            className="text-blue-600 underline-offset-2 hover:text-blue-400 hover:underline active:opacity-80"
+            className="text-blue-500 underline-offset-2 hover:text-blue-400 hover:underline active:opacity-80"
           >
             {" "}
             página inicial
