@@ -1,7 +1,8 @@
 import { SITE_NAME } from "@/utils/constants";
 
 import Head from "next/head";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Link } from "./ui/link";
 
 interface PageErrorProps {
   title: string;
@@ -20,13 +21,9 @@ export function PageError({ title, description }: PageErrorProps) {
         <h1 className="mb-2 pt-10 text-2xl">{title}</h1>
         <p className="mt-2 text-lg">{description}</p>
         <p className="mt-2 text-base">
-          Voltar para a{" "}
-          <Link
-            href="/"
-            className="text-blue-500 underline-offset-2 hover:text-blue-400 hover:underline active:opacity-80"
-          >
-            {" "}
-            página inicial
+          Volte para a{" "}
+          <Link asChild>
+            <NextLink href="/">página inicial</NextLink>
           </Link>
           .
         </p>
