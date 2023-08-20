@@ -4,6 +4,7 @@
 
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -12,4 +13,8 @@ html {
 
 body {
   @apply relative min-h-screen bg-black text-gray-100 antialiased;
+}
+
+.ripple {
+  @apply animate-ripple pointer-events-none absolute rounded-full;
 }
