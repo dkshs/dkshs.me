@@ -17,7 +17,7 @@ export function PageError({ title, description }: PageErrorProps) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <main className="flex flex-col items-center justify-center text-center">
+      <main className="flex flex-col items-center justify-center pt-16 text-center md:pt-20">
         <h1 className="mb-2 pt-10 text-2xl">{title}</h1>
         <p className="mt-2 text-lg">{description}</p>
         <p className="mt-2 text-base">
