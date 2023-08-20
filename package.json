@@ -10,7 +10,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir . && eslint . && prettier . -c",
-    "lint:fix": "eslint --fix . && prettier . -w"
+    "lint:fix": "eslint --fix . && prettier . -w",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -30,9 +32,16 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
     "postcss": "8.4.28",
     "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "npm run lint:fix"
+    ]
   }
 }
