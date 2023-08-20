@@ -16,5 +16,5 @@ body {
 }
 
 .ripple {
-  @apply animate-ripple pointer-events-none absolute rounded-full;
+  @apply pointer-events-none absolute animate-ripple rounded-full;
 }

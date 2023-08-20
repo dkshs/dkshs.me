@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="about" className="mdlg:py-24 py-20 xl:py-0">
+      <section id="about" className="py-20 mdlg:py-24 xl:py-0">
         <div className="m-auto w-[92%] max-w-7xl">
           <h2 className="mb-20">
             <span className="after:contents-[''] relative mb-10 block text-center text-4xl font-bold tracking-wide after:absolute after:left-1/2 after:top-[calc(100%+1rem)] after:h-[5px] after:w-12 after:-translate-x-1/2 after:rounded-md after:bg-violet-600">
@@ -54,7 +54,7 @@ export default function HomePage() {
               current skills mostly in terms of programming and technology
             </span>
           </h2>
-          <div className="mdlg:grid-cols-2 mdlg:gap-40 grid gap-14">
+          <div className="grid gap-14 mdlg:grid-cols-2 mdlg:gap-40">
             <div>
               <h3 className="mb-8 text-2xl font-bold tracking-wide">
                 Get to know me!
