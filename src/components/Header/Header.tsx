@@ -4,7 +4,7 @@ import { NavLink } from "./components";
 
 export function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 h-16 border-b border-zinc-800 bg-black/50 backdrop-blur-md md:h-[72px]">
+    <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800 bg-black/50 backdrop-blur-md md:h-[72px]">
       <div className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
         <Link
           href="/"
@@ -26,6 +26,9 @@ export function Header() {
           <ul className="flex space-x-2 uppercase">
             <li>
               <NavLink href="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink href="#about">About</NavLink>
             </li>
             <li>
               <NavLink href="/">Projects</NavLink>
