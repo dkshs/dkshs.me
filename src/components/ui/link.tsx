@@ -27,6 +27,12 @@ const linkVariants = cva(
         none: "rounded-none",
       },
     },
+    compoundVariants: [
+      {
+        variant: ["ghost"],
+        className: "rounded-none",
+      },
+    ],
     defaultVariants: {
       variant: "default",
       size: "default",
