@@ -78,7 +78,7 @@ export default function HomePage() {
               <div className="flex flex-wrap">
                 {skills.map((skill, i) => (
                   <div
-                    className="mb-4 mr-4 rounded-md bg-violet-900/10 bg-gradient-to-t from-violet-900/30 to-white/20 px-5 py-2.5 text-gray-300"
+                    className="mb-4 mr-4 rounded-md bg-white/10 px-5 py-2.5 text-gray-300"
                     key={i}
                   >
                     {skill}
