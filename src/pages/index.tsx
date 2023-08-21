@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="about" className="py-20 mdlg:py-24 xl:py-0">
+      <section id="about" className="py-20 mdlg:py-24 xl:py-28">
         <div className="m-auto w-[92%] max-w-7xl">
           <h2 className="mb-20">
             <span className="after:contents-[''] relative mb-10 block text-center text-4xl font-bold tracking-wide after:absolute after:left-1/2 after:top-[calc(100%+1rem)] after:h-[5px] after:w-12 after:-translate-x-1/2 after:rounded-md after:bg-violet-600">
@@ -87,6 +87,19 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="projects" className="py-20 mdlg:py-24 xl:py-28">
+        <div className="m-auto w-[92%] max-w-7xl">
+          <h2 className="mb-20">
+            <span className="after:contents-[''] relative mb-10 block text-center text-4xl font-bold tracking-wide after:absolute after:left-1/2 after:top-[calc(100%+1rem)] after:h-[5px] after:w-12 after:-translate-x-1/2 after:rounded-md after:bg-violet-600">
+              Projects
+            </span>
+            <span className="mx-auto block max-w-4xl text-center text-lg font-normal text-gray-300">
+              Here you will find some of the personal projects I created
+            </span>
+          </h2>
+          <div></div>
         </div>
       </section>
     </>

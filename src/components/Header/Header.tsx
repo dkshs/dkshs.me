@@ -31,7 +31,7 @@ export function Header() {
               <NavLink href="#about">About</NavLink>
             </li>
             <li>
-              <NavLink href="/">Projects</NavLink>
+              <NavLink href="#projects">Projects</NavLink>
             </li>
           </ul>
         </div>
