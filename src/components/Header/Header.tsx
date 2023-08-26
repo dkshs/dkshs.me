@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NavLink } from "./components";
+import data from "../../../data.json";
 
 export function Header() {
+  const { name, github, sections } = data;
+
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/20 backdrop-blur-md md:h-[72px]">
       <div className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
@@ -12,27 +15,25 @@ export function Header() {
         >
           <div className="relative h-10 w-10 md:h-[50px] md:w-[50px]">
             <Image
-              src="https://github.com/ShadowsS01.png"
+              src={`${github}.png`}
               alt="DKSHS Logo Image"
               className="rounded-full"
               fill
             />
           </div>
           <span className="pr-1 text-xl font-bold uppercase text-white duration-200 group-hover:text-violet-400">
-            DKSHS
+            {name}
           </span>
         </Link>
         <div className="flex items-center">
           <ul className="flex space-x-2 uppercase">
-            <li>
-              <NavLink href="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink href="#about">About</NavLink>
-            </li>
-            <li>
-              <NavLink href="#projects">Projects</NavLink>
-            </li>
+            {Object.entries(sections).map(([key, value], i) => (
+              <li key={key}>
+                <NavLink href={i === 0 ? "/" : `#${value.id}`}>
+                  {value.id}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -80,3 +80,4 @@ export const Section = {
   Title: SectionTitle,
   Description: SectionDescription,
 };
+export { AboutParagraph } from "./AboutParagraph";
