@@ -1,4 +1,4 @@
-# [dkshs.me](dkshs.me)
+# [dkshs.me](https://dkshs.me)
 
 [![license mit](https://img.shields.io/badge/licence-MIT-6C47FF)](LICENSE)
 
