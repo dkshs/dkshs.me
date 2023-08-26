@@ -55,13 +55,14 @@ interface SectionDescriptionProps
 const SectionDescription = forwardRef<
   HTMLParagraphElement,
   SectionDescriptionProps
->(({ className, ...props }) => {
+>(({ className, ...props }, ref) => {
   return (
     <p
       className={cn(
         "mx-auto mb-20 block max-w-4xl text-center text-lg font-normal text-gray-300",
         className,
       )}
+      ref={ref}
       {...props}
     />
   );
