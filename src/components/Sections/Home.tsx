@@ -6,11 +6,22 @@ import { Section } from "./components";
 import { Button } from "@/components/ui/button";
 
 const container = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
 };
 const item = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 60, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
@@ -39,7 +50,7 @@ export function HomeSection({
           </motion.div>
           <motion.div
             variants={item}
-            transition={{ delay: 0.4, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             className="mx-auto mt-10 max-w-4xl"
           >
             <Section.Description className="mb-0 text-center text-xl tracking-wide text-inherit">
@@ -48,7 +59,7 @@ export function HomeSection({
           </motion.div>
           <motion.div
             variants={item}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             className="mt-14 text-center md:mt-16"
           >
             <Button size="xlg" asChild>

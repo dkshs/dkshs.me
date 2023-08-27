@@ -47,7 +47,7 @@ export function Header() {
               <motion.li
                 key={key}
                 variants={animation.item}
-                transition={{ delay: i * 0.4, duration: 0.6 }}
+                transition={{ duration: 0.6 }}
               >
                 <NavLink href={i === 0 ? "/" : `#${value.id}`}>
                   {value.id}
