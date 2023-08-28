@@ -17,6 +17,10 @@ updates:
   # Update npm packages
   - package-ecosystem: "npm"
     directory: "/"
+    ignore:
+      - dependency-name: "@types/*"
+        update-types:
+          - "version-update:semver-patch"
     schedule:
       interval: "daily"
     labels:
