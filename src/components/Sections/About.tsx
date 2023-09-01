@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
 import { AboutParagraph, Section } from "./components";
-import { animation } from "./animationVariants";
+import { aboutAnimation as animation } from "./animationVariants";
 
 export function AboutSection({
   data: { title, description, content, id },

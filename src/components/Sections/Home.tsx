@@ -4,29 +4,7 @@ import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Section } from "./components";
 import { Button } from "@/components/ui/button";
-
-const container = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-    },
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.3,
-    },
-  },
-};
-const item = {
-  hidden: { y: 60, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
+import { homeAnimation } from "./animationVariants";
 
 export function HomeSection({
   data: { title, description },
@@ -34,13 +12,16 @@ export function HomeSection({
   return (
     <Section.Root className="relative h-screen">
       <motion.div
-        variants={container}
+        variants={homeAnimation.container}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5 }}
       >
         <Section.Container className="absolute left-1/2 top-[35%] w-[92%] max-w-[90rem] -translate-x-1/2 -translate-y-1/2 md:top-[40%]">
-          <motion.div variants={item} transition={{ duration: 0.5 }}>
+          <motion.div
+            variants={homeAnimation.item}
+            transition={{ duration: 0.5 }}
+          >
             <Section.Title
               asChild
               className="text-center text-6xl font-extrabold tracking-wide"
@@ -49,7 +30,7 @@ export function HomeSection({
             </Section.Title>
           </motion.div>
           <motion.div
-            variants={item}
+            variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
             className="mx-auto mt-10 max-w-4xl"
           >
@@ -58,7 +39,7 @@ export function HomeSection({
             </Section.Description>
           </motion.div>
           <motion.div
-            variants={item}
+            variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
             className="mt-14 text-center md:mt-16"
           >
