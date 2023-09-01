@@ -41,7 +41,32 @@
       "id": "projects",
       "title": "Projects",
       "description": "Here you will find some of the personal projects I created",
-      "content": {}
+      "content": {
+        "project1": {
+          "title": "Video Ambilight",
+          "description": "🌈 Ambilight Effect - React - Next.js (YouTube iframe, Video).",
+          "githubUrl": "https://github.com/ShadowsS01/video-ambilight",
+          "demoUrl": "https://shadowss01.github.io/video-ambilight/"
+        },
+        "project2": {
+          "title": "Cookiecutter Django",
+          "description": "A simple Django template with cookiecutter.",
+          "githubUrl": "https://github.com/ShadowsS01/cookiecutter-django",
+          "demoUrl": null
+        },
+        "project3": {
+          "title": "AceEx UI",
+          "description": "Construction of a design system. AceEx's design system for the web.",
+          "githubUrl": "https://github.com/ShadowsS01/ace-ex-ui",
+          "demoUrl": "https://ace-ex-ui.vercel.app/"
+        },
+        "project4": {
+          "title": "dkshs.me (Current site)",
+          "description": "Bridge to my projects.",
+          "githubUrl": "https://github.com/ShadowsS01/dkshs.me",
+          "demoUrl": "https://dkshs.me/"
+        }
+      }
     }
   }
 }

@@ -1,16 +1,22 @@
 import type { ProjectsSectionProps } from "@/utils/types";
 
-import { Section } from "./components";
+import { ProjectCard, Section } from "./components";
 import { motion } from "framer-motion";
-import { animation } from "./animationVariants";
+// import Link from "next/link";
+import { Button } from "../ui/button";
+import { projectsAnimation } from "./animationVariants";
+
+import { ArrowUpRight } from "lucide-react";
 
 export function ProjectsSection({
-  data: { title, description, id },
+  data: { title, description, id, content },
 }: ProjectsSectionProps) {
+  const projects = Object.entries(content);
+
   return (
     <Section.Root id={id}>
       <motion.div
-        variants={animation.container}
+        variants={projectsAnimation.container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -19,7 +25,44 @@ export function ProjectsSection({
         <Section.Container>
           <Section.Title>{title}</Section.Title>
           <Section.Description>{description}</Section.Description>
-          <div>{/* Content */}</div>
+          <div className="grid gap-6 px-2 md:px-10 mdlg:grid-cols-2 mdlg:px-0">
+            {projects.map(([key, value]) => (
+              <motion.div
+                key={key}
+                variants={projectsAnimation.item}
+                transition={{ duration: 0.5 }}
+              >
+                <ProjectCard {...value} />
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            variants={projectsAnimation.item}
+            transition={{ duration: 0.5 }}
+            className="mt-10 flex items-center justify-center"
+          >
+            <Button asChild>
+              <a
+                href="https://github.com/ShadowsS01?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-1"
+              >
+                <span>View more projects</span>
+                <ArrowUpRight
+                  size={20}
+                  className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </a>
+              {/* <Link
+                href="/projects"
+                className="group flex items-center space-x-1"
+              >
+                <span>View more projects</span>
+                <ArrowUpRight size={20} />
+              </Link> */}
+            </Button>
+          </motion.div>
         </Section.Container>
       </motion.div>
     </Section.Root>
