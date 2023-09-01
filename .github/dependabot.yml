@@ -18,6 +18,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     ignore:
+      - dependency-name: "typescript"
       - dependency-name: "@types/*"
         update-types:
           - "version-update:semver-patch"
