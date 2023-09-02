@@ -9,7 +9,7 @@ export function NavLink({ className, ...props }: NavLinkProps) {
   return (
     <Link
       className={cn(
-        "rounded-full p-2 ring-2 ring-transparent duration-200 hover:text-violet-400 focus:outline-none focus:ring-violet-600 active:opacity-70 md:p-4",
+        "rounded-full p-4 ring-2 ring-transparent duration-200 hover:text-violet-400 focus:outline-none focus:ring-violet-600 active:opacity-70",
         className,
       )}
       {...props}

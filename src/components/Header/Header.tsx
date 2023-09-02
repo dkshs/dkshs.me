@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { NavLink } from "./components";
+import { NavLink, NavMenu } from "./components";
 import { animation } from "./animationVariants";
 
 import data from "../../../data.json";
@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/20 backdrop-blur-md md:h-[72px]">
-      <div className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
+      <nav className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
         <motion.div
           variants={animation.item}
           initial="hidden"
@@ -37,7 +37,7 @@ export function Header() {
         </motion.div>
         <div className="flex items-center">
           <motion.ul
-            className="flex space-x-2 uppercase"
+            className="hidden space-x-2 uppercase md:flex"
             variants={animation.list}
             initial="hidden"
             animate="visible"
@@ -55,8 +55,9 @@ export function Header() {
               </motion.li>
             ))}
           </motion.ul>
+          <NavMenu sections={sections} />
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
