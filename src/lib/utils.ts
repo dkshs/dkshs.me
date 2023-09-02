@@ -12,8 +12,7 @@ export function createRipple(
 ) {
   const button = event.currentTarget;
   const { height, width, top, left } = button.getBoundingClientRect();
-  const clientX = event.clientX;
-  const clientY = event.clientY;
+  const { clientX, clientY } = event;
 
   const x = clientX - left;
   const y = clientY - top;
