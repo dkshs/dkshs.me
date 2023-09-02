@@ -57,10 +57,7 @@ export function AboutSection({
               ))}
               <motion.div
                 variants={animation.item}
-                transition={{
-                  delay: 2,
-                  duration: 0.5,
-                }}
+                transition={{ delay: 2, duration: 0.5 }}
               >
                 <Button size="xlg" asChild>
                   <NextLink href="#contact">Contact</NextLink>
@@ -79,10 +76,7 @@ export function AboutSection({
                 {mySkills.content.map((skill, i) => (
                   <motion.div
                     variants={animation.item}
-                    transition={{
-                      delay: i * 0.5,
-                      duration: 0.5,
-                    }}
+                    transition={{ delay: i * 0.5, duration: 0.5 }}
                     className="mb-4 mr-4 rounded-md bg-white/10 px-5 py-2.5 text-gray-300"
                     key={i}
                   >

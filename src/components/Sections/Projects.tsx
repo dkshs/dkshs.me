@@ -2,7 +2,6 @@ import type { ProjectsSectionProps } from "@/utils/types";
 
 import { ProjectCard, Section } from "./components";
 import { motion } from "framer-motion";
-// import Link from "next/link";
 import { Button } from "../ui/button";
 import { projectsAnimation } from "./animationVariants";
 
@@ -54,13 +53,6 @@ export function ProjectsSection({
                   className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </a>
-              {/* <Link
-                href="/projects"
-                className="group flex items-center space-x-1"
-              >
-                <span>View more projects</span>
-                <ArrowUpRight size={20} />
-              </Link> */}
             </Button>
           </motion.div>
         </Section.Container>
