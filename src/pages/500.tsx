@@ -1,7 +1,7 @@
 import { PageError } from "@/components/PageError";
 
-const title = "Erro no servidor";
-const description = "Ocorreu um erro no servidor, tente novamente mais tarde.";
+const title = "Server error";
+const description = "A server error occurred, please try again later.";
 
 export default function ServerSideError() {
   return <PageError title={title} description={description} />;
