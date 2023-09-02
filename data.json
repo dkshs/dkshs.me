@@ -1,6 +1,6 @@
 {
   "name": "DKSHS",
-  "github": "https://github.com/ShadowsS01",
+  "github": "https://github.com/dkshs",
   "sections": {
     "home": {
       "id": "home",
@@ -45,25 +45,25 @@
         "project1": {
           "title": "Video Ambilight",
           "description": "🌈 Ambilight Effect - React - Next.js (YouTube iframe, Video).",
-          "githubUrl": "https://github.com/ShadowsS01/video-ambilight",
-          "demoUrl": "https://shadowss01.github.io/video-ambilight/"
+          "githubUrl": "https://github.com/dkshs/video-ambilight",
+          "demoUrl": "https://dkshs.github.io/video-ambilight/"
         },
         "project2": {
           "title": "Cookiecutter Django",
           "description": "A simple Django template with cookiecutter.",
-          "githubUrl": "https://github.com/ShadowsS01/cookiecutter-django",
+          "githubUrl": "https://github.com/dkshs/cookiecutter-django",
           "demoUrl": null
         },
         "project3": {
           "title": "AceEx UI",
           "description": "Construction of a design system. AceEx's design system for the web.",
-          "githubUrl": "https://github.com/ShadowsS01/ace-ex-ui",
+          "githubUrl": "https://github.com/dkshs/ace-ex-ui",
           "demoUrl": "https://ace-ex-ui.vercel.app/"
         },
         "project4": {
           "title": "dkshs.me (Current site)",
           "description": "Bridge to my projects.",
-          "githubUrl": "https://github.com/ShadowsS01/dkshs.me",
+          "githubUrl": "https://github.com/dkshs/dkshs.me",
           "demoUrl": "https://dkshs.me/"
         }
       }
