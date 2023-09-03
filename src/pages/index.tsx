@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <>
       <Meta description="Bridge to my projects." path="/" />
-      <Sections.Home data={home} />
-      <Sections.About data={about} />
-      <Sections.Projects data={projects} github={data.github} />
+      <Sections.Home {...home} />
+      <Sections.About {...about} />
+      <Sections.Projects {...projects} github={data.github} />
     </>
   );
 }

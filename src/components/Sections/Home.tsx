@@ -1,4 +1,4 @@
-import type { HomeSectionProps } from "@/utils/types";
+import type { HomeSectionTypes } from "@/utils/types";
 
 import { motion } from "framer-motion";
 import NextLink from "next/link";
@@ -6,8 +6,14 @@ import { Section } from "./components";
 import { Button } from "@/components/ui/button";
 import { homeAnimation } from "./animationVariants";
 
+interface HomeSectionProps extends HomeSectionTypes {
+  btnSectionId: string;
+}
+
 export function HomeSection({
-  data: { title, description },
+  title,
+  description,
+  btnSectionId,
 }: HomeSectionProps) {
   return (
     <Section.Root className="relative h-screen">
@@ -43,8 +49,8 @@ export function HomeSection({
             transition={{ duration: 0.5 }}
             className="mt-14 text-center md:mt-16"
           >
-            <Button size="xlg" asChild>
-              <NextLink href="#projects">Projects</NextLink>
+            <Button size="xlg" asChild className="capitalize">
+              <NextLink href={`#${btnSectionId}`}>{btnSectionId}</NextLink>
             </Button>
           </motion.div>
         </Section.Container>

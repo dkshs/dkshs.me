@@ -1,4 +1,4 @@
-import type { ProjectsSectionProps } from "@/utils/types";
+import type { ProjectsSectionTypes } from "@/utils/types";
 
 import { ProjectCard, Section } from "./components";
 import { motion } from "framer-motion";
@@ -7,14 +7,17 @@ import { projectsAnimation } from "./animationVariants";
 
 import { ArrowUpRight } from "lucide-react";
 
-interface ProjectsSectionCompProps extends ProjectsSectionProps {
+interface ProjectsSectionProps extends ProjectsSectionTypes {
   github: string;
 }
 
 export function ProjectsSection({
-  data: { title, description, id, content },
+  title,
+  description,
+  id,
+  content,
   github,
-}: ProjectsSectionCompProps) {
+}: ProjectsSectionProps) {
   const projects = Object.entries(content);
 
   return (

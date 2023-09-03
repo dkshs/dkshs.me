@@ -6,12 +6,14 @@
       "id": "home",
       "title": "Hey, I'm DKSHS",
       "description": "A Web developer who creates websites and applications with a focus on the Frontend and a little Backend.",
+      "btnSectionId": "projects",
       "content": {}
     },
     "about": {
       "id": "about",
       "title": "About Me",
       "description": "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology",
+      "btnSectionId": "contact",
       "content": {
         "getToKnowMe": {
           "title": "Get to know me!",

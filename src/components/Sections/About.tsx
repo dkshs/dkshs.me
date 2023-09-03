@@ -1,4 +1,4 @@
-import type { AboutMeSectionProps } from "@/utils/types";
+import type { AboutMeSectionTypes } from "@/utils/types";
 
 import { motion } from "framer-motion";
 import NextLink from "next/link";
@@ -6,9 +6,17 @@ import { Button } from "@/components/ui/button";
 import { AboutParagraph, Section } from "./components";
 import { aboutAnimation as animation } from "./animationVariants";
 
+interface AboutSectionProps extends AboutMeSectionTypes {
+  btnSectionId: string;
+}
+
 export function AboutSection({
-  data: { title, description, content, id },
-}: AboutMeSectionProps) {
+  title,
+  description,
+  content,
+  id,
+  btnSectionId,
+}: AboutSectionProps) {
   const { getToKnowMe, mySkills } = content;
 
   return (
@@ -59,8 +67,8 @@ export function AboutSection({
                 variants={animation.item}
                 transition={{ delay: 2, duration: 0.5 }}
               >
-                <Button size="xlg" asChild>
-                  <NextLink href="#contact">Contact</NextLink>
+                <Button size="xlg" asChild className="capitalize">
+                  <NextLink href={`#${btnSectionId}`}>{btnSectionId}</NextLink>
                 </Button>
               </motion.div>
             </div>

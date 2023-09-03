@@ -1,6 +1,6 @@
 import type { sections } from "../../data.json";
 
-export type HomeSectionProps = { data: typeof sections.home };
-export type AboutMeSectionProps = { data: typeof sections.about };
-export type ProjectsSectionProps = { data: typeof sections.projects };
-export type SectionsProps = typeof sections;
+export type HomeSectionTypes = typeof sections.home;
+export type AboutMeSectionTypes = typeof sections.about;
+export type ProjectsSectionTypes = typeof sections.projects;
+export type SectionsTypes = typeof sections;
