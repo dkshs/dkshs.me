@@ -10,7 +10,7 @@ export function Header() {
   const { name, github, sections } = data;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/20 backdrop-blur-md md:h-[72px]">
+    <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/50 backdrop-blur-md md:h-[72px]">
       <nav className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
         <motion.div
           variants={animation.item}

@@ -19,8 +19,11 @@ export function NavMenu({ sections }: NavMenuProps) {
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
         <Button
-          className="flex items-center gap-2 md:hidden"
-          onClick={() => setIsOpen(true)}
+          type="button"
+          className="mr-2 flex items-center gap-2 p-2 md:hidden"
+          size="icon"
+          variant="ghost"
+          radius="full"
         >
           <Menu size={24} />
         </Button>
@@ -40,13 +43,23 @@ export function NavMenu({ sections }: NavMenuProps) {
             <Dialog.Content className="fixed right-0 top-0 z-[9999] h-screen w-[calc(100vw-40%)]">
               <motion.div
                 initial={{ opacity: 0, transform: "translateX(100%)" }}
-                animate={{ opacity: 1, transform: "translateX(0%)" }}
+                animate={{
+                  opacity: 1,
+                  transform: "translateX(0%)",
+                  backgroundColor: "black",
+                }}
                 exit={{ opacity: 0, transform: "translateX(100%)" }}
                 transition={{ duration: 0.5 }}
-                className="h-full w-full bg-black/40 shadow-2xl shadow-violet-900/40"
+                className="h-full w-full bg-violet-900/20 bg-gradient-to-b from-violet-900/30 to-black/60 shadow-2xl shadow-black"
               >
                 <Dialog.Close asChild>
-                  <Button className="absolute right-6 top-3">
+                  <Button
+                    type="button"
+                    className="absolute right-7 top-3 sm:right-8"
+                    size="icon"
+                    variant="ghost"
+                    radius="full"
+                  >
                     <X size={24} />
                   </Button>
                 </Dialog.Close>
