@@ -17,7 +17,7 @@ export function HomeSection({
         animate="visible"
         transition={{ duration: 0.5 }}
       >
-        <Section.Container className="absolute left-1/2 top-[35%] w-[92%] max-w-[90rem] -translate-x-1/2 -translate-y-1/2 md:top-[40%]">
+        <Section.Container className="absolute left-1/2 top-[40%] w-[92%] max-w-[90rem] -translate-x-1/2 -translate-y-1/2">
           <motion.div
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
