@@ -1,4 +1,4 @@
-import type { SectionsProps } from "@/utils/types";
+import type { SectionsTypes } from "@/utils/types";
 
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 interface NavMenuProps {
-  sections: SectionsProps;
+  sections: SectionsTypes;
 }
 
 export function NavMenu({ sections }: NavMenuProps) {
