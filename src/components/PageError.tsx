@@ -21,9 +21,9 @@ export function PageError({ title, description }: PageErrorProps) {
         <h1 className="mb-2 pt-10 text-2xl">{title}</h1>
         <p className="mt-2 text-lg">{description}</p>
         <p className="mt-2 text-base">
-          Volte para a{" "}
+          Go back to the{" "}
           <Link asChild>
-            <NextLink href="/">página inicial</NextLink>
+            <NextLink href="/">homepage</NextLink>
           </Link>
           .
         </p>
