@@ -3,7 +3,7 @@ import { Sections } from "@/components/Sections";
 import data from "../../data.json";
 
 export default function HomePage() {
-  const { home, about, projects } = data.sections;
+  const { home, about, projects, contact } = data.sections;
 
   return (
     <>
@@ -11,6 +11,7 @@ export default function HomePage() {
       <Sections.Home {...home} />
       <Sections.About {...about} />
       <Sections.Projects {...projects} github={data.github} />
+      <Sections.Contact {...contact} />
     </>
   );
 }

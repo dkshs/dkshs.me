@@ -82,3 +82,4 @@ export const Section = {
 };
 export { AboutParagraph } from "./AboutParagraph";
 export { ProjectCard } from "./ProjectCard";
+export { Form } from "./Form";
