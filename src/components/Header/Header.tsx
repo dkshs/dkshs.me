@@ -25,7 +25,7 @@ export function Header() {
             <div className="relative h-10 w-10 md:h-[50px] md:w-[50px]">
               <Image
                 src={`${github}.png`}
-                alt="DKSHS Logo Image"
+                alt={`${name} Image`}
                 className="rounded-full"
                 fill
               />

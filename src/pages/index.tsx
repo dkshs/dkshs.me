@@ -10,7 +10,7 @@ export default function HomePage() {
       <Meta description="Bridge to my projects." path="/" />
       <Sections.Home data={home} />
       <Sections.About data={about} />
-      <Sections.Projects data={projects} />
+      <Sections.Projects data={projects} github={data.github} />
     </>
   );
 }

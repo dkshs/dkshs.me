@@ -7,9 +7,14 @@ import { projectsAnimation } from "./animationVariants";
 
 import { ArrowUpRight } from "lucide-react";
 
+interface ProjectsSectionCompProps extends ProjectsSectionProps {
+  github: string;
+}
+
 export function ProjectsSection({
   data: { title, description, id, content },
-}: ProjectsSectionProps) {
+  github,
+}: ProjectsSectionCompProps) {
   const projects = Object.entries(content);
 
   return (
@@ -42,7 +47,7 @@ export function ProjectsSection({
           >
             <Button asChild>
               <a
-                href="https://github.com/ShadowsS01?tab=repositories"
+                href={`${github}?tab=repositories`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-1"
