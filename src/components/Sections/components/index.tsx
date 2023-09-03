@@ -64,7 +64,7 @@ const SectionDescription = forwardRef<
   return (
     <p
       className={cn(
-        "mx-auto mb-20 block max-w-4xl text-center text-lg font-normal text-gray-300",
+        "mx-auto mb-16 block max-w-4xl text-center text-lg font-normal text-gray-300 md:mb-20",
         className,
       )}
       ref={ref}
