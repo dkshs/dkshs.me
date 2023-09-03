@@ -5,6 +5,7 @@ import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 
 import { ToastContainer } from "react-toastify";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const merriweatherSans = MerriweatherSans({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,17 @@
 {
   "name": "DKSHS",
+  "description": "A Web developer who creates websites and applications with a focus on the Frontend and a little Backend.",
   "github": "https://github.com/dkshs",
+  "social": {
+    "twitter": {
+      "icon": "/icons/twitter-ico.png",
+      "url": "https://twitter.com/DK_ShSs"
+    },
+    "github": {
+      "icon": "/icons/github-ico.png",
+      "url": "https://github.com/dkshs"
+    }
+  },
   "sections": {
     "home": {
       "id": "home",

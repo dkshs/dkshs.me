@@ -8,7 +8,7 @@ const SectionRoot = forwardRef<HTMLElement, SectionRootProps>(
   ({ className, ...props }, ref) => {
     return (
       <section
-        className={cn("py-20 mdlg:py-24 xl:py-28", className)}
+        className={cn("py-20 mdlg:py-24 xl:py-32", className)}
         ref={ref}
         {...props}
       />
