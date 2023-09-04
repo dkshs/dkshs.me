@@ -7,7 +7,15 @@ export default function HomePage() {
 
   return (
     <>
-      <Meta description="Bridge to my projects." path="/" />
+      <Meta
+        description={data.description}
+        path="/"
+        twitter={data.twitter}
+        image={{
+          src: "/og.png",
+          alt: "OG Image",
+        }}
+      />
       <Sections.Home {...home} />
       <Sections.About {...about} />
       <Sections.Projects {...projects} github={data.github} />

@@ -7,6 +7,7 @@ export interface MetaProps {
   baseUrl?: string;
   description?: string;
   siteName?: string;
+  manifest?: string;
   image?: {
     src: string;
     alt: string;
@@ -29,6 +30,7 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
   path,
   baseUrl = process.env.SITE_BASEURL,
   siteName = process.env.SITE_NAME,
+  manifest = "/manifest.json",
   type = "website",
   image,
   updatedAt,
@@ -53,6 +55,7 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
       {description && <meta name="description" content={description} />}
       <meta name="robots" content={`${indexString} ${followString}`} />
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="manifest" href={manifest} />
 
       {/* Facebook */}
       <meta property="og:title" content={title || titleSiteName} />
@@ -67,6 +70,7 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
 
       {/* Twitter */}
       {twitter && <meta name="twitter:site" content={`@${twitter}`} />}
+      {twitter && <meta name="twitter:creator" content={`@${twitter}`} />}
       <meta property="twitter:url" content={canonicalUrl} />
       <meta property="twitter:title" content={titleSiteName} />
       <meta property="twitter:description" content={description} />
