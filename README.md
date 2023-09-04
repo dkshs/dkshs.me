@@ -2,12 +2,7 @@
 
 [![license mit](https://img.shields.io/badge/licence-MIT-6C47FF)](LICENSE)
 
-Bridge to my projects.
-
-## Technologies used
-
-- [Next.Js](https://nextjs.org/)
-- [TailwindCSS](https://tailwindcss.com/)
+My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and deployed to [Vercel](https://vercel.com/).
 
 ## Install and run the project
 
@@ -33,6 +28,16 @@ So after getting the repository, don't forget to install the project's local dep
 npm install
 ```
 
+### Environment variables
+
+Create a `.env` file similar to [`.env.example`](./.env.example).
+
+The required variable is the url to the [formspree](https://formspree.io/) form:
+
+```env
+NEXT_PUBLIC_FORM_SEND_URL="https://formspree.io/f/<your_id>"
+```
+
 ### Run the project
 
 To run the project locally, just run the command below:
@@ -42,3 +47,7 @@ npm run dev
 ```
 
 - go to <http://localhost:3000> to see the application.
+
+## License
+
+This project is licensed under the **MIT** License - see the [LICENSE](./LICENSE) file for details
