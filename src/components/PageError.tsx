@@ -17,13 +17,13 @@ export function PageError({ title, description }: PageErrorProps) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <main className="flex flex-col items-center justify-center pt-16 text-center md:pt-20">
-        <h1 className="mb-2 pt-10 text-2xl">{title}</h1>
-        <p className="mt-2 text-lg">{description}</p>
+      <main className="flex h-screen flex-col items-center justify-center text-center">
+        <h1 className="text-4xl font-bold tracking-wide">{title}</h1>
+        <p className="mt-4 text-lg">{description}</p>
         <p className="mt-2 text-base">
           Go back to the{" "}
           <Link asChild>
-            <NextLink href="/">homepage</NextLink>
+            <NextLink href="/">home</NextLink>
           </Link>
           .
         </p>
