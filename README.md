@@ -32,10 +32,19 @@ npm install
 
 Create a `.env` file similar to [`.env.example`](./.env.example).
 
-The required variable is the url to the [formspree](https://formspree.io/) form:
+- The required variable is the url to the [formspree](https://formspree.io/) form.
+- There are also variables for the site's SEO used in the [`next.config.js`](./next.config.js) files and the [`Meta.tsx`](./src/components/Meta.tsx) component.
 
 ```env
 NEXT_PUBLIC_FORM_SEND_URL="https://formspree.io/f/<your_id>"
+
+# SEO ENV
+# ------------------------------------------------
+# these variables are used for the site's SEO
+# and are located in the `next.config.js` and `Meta.tsx` component
+SITE_NAME=YOUR_SITE_NAME
+SITE_LOCALE=en_US
+SITE_BASEURL=http://localhost:3000 # in PROD put the URL of your project
 ```
 
 ### Run the project
