@@ -1,13 +1,15 @@
+import { useData } from "@/hooks/useData";
+
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { NavLink, NavMenu } from "./components";
 import { animation } from "./animationVariants";
 
-import data from "../../../data.json";
-
 export function Header() {
-  const { name, github, sections } = data;
+  const {
+    data: { name, github, sections },
+  } = useData();
 
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/50 backdrop-blur-md md:h-[72px]">

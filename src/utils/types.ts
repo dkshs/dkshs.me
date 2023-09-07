@@ -1,4 +1,5 @@
-import type { sections } from "../../data.json";
+import { data } from "@/data";
+const { sections } = data;
 
 export type HomeSectionTypes = typeof sections.home;
 export type AboutMeSectionTypes = typeof sections.about;

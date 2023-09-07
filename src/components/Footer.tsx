@@ -1,11 +1,12 @@
+import { useData } from "@/hooks/useData";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
-import data from "../../data.json";
-
 export function Footer() {
-  const { social } = data;
+  const { data } = useData();
+  const social = Object.entries(data.social);
 
   return (
     <footer className="mt-10 flex w-full items-center justify-center bg-violet-950/30">
@@ -16,7 +17,7 @@ export function Footer() {
               Social
             </h2>
             <div className="mt-5 flex space-x-1.5">
-              {Object.entries(social).map(([key, value]) => (
+              {social.map(([key, value]) => (
                 <Button
                   key={key}
                   size="icon"
@@ -44,9 +45,7 @@ export function Footer() {
             <h2 className="text-xl font-bold uppercase leading-5 text-white">
               {data.name}
             </h2>
-            <p className="mt-5 text-base text-zinc-300">
-              {data.sections.home.description}
-            </p>
+            <p className="mt-5 text-base text-zinc-300">{data.description}</p>
           </div>
         </div>
         <div className="border-t border-zinc-600 py-7 md:py-10">
