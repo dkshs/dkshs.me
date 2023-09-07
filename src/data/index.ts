@@ -46,6 +46,7 @@ export const data = {
       content: {
         project1: {
           title: "Video Ambilight",
+          slug: "video-ambilight",
           description:
             "🌈 Ambilight Effect - React - Next.js (YouTube iframe, Video).",
           githubUrl: "https://github.com/dkshs/video-ambilight",
@@ -53,12 +54,14 @@ export const data = {
         },
         project2: {
           title: "Cookiecutter Django",
+          slug: "cookiecutter-django",
           description: "A simple Django template with cookiecutter.",
           githubUrl: "https://github.com/dkshs/cookiecutter-django",
           demoUrl: null,
         },
         project3: {
           title: "AceEx UI",
+          slug: "ace-ex-ui",
           description:
             "Construction of a design system. AceEx's design system for the web.",
           githubUrl: "https://github.com/dkshs/ace-ex-ui",
@@ -66,6 +69,7 @@ export const data = {
         },
         project4: {
           title: "dkshs.me (Current site)",
+          slug: "dkshs.me",
           description: "Bridge to my projects.",
           githubUrl: "https://github.com/dkshs/dkshs.me",
           demoUrl: "https://dkshs.me/",

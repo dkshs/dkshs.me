@@ -20,7 +20,7 @@ export default function HomePage() {
       />
       <Sections.Home {...home} />
       <Sections.About {...about} />
-      <Sections.Projects {...projects} github={data.github} />
+      <Sections.Projects {...projects} />
       <Sections.Contact {...contact} />
     </>
   );

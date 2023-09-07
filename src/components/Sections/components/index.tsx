@@ -81,5 +81,4 @@ export const Section = {
   Description: SectionDescription,
 };
 export { AboutParagraph } from "./AboutParagraph";
-export { ProjectCard } from "./ProjectCard";
 export { Form } from "./Form";

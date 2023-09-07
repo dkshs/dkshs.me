@@ -6,3 +6,10 @@ export type AboutMeSectionTypes = typeof sections.about;
 export type ProjectsSectionTypes = typeof sections.projects;
 export type ContactSectionTypes = typeof sections.contact;
 export type SectionsTypes = typeof sections;
+export type ProjectType = {
+  title: string;
+  description: string;
+  githubUrl: string;
+  demoUrl: string | null;
+  slug: string | null;
+};

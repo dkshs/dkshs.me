@@ -1,0 +1,58 @@
+import type { ProjectType } from "@/utils/types";
+
+import { Button } from "@/components/ui/button";
+import { Card } from "./Card";
+
+import { ArrowUpRight, Github } from "lucide-react";
+
+interface ProjectCardProps extends ProjectType {
+  hFit?: boolean;
+}
+
+export function ProjectCard({
+  title,
+  description,
+  githubUrl,
+  demoUrl,
+  slug,
+  hFit,
+}: ProjectCardProps) {
+  return (
+    <Card.Root className={hFit ? "h-fit" : ""}>
+      <Card.Container projectUrl={`/projects/${slug}`}>
+        <div className="h-1/2 w-full">
+          <Card.Title>{title}</Card.Title>
+          <Card.Description>{description}</Card.Description>
+        </div>
+        <div className="mt-4 flex h-1/2 items-end space-x-4">
+          <Button
+            className="z-20 flex items-center space-x-2"
+            variant="outline"
+            asChild
+          >
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span>
+              <Github size={20} />
+            </a>
+          </Button>
+          {demoUrl && (
+            <Button className="z-20 flex items-center space-x-1" asChild>
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/demo"
+              >
+                <span>Demo</span>
+                <ArrowUpRight
+                  size={20}
+                  className="duration-300 group-hover/demo:-translate-y-0.5 group-hover/demo:translate-x-0.5"
+                />
+              </a>
+            </Button>
+          )}
+        </div>
+      </Card.Container>
+    </Card.Root>
+  );
+}

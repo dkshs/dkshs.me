@@ -1,24 +1,21 @@
 import type { ProjectsSectionTypes } from "@/utils/types";
 
-import { ProjectCard, Section } from "./components";
 import { motion } from "framer-motion";
+import { Section } from "./components";
+import { ProjectCard } from "../ProjectCard";
 import { Button } from "../ui/button";
+import Link from "next/link";
 import { projectsAnimation } from "./animationVariants";
 
 import { ArrowUpRight } from "lucide-react";
-
-interface ProjectsSectionProps extends ProjectsSectionTypes {
-  github: string;
-}
 
 export function ProjectsSection({
   title,
   description,
   id,
   content,
-  github,
-}: ProjectsSectionProps) {
-  const projects = Object.entries(content);
+}: ProjectsSectionTypes) {
+  const projects = Object.entries(content).slice(0, 4);
 
   return (
     <Section.Root id={id}>
@@ -49,10 +46,8 @@ export function ProjectsSection({
             className="mt-10 flex items-center justify-center"
           >
             <Button asChild>
-              <a
-                href={`${github}?tab=repositories`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/projects"
                 className="group flex items-center space-x-1"
               >
                 <span>View more projects</span>
@@ -60,7 +55,7 @@ export function ProjectsSection({
                   size={20}
                   className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </Section.Container>
