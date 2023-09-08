@@ -62,7 +62,7 @@ export default function ProjectPage({
     <>
       <Meta path={`/projects/${project.slug}`} title={project.title} />
       <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
-        <div className="container relative mx-auto flex flex-col justify-center">
+        <div className="container relative mx-auto flex max-w-5xl flex-col justify-center">
           <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight">
               {project.title}
@@ -100,22 +100,21 @@ export default function ProjectPage({
             )}
           </div>
           <div className="mt-16 h-px w-full bg-zinc-700" />
-          <div className="mx-auto mb-28 mt-10 flex max-w-3xl flex-col items-center justify-center">
+          <div className="mx-auto mb-28 mt-10 flex w-full max-w-3xl flex-col items-center justify-center px-4">
             {project.image && (
-              <div className="relative h-96 w-[618px]">
-                <a
-                  href={project.demoUrl || project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="aspect-video rounded-xl shadow-xl shadow-violet-950/20"
-                  />
-                </a>
-              </div>
+              <a
+                href={project.demoUrl || project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={618}
+                  height={400}
+                  className="aspect-video rounded-xl object-cover shadow-xl shadow-violet-950/20"
+                />
+              </a>
             )}
             <p className="mt-10 text-center leading-7 tracking-wide text-zinc-300">
               {project.longDescription}
