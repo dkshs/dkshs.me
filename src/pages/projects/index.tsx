@@ -27,7 +27,7 @@ const projectsItem = {
 };
 
 export default function ProjectsPage() {
-  const { getProjects } = useData();
+  const { getProjects, data } = useData();
   const projects = getProjects();
 
   return (
@@ -35,6 +35,7 @@ export default function ProjectsPage() {
       <Meta
         path="/projects"
         title="Projects"
+        twitter={data.twitter}
         description="Here you will find some of the personal projects I created."
       />
       <motion.div

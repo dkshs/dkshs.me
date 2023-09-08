@@ -5,6 +5,9 @@ import type {
 } from "next";
 import type { ProjectType } from "@/utils/types";
 
+import { useCallback } from "react";
+import { useRouter } from "next/router";
+
 import { Meta } from "@/components/Meta";
 import { Link } from "@/components/ui/link";
 import Image from "next/image";
@@ -12,8 +15,6 @@ import { Button } from "@/components/ui/button";
 import { data } from "@/data";
 
 import { ArrowUpRight } from "lucide-react";
-import { useCallback } from "react";
-import { useRouter } from "next/router";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const projects = Object.entries(data.sections.projects.content);
@@ -60,7 +61,11 @@ export default function ProjectPage({
 
   return (
     <>
-      <Meta path={`/projects/${project.slug}`} title={project.title} />
+      <Meta
+        path={`/projects/${project.slug}`}
+        title={project.title}
+        description={project.description}
+      />
       <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
         <div className="container relative mx-auto flex max-w-5xl flex-col justify-center">
           <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
