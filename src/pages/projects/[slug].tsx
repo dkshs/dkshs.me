@@ -1,0 +1,137 @@
+import type {
+  InferGetStaticPropsType,
+  GetStaticProps,
+  GetStaticPaths,
+} from "next";
+import type { ProjectType } from "@/utils/types";
+
+import { Meta } from "@/components/Meta";
+import { Link } from "@/components/ui/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { data } from "@/data";
+
+import { ArrowUpRight } from "lucide-react";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const projects = Object.entries(data.sections.projects.content);
+
+  const paths = projects.map(([, project]) => ({
+    params: {
+      slug: project.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<{
+  project: ProjectType;
+}> = ({ params }) => {
+  const projects = Object.entries(data.sections.projects.content).map(
+    ([, value]) => value,
+  );
+
+  const project = projects.find(
+    (project) => project.slug === params?.slug,
+  ) as unknown as ProjectType;
+
+  return {
+    props: {
+      project,
+    },
+  };
+};
+
+export default function ProjectPage({
+  project,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
+  const goBack = useCallback(() => {
+    if (router.pathname === "/projects/[slug]") {
+      router.back();
+    }
+  }, [router]);
+
+  return (
+    <>
+      <Meta path={`/projects/${project.slug}`} title={project.title} />
+      <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
+        <div className="container relative mx-auto flex flex-col justify-center">
+          <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
+            <h1 className="text-4xl font-bold tracking-tight">
+              {project.title}
+            </h1>
+            <p className="mt-4 leading-8 text-zinc-300">
+              {project.description}
+            </p>
+          </div>
+          <div className="mx-auto mt-10 flex max-w-2xl justify-center space-x-3 lg:mx-0 lg:max-w-none">
+            <Link
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center space-x-2"
+            >
+              Github
+              <ArrowUpRight
+                size={20}
+                className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </Link>
+            {project.demoUrl && (
+              <Link
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-2"
+              >
+                Demo
+                <ArrowUpRight
+                  size={20}
+                  className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </Link>
+            )}
+          </div>
+          <div className="mt-16 h-px w-full bg-zinc-700" />
+          <div className="mx-auto mb-28 mt-10 flex max-w-3xl flex-col items-center justify-center">
+            {project.image && (
+              <div className="relative h-96 w-[618px]">
+                <a
+                  href={project.demoUrl || project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="aspect-video rounded-xl shadow-xl shadow-violet-950/20"
+                  />
+                </a>
+              </div>
+            )}
+            <p className="mt-10 text-center leading-7 tracking-wide text-zinc-300">
+              {project.longDescription}
+            </p>
+            <div className="mt-10">
+              <Button
+                onClick={() => goBack()}
+                type="button"
+                aria-label="Go back"
+              >
+                Go back
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

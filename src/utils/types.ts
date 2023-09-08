@@ -12,4 +12,6 @@ export type ProjectType = {
   githubUrl: string;
   demoUrl: string | null;
   slug: string | null;
+  image: string | null;
+  longDescription: string | null;
 };

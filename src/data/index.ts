@@ -51,6 +51,9 @@ export const data = {
             "🌈 Ambilight Effect - React - Next.js (YouTube iframe, Video).",
           githubUrl: "https://github.com/dkshs/video-ambilight",
           demoUrl: "https://dkshs.github.io/video-ambilight/",
+          image: "/projects/video-ambilight.png",
+          longDescription:
+            "Project using YouTube iframe API in HTML and react-player with React and NextJs to make an ambient light effect. The aim of the project is to create an ambient light effect that changes color according to the video content, using the YouTube iframe API, an API that allows you to control the YouTube player using JavaScript. The API also lets you capture events such as player state, current time, and video quality.",
         },
         project2: {
           title: "Cookiecutter Django",
@@ -58,6 +61,9 @@ export const data = {
           description: "A simple Django template with cookiecutter.",
           githubUrl: "https://github.com/dkshs/cookiecutter-django",
           demoUrl: null,
+          image: null,
+          longDescription:
+            "A template using Django with cookiecutter to quickly launch production-ready Django projects.",
         },
         project3: {
           title: "AceEx UI",
@@ -66,13 +72,19 @@ export const data = {
             "Construction of a design system. AceEx's design system for the web.",
           githubUrl: "https://github.com/dkshs/ace-ex-ui",
           demoUrl: "https://ace-ex-ui.vercel.app/",
+          image: null,
+          longDescription:
+            "AceEx is a web design system that aims to make it easier to develop consistent, accessible, and responsive interfaces. The system comprises a collection of reusable, standardized and documented components that follow the brand's design principles.",
         },
         project4: {
-          title: "dkshs.me (Current site)",
+          title: "dkshs.me",
           slug: "dkshs.me",
-          description: "Bridge to my projects.",
+          description: "My personal website (The website you're looking at).",
           githubUrl: "https://github.com/dkshs/dkshs.me",
           demoUrl: "https://dkshs.me/",
+          image: "/projects/dkshs.me.png",
+          longDescription:
+            "If you like the design, check out the Repository on GitHub.",
         },
       },
     },

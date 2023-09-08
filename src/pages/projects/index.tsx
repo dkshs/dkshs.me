@@ -64,7 +64,7 @@ export default function ProjectsPage() {
         <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:mx-0">
           <div className="grid grid-cols-1 gap-4">
             {projects
-              .filter((_, i) => i % 3 === 0)
+              .filter((_, i) => i % 2 === 0)
               .map(([key, value]) => (
                 <motion.div
                   key={key}
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
           </div>
           <div className="grid grid-cols-1 gap-4">
             {projects
-              .filter((_, i) => i % 3 === 1)
+              .filter((_, i) => i % 2 === 1)
               .map(([key, value]) => (
                 <motion.div
                   key={key}
