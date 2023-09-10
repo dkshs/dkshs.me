@@ -9,14 +9,6 @@ export const config = {
   runtime: "edge",
 };
 
-const mediumFontI = fetch(
-  new URL("../../../public/fonts/Inter-Medium.ttf", import.meta.url),
-).then((res) => res.arrayBuffer());
-
-const boldFontI = fetch(
-  new URL("../../../public/fonts/Inter-Bold.ttf", import.meta.url),
-).then((res) => res.arrayBuffer());
-
 const ogSchema = z.object({
   title: z.string().optional().default(data.name),
   description: z.string().optional().default(data.description),
@@ -27,7 +19,9 @@ const ogSchema = z.object({
 });
 
 export default async function handler(request: NextRequest) {
-  const [mediumFont, boldFont] = await Promise.all([mediumFontI, boldFontI]);
+  const fontData = await fetch(
+    new URL("../../../public/fonts/Inter-SemiBold.ttf", import.meta.url),
+  ).then((res) => res.arrayBuffer());
 
   try {
     const { searchParams } = new URL(request.url);
@@ -50,7 +44,7 @@ export default async function handler(request: NextRequest) {
             <h1
               tw={`${
                 isProject ? "text-8xl" : "text-[164px]"
-              } font-bold tracking-tighter`}
+              } font-semibold tracking-tighter`}
             >
               {title}
             </h1>
@@ -72,15 +66,8 @@ export default async function handler(request: NextRequest) {
         fonts: [
           {
             name: "Inter",
-            data: mediumFont,
+            data: fontData,
             style: "normal",
-            weight: 500,
-          },
-          {
-            name: "Inter",
-            data: boldFont,
-            style: "normal",
-            weight: 700,
           },
         ],
       },
