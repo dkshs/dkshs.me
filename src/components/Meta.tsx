@@ -53,12 +53,12 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
       <title>{titleSiteName}</title>
       <meta name="title" content={titleSiteName}></meta>
       {description && <meta name="description" content={description} />}
-      <meta name="robots" content={`${indexString} ${followString}`} />
+      <meta name="robots" content={`${indexString}, ${followString}`} />
       <link rel="canonical" href={canonicalUrl} />
       <link rel="manifest" href={manifest} />
 
       {/* Facebook */}
-      <meta property="og:title" content={title || titleSiteName} />
+      <meta property="og:title" content={titleSiteName} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
