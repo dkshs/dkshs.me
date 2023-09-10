@@ -29,14 +29,19 @@ const projectsItem = {
 export default function ProjectsPage() {
   const { getProjects, data } = useData();
   const projects = getProjects();
+  const projectsDescription = data.sections.projects.description;
 
   return (
     <>
       <Meta
         path="/projects"
         title="Projects"
+        description={`${projectsDescription}.`}
         twitter={data.twitter}
-        description="Here you will find some of the personal projects I created."
+        image={{
+          src: `/api/og?description=${projectsDescription}.`,
+          alt: `${data.name} - ${projectsDescription}.`,
+        }}
       />
       <motion.div
         variants={projectsContainer}

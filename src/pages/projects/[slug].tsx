@@ -65,6 +65,16 @@ export default function ProjectPage({
         path={`/projects/${project.slug}`}
         title={project.title}
         description={project.description}
+        twitter={data.twitter}
+        image={{
+          src: `${
+            project.image
+              ? project.image
+              : `/api/og?title=${project.title}&description=${project.description}&isProject=true`
+          }`,
+          alt: `${project.title} - ${project.description}`,
+          isExternalImage: !!project.image && !project.image.startsWith("/"),
+        }}
       />
       <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
         <div className="container relative mx-auto flex max-w-5xl flex-col justify-center">

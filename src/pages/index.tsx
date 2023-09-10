@@ -10,12 +10,12 @@ export default function HomePage() {
   return (
     <>
       <Meta
-        description={data.description}
         path="/"
+        description={data.description}
         twitter={data.twitter}
         image={{
-          src: "/og.png",
-          alt: "OG Image",
+          src: "/api/og",
+          alt: `${data.name} - ${data.description}`,
         }}
       />
       <Sections.Home {...home} />
