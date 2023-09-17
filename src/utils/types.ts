@@ -13,5 +13,6 @@ export type ProjectType = {
   demoUrl: string | null;
   slug: string | null;
   image: string | null;
+  readme: string;
   longDescription: string | null;
 };

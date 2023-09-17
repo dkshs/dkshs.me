@@ -1,9 +1,31 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
+  content: [
+    "./src/pages/**/*.tsx",
+    "./src/components/**/*.tsx",
+    "./src/data/projects/**/*.mdx",
+  ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
+            },
+          },
+        },
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
+      },
       keyframes: {
         ripple: {
           to: { transform: "scale(2)", opacity: "0" },
@@ -17,6 +39,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

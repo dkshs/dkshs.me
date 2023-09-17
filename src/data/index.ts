@@ -52,6 +52,13 @@ export const data = {
           githubUrl: "https://github.com/dkshs/video-ambilight",
           demoUrl: "https://dkshs.github.io/video-ambilight/",
           image: "/projects/video-ambilight.png",
+          mdx: "./projects/video-ambilight.mdx",
+          readme: `
+            [![Project preview](/projects/video-ambilight.png)](https://dkshs.github.io/video-ambilight/)
+
+            Project using YouTube iframe API in HTML and react-player with React and NextJs to make an ambient light effect.
+            The aim of the project is to create an ambient light effect that changes color according to the video content, using the YouTube iframe API, an API that allows you to control the YouTube player using JavaScript. The API also lets you capture events such as player state, current time, and video quality.
+          `,
           longDescription:
             "Project using YouTube iframe API in HTML and react-player with React and NextJs to make an ambient light effect. The aim of the project is to create an ambient light effect that changes color according to the video content, using the YouTube iframe API, an API that allows you to control the YouTube player using JavaScript. The API also lets you capture events such as player state, current time, and video quality.",
         },
@@ -62,6 +69,8 @@ export const data = {
           githubUrl: "https://github.com/dkshs/cookiecutter-django",
           demoUrl: null,
           image: null,
+          readme:
+            "A template using Django with `cookiecutter` to quickly launch production-ready Django projects.",
           longDescription:
             "A template using Django with cookiecutter to quickly launch production-ready Django projects.",
         },
@@ -73,6 +82,8 @@ export const data = {
           githubUrl: "https://github.com/dkshs/ace-ex-ui",
           demoUrl: "https://ace-ex-ui.vercel.app/",
           image: null,
+          readme:
+            "AceEx is a web design system that aims to make it easier to develop consistent, accessible, and responsive interfaces. The system comprises a collection of reusable, standardized and documented components that follow the brand's design principles.",
           longDescription:
             "AceEx is a web design system that aims to make it easier to develop consistent, accessible, and responsive interfaces. The system comprises a collection of reusable, standardized and documented components that follow the brand's design principles.",
         },
@@ -83,6 +94,11 @@ export const data = {
           githubUrl: "https://github.com/dkshs/dkshs.me",
           demoUrl: "https://dkshs.me/",
           image: "/projects/dkshs.me.png",
+          readme: `
+            [![Project preview](/projects/dkshs.me.png)](https://dkshs.me/)
+
+            If you like the design, check out the [Repository on GitHub](https://github.com/dkshs/dkshs.me).
+          `,
           longDescription:
             "If you like the design, check out the Repository on GitHub.",
         },

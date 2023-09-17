@@ -7,12 +7,14 @@ import type { ProjectType } from "@/utils/types";
 
 import { useCallback } from "react";
 import { useRouter } from "next/router";
+import { data } from "@/data";
+import { serializeMdx } from "@/lib/serializer";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
+import { components } from "@/components/mdx";
 
 import { Meta } from "@/components/Meta";
 import { Link } from "@/components/ui/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { data } from "@/data";
 
 import { ArrowUpRight } from "lucide-react";
 
@@ -33,7 +35,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{
   project: ProjectType;
-}> = ({ params }) => {
+  mdx: MDXRemoteSerializeResult;
+}> = async ({ params }) => {
   const projects = Object.entries(data.sections.projects.content).map(
     ([, value]) => value,
   );
@@ -41,16 +44,19 @@ export const getStaticProps: GetStaticProps<{
   const project = projects.find(
     (project) => project.slug === params?.slug,
   ) as unknown as ProjectType;
+  const mdxSource = await serializeMdx(project.readme);
 
   return {
     props: {
       project,
+      mdx: mdxSource,
     },
   };
 };
 
 export default function ProjectPage({
   project,
+  mdx,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
   const goBack = useCallback(() => {
@@ -115,34 +121,13 @@ export default function ProjectPage({
             )}
           </div>
           <div className="mt-16 h-px w-full bg-zinc-700" />
-          <div className="mx-auto mb-28 mt-10 flex w-full max-w-3xl flex-col items-center justify-center px-4">
-            {project.image && (
-              <a
-                href={project.demoUrl || project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={618}
-                  height={400}
-                  className="aspect-video rounded-xl object-cover shadow-xl shadow-violet-950/20"
-                />
-              </a>
-            )}
-            <p className="mt-10 text-center leading-7 tracking-wide text-zinc-300">
-              {project.longDescription}
-            </p>
-            <div className="mt-10">
-              <Button
-                onClick={() => goBack()}
-                type="button"
-                aria-label="Go back"
-              >
-                Go back
-              </Button>
-            </div>
+          <div className="prose prose-invert prose-quoteless mx-auto mb-28 mt-20 max-w-3xl px-4">
+            <MDXRemote {...mdx} components={components} />
+          </div>
+          <div className="my-10 flex justify-center">
+            <Button onClick={() => goBack()} type="button" aria-label="Go back">
+              Go back
+            </Button>
           </div>
         </div>
       </div>
