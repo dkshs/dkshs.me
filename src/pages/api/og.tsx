@@ -1,6 +1,4 @@
-import type { NextRequest } from "next/server";
-
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 
 import { data } from "@/data";
