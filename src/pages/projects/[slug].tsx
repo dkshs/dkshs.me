@@ -8,10 +8,9 @@ import type { ProjectType } from "@/utils/types";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 import { data } from "@/data";
-import { serializeMdx } from "@/lib/serializer";
-import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
-import { components } from "@/components/mdx";
+import { allProjects } from "contentlayer/generated";
 
+import { Mdx } from "@/components/mdx";
 import { Meta } from "@/components/Meta";
 import { Link } from "@/components/ui/link";
 import { Button } from "@/components/ui/button";
@@ -19,9 +18,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projects = Object.entries(data.sections.projects.content);
-
-  const paths = projects.map(([, project]) => ({
+  const paths = allProjects.map((project) => ({
     params: {
       slug: project.slug,
     },
@@ -35,28 +32,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{
   project: ProjectType;
-  mdx: MDXRemoteSerializeResult;
 }> = async ({ params }) => {
-  const projects = Object.entries(data.sections.projects.content).map(
-    ([, value]) => value,
-  );
-
-  const project = projects.find(
+  const project = allProjects.find(
     (project) => project.slug === params?.slug,
   ) as unknown as ProjectType;
-  const mdxSource = await serializeMdx(project.readme);
 
   return {
     props: {
       project,
-      mdx: mdxSource,
     },
   };
 };
 
 export default function ProjectPage({
   project,
-  mdx,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
   const goBack = useCallback(() => {
@@ -122,7 +111,7 @@ export default function ProjectPage({
           </div>
           <div className="mt-16 h-px w-full bg-zinc-700" />
           <div className="prose prose-invert prose-quoteless mx-auto mb-28 mt-20 max-w-3xl px-4">
-            <MDXRemote {...mdx} components={components} />
+            <Mdx code={project.body.code} />
           </div>
           <div className="my-10 flex justify-center">
             <Button onClick={() => goBack()} type="button" aria-label="Go back">

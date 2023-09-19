@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import type { AppProps } from "next/app";
 import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 
-import { DataContextProvider } from "@/context/DataContext";
 import { ToastContainer } from "react-toastify";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -30,11 +29,9 @@ export default function App({ Component, pageProps }: AppProps) {
           fontFamily: merriweatherSans.style.fontFamily,
         }}
       />
-      <DataContextProvider>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </DataContextProvider>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }

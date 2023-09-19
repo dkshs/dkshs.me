@@ -1,5 +1,6 @@
 import type { ProjectsSectionTypes } from "@/utils/types";
 
+import { allProjects } from "contentlayer/generated";
 import { motion } from "framer-motion";
 import { Section } from "./components";
 import { ProjectCard } from "../ProjectCard";
@@ -13,9 +14,8 @@ export function ProjectsSection({
   title,
   description,
   id,
-  content,
 }: ProjectsSectionTypes) {
-  const projects = Object.entries(content).slice(0, 4);
+  const projects = allProjects.slice(0, 4);
 
   return (
     <Section.Root id={id}>
@@ -30,13 +30,13 @@ export function ProjectsSection({
           <Section.Title>{title}</Section.Title>
           <Section.Description>{description}</Section.Description>
           <div className="grid gap-6 px-2 md:px-10 mdlg:grid-cols-2 mdlg:px-0">
-            {projects.map(([key, value]) => (
+            {projects.map((project) => (
               <motion.div
-                key={key}
+                key={project._id}
                 variants={projectsAnimation.item}
                 transition={{ duration: 0.5 }}
               >
-                <ProjectCard {...value} />
+                <ProjectCard {...project} />
               </motion.div>
             ))}
           </div>

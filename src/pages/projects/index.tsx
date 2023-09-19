@@ -1,4 +1,5 @@
-import { useData } from "@/hooks/useData";
+import { data } from "@/data";
+import { allProjects } from "contentlayer/generated";
 
 import { Meta } from "@/components/Meta";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -27,8 +28,6 @@ const projectsItem = {
 };
 
 export default function ProjectsPage() {
-  const { getProjects, data } = useData();
-  const projects = getProjects();
   const projectsDescription = data.sections.projects.description;
 
   return (
@@ -69,28 +68,28 @@ export default function ProjectsPage() {
         <div className="h-px w-full bg-zinc-700" />
         <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:mx-0">
           <div className="grid grid-cols-1 gap-4">
-            {projects
+            {allProjects
               .filter((_, i) => i % 2 === 0)
-              .map(([key, value]) => (
+              .map((project) => (
                 <motion.div
-                  key={key}
+                  key={project._id}
                   variants={projectsItem}
                   transition={{ duration: 0.5 }}
                 >
-                  <ProjectCard hFit {...value} />
+                  <ProjectCard hFit {...project} />
                 </motion.div>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
-            {projects
+            {allProjects
               .filter((_, i) => i % 2 === 1)
-              .map(([key, value]) => (
+              .map((project) => (
                 <motion.div
-                  key={key}
+                  key={project._id}
                   variants={projectsItem}
                   transition={{ duration: 0.5 }}
                 >
-                  <ProjectCard hFit {...value} />
+                  <ProjectCard hFit {...project} />
                 </motion.div>
               ))}
           </div>

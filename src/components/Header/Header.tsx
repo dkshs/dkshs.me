@@ -1,4 +1,4 @@
-import { useData } from "@/hooks/useData";
+import { data } from "@/data";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +7,7 @@ import { NavLink, NavMenu } from "./components";
 import { animation } from "./animationVariants";
 
 export function Header() {
-  const {
-    data: { name, github, sections },
-  } = useData();
+  const { name, github, sections } = data;
 
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-zinc-800/80 bg-black/50 backdrop-blur-md md:h-[72px]">

@@ -1,10 +1,9 @@
-import { useData } from "@/hooks/useData";
+import { data } from "@/data";
 
 import { Meta } from "@/components/Meta";
 import { Sections } from "@/components/Sections";
 
 export default function HomePage() {
-  const { data } = useData();
   const { home, about, projects, contact } = data.sections;
 
   return (
