@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "contentlayer build && next build",
     "start": "next start",
     "lint": "next lint --dir . && eslint . && prettier . -c",
     "lint:fix": "eslint --fix . && prettier . -w",
