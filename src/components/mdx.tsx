@@ -187,7 +187,7 @@ export const components = {
   pre: ({ className, ...props }: HTMLAttributes<HTMLPreElement>) => (
     <pre
       className={cn(
-        "mb-4 mt-6 overflow-x-auto rounded-lg bg-zinc-900/80 py-4",
+        "mb-4 mt-6 overflow-x-auto rounded-lg bg-zinc-900/80 px-0 py-4",
         className,
       )}
       {...props}
