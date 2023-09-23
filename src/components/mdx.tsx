@@ -26,12 +26,18 @@ function HeadingLinks({ id }: { id: string }) {
 function AnchorLink({
   href,
   children,
+  className,
   ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   const isInside = href ? href.startsWith("#") || href.startsWith("/") : false;
 
   return (
-    <Link href={href} asChild={!!isInside} className="no-underline" {...props}>
+    <Link
+      href={href}
+      asChild={!!isInside}
+      className={cn("no-underline", className)}
+      {...props}
+    >
       {isInside ? <NextLink href={href!}>{children}</NextLink> : children}
     </Link>
   );
