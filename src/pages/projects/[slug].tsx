@@ -5,14 +5,13 @@ import type {
 } from "next";
 import type { ProjectType } from "@/utils/types";
 
-import { useCallback } from "react";
-import { useRouter } from "next/router";
 import { data } from "@/data";
 import { allProjects } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx";
 import { Meta } from "@/components/Meta";
 import { Link } from "@/components/ui/link";
+import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { ArrowUpRight } from "lucide-react";
@@ -47,13 +46,6 @@ export const getStaticProps: GetStaticProps<{
 export default function ProjectPage({
   project,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const router = useRouter();
-  const goBack = useCallback(() => {
-    if (router.pathname === "/projects/[slug]") {
-      router.back();
-    }
-  }, [router]);
-
   return (
     <>
       <Meta
@@ -113,9 +105,9 @@ export default function ProjectPage({
           <div className="prose prose-invert prose-quoteless mx-auto mb-28 mt-20 max-w-3xl px-4">
             <Mdx code={project.body.code} />
           </div>
-          <div className="my-10 flex justify-center">
-            <Button onClick={() => goBack()} type="button" aria-label="Go back">
-              Go back
+          <div className="my-10 flex justify-center gap-2">
+            <Button aria-label="Go to projects page" asChild>
+              <NextLink href="/projects">Go to projects page</NextLink>
             </Button>
           </div>
         </div>
