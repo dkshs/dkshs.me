@@ -207,7 +207,7 @@ export const components = {
   code: ({ className, ...props }: HTMLAttributes<HTMLPreElement>) => (
     <code
       className={cn(
-        "relative max-w-fit rounded bg-zinc-400/20 px-1.5 py-1 font-mono",
+        "relative rounded bg-zinc-400/20 px-1.5 py-1 font-mono",
         className,
       )}
       {...props}
