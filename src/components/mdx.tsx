@@ -54,9 +54,10 @@ export const components = {
   h2: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "group mt-10 flex scroll-m-20 items-center border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
         className,
       )}
+      id={id}
       {...props}
     >
       {id && <HeadingLinks id={id} />}
@@ -66,9 +67,10 @@ export const components = {
   h3: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
+        "group mt-8 flex scroll-m-20 items-center text-2xl font-semibold tracking-tight",
         className,
       )}
+      id={id}
       {...props}
     >
       {id && <HeadingLinks id={id} />}
@@ -78,9 +80,10 @@ export const components = {
   h4: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h4
       className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "group mt-8 flex scroll-m-20 items-center text-xl font-semibold tracking-tight",
         className,
       )}
+      id={id}
       {...props}
     >
       {id && <HeadingLinks id={id} />}
@@ -90,9 +93,10 @@ export const components = {
   h5: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h5
       className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        "group mt-8 flex scroll-m-20 items-center text-lg font-semibold tracking-tight",
         className,
       )}
+      id={id}
       {...props}
     >
       {id && <HeadingLinks id={id} />}
@@ -102,9 +106,10 @@ export const components = {
   h6: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <h6
       className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
+        "group mt-8 flex scroll-m-20 items-center text-base font-semibold tracking-tight",
         className,
       )}
+      id={id}
       {...props}
     >
       {id && <HeadingLinks id={id} />}
