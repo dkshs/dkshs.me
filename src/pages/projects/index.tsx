@@ -67,7 +67,7 @@ export default function ProjectsPage() {
         </div>
         <div className="h-px w-full bg-zinc-700" />
         <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:mx-0">
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid h-fit grid-cols-1 gap-4">
             {allProjects
               .filter((_, i) => i % 2 === 0)
               .map((project) => (
@@ -75,12 +75,13 @@ export default function ProjectsPage() {
                   key={project._id}
                   variants={projectsItem}
                   transition={{ duration: 0.5 }}
+                  className="h-fit"
                 >
                   <ProjectCard hFit {...project} />
                 </motion.div>
               ))}
           </div>
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid h-fit grid-cols-1 gap-4">
             {allProjects
               .filter((_, i) => i % 2 === 1)
               .map((project) => (
@@ -88,6 +89,7 @@ export default function ProjectsPage() {
                   key={project._id}
                   variants={projectsItem}
                   transition={{ duration: 0.5 }}
+                  className="h-fit"
                 >
                   <ProjectCard hFit {...project} />
                 </motion.div>
