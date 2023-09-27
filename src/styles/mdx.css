@@ -1,10 +1,10 @@
 [data-rehype-pretty-code-fragment] code {
-  @apply grid break-words rounded-none border-0 bg-transparent p-0 text-base text-white;
-  /* counter-reset: line; */
+  @apply grid w-0 break-words rounded-none border-0 bg-transparent p-0 text-base text-white;
+  counter-reset: line;
   box-decoration-break: clone;
 }
 [data-rehype-pretty-code-fragment] [data-line] {
-  @apply border-l-2 border-transparent pl-4;
+  @apply border-l-2 border-transparent px-4;
 }
 [data-rehype-pretty-code-fragment] .line {
   @apply w-fit px-1.5 py-1;
