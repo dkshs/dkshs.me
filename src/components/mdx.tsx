@@ -9,19 +9,7 @@ import { Link } from "./ui/link";
 import NextLink from "next/link";
 import { cn } from "@/lib/utils";
 
-import { Hash } from "lucide-react";
-
-function HeadingLinks({ id }: { id: string }) {
-  return (
-    <NextLink
-      href={`#${id}`}
-      aria-label="Link to section"
-      className="absolute -ml-7 opacity-0 duration-200 focus-visible:opacity-70 group-hover:opacity-70"
-    >
-      <Hash />
-    </NextLink>
-  );
-}
+import { Link as LinkIcon } from "lucide-react";
 
 function AnchorLink({
   href,
@@ -43,84 +31,96 @@ function AnchorLink({
   );
 }
 
+interface HeadingLinkedProps extends HTMLAttributes<HTMLHeadingElement> {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+function HeadingLinked({
+  id,
+  as = "h1",
+  children,
+  className,
+  ...props
+}: HeadingLinkedProps) {
+  const Comp = as;
+
+  return id ? (
+    <Comp id={id} {...props}>
+      <AnchorLink
+        href={`#${id}`}
+        aria-label="Link to section"
+        className={cn(
+          "w-fit justify-start rounded-none text-inherit focus-visible:rounded-md",
+          className,
+        )}
+      >
+        {children}
+        <LinkIcon
+          size={20}
+          className="ml-2 opacity-20 duration-200 group-hover:opacity-70"
+        />
+      </AnchorLink>
+    </Comp>
+  ) : (
+    <Comp id={id} {...props} />
+  );
+}
+
 export const components = {
-  h1: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h1
+  h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
       className={cn(
-        "group relative mt-2 flex scroll-m-20 items-center text-4xl font-bold tracking-tight",
+        "group relative mt-2 w-full scroll-m-20 text-4xl font-bold tracking-tight",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h1>
+    />
   ),
-  h2: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h2
+  h2: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
+      as="h2"
       className={cn(
-        "group mt-10 flex scroll-m-20 items-center border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "group mt-10 w-full scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h2>
+    />
   ),
-  h3: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h3
+  h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
       className={cn(
-        "group mt-8 flex scroll-m-20 items-center text-2xl font-semibold tracking-tight",
+        "group mt-8 w-full scroll-m-20 text-2xl font-semibold tracking-tight",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h3>
+    />
   ),
-  h4: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h4
+  h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
       className={cn(
-        "group mt-8 flex scroll-m-20 items-center text-xl font-semibold tracking-tight",
+        "group mt-8 w-full scroll-m-20 text-xl font-semibold tracking-tight",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h4>
+    />
   ),
-  h5: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h5
+  h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
       className={cn(
-        "group mt-8 flex scroll-m-20 items-center text-lg font-semibold tracking-tight",
+        "group mt-8 w-full scroll-m-20 text-lg font-semibold tracking-tight",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h5>
+    />
   ),
-  h6: ({ className, id, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-    <h6
+  h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+    <HeadingLinked
       className={cn(
-        "group mt-8 flex scroll-m-20 items-center text-base font-semibold tracking-tight",
+        "group mt-8 w-full scroll-m-20 text-base font-semibold tracking-tight",
         className,
       )}
-      id={id}
       {...props}
-    >
-      {id && <HeadingLinks id={id} />}
-      {props.children}
-    </h6>
+    />
   ),
   a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <AnchorLink {...props} />
