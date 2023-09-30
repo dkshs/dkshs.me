@@ -39,27 +39,23 @@ function HeadingLinked({
   id,
   as = "h1",
   children,
-  className,
   ...props
 }: HeadingLinkedProps) {
   const Comp = as;
 
   return id ? (
     <Comp id={id} {...props}>
-      <AnchorLink
+      <NextLink
         href={`#${id}`}
         aria-label="Link to section"
-        className={cn(
-          "w-fit justify-start rounded-none text-inherit focus-visible:rounded-md",
-          className,
-        )}
+        className="group flex w-fit items-center rounded-md no-underline underline-offset-4 ring-offset-black duration-200 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-900 focus-visible:ring-offset-2 active:opacity-70"
       >
         {children}
         <LinkIcon
           size={20}
           className="ml-2 opacity-20 duration-200 group-hover:opacity-70"
         />
-      </AnchorLink>
+      </NextLink>
     </Comp>
   ) : (
     <Comp id={id} {...props} />
@@ -70,7 +66,7 @@ export const components = {
   h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <HeadingLinked
       className={cn(
-        "group relative mt-2 w-full scroll-m-20 text-4xl font-bold tracking-tight",
+        "relative mt-2 w-full scroll-m-20 text-4xl font-bold tracking-tight",
         className,
       )}
       {...props}
@@ -80,7 +76,7 @@ export const components = {
     <HeadingLinked
       as="h2"
       className={cn(
-        "group mt-10 w-full scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "mt-10 w-full scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
         className,
       )}
       {...props}
@@ -88,8 +84,9 @@ export const components = {
   ),
   h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <HeadingLinked
+      as="h3"
       className={cn(
-        "group mt-8 w-full scroll-m-20 text-2xl font-semibold tracking-tight",
+        "mt-8 w-full scroll-m-20 text-2xl font-semibold tracking-tight",
         className,
       )}
       {...props}
@@ -97,8 +94,9 @@ export const components = {
   ),
   h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <HeadingLinked
+      as="h4"
       className={cn(
-        "group mt-8 w-full scroll-m-20 text-xl font-semibold tracking-tight",
+        "mt-8 w-full scroll-m-20 text-xl font-semibold tracking-tight",
         className,
       )}
       {...props}
@@ -106,8 +104,9 @@ export const components = {
   ),
   h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <HeadingLinked
+      as="h5"
       className={cn(
-        "group mt-8 w-full scroll-m-20 text-lg font-semibold tracking-tight",
+        "mt-8 w-full scroll-m-20 text-lg font-semibold tracking-tight",
         className,
       )}
       {...props}
@@ -115,8 +114,9 @@ export const components = {
   ),
   h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
     <HeadingLinked
+      as="h6"
       className={cn(
-        "group mt-8 w-full scroll-m-20 text-base font-semibold tracking-tight",
+        "mt-8 w-full scroll-m-20 text-base font-semibold tracking-tight",
         className,
       )}
       {...props}
