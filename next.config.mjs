@@ -9,7 +9,10 @@ const nextConfig = {
     SITE_BASEURL: process.env.SITE_BASEURL || "http://localhost:3000",
   },
   images: {
-    domains: ["github.com"],
+    remotePatterns: [{ hostname: "github.com" }],
+  },
+  experimental: {
+    webpackBuildWorker: true,
   },
 };
 

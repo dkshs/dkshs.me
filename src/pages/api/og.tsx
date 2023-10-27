@@ -1,4 +1,5 @@
-import { ImageResponse, type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
+import { ImageResponse } from "next/og";
 import { z } from "zod";
 
 import { data } from "@/data";
