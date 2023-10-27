@@ -1,12 +1,9 @@
-import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
 import { z } from "zod";
 
 import { data } from "@/data";
 
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge";
 
 const ogSchema = z.object({
   title: z.string().optional().default(data.name),
@@ -17,7 +14,7 @@ const ogSchema = z.object({
     .transform((val) => val === "true"),
 });
 
-export default async function handler(request: NextRequest) {
+export async function GET(request: Request) {
   const fontData = await fetch(
     new URL("../../../public/fonts/Inter-SemiBold.ttf", import.meta.url),
   ).then((res) => res.arrayBuffer());

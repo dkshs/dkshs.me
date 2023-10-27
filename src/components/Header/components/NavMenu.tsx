@@ -1,3 +1,5 @@
+"use client";
+
 import type { SectionsTypes } from "@/utils/types";
 
 import { useState } from "react";

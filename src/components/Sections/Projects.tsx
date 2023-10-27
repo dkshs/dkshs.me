@@ -1,3 +1,5 @@
+"use client";
+
 import type { ProjectsSectionTypes } from "@/utils/types";
 
 import { allProjects } from "contentlayer/generated";

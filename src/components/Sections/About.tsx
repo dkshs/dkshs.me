@@ -1,3 +1,5 @@
+"use client";
+
 import type { AboutMeSectionTypes } from "@/utils/types";
 
 import { motion } from "framer-motion";

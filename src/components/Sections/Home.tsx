@@ -1,3 +1,5 @@
+"use client";
+
 import type { HomeSectionTypes } from "@/utils/types";
 
 import { motion } from "framer-motion";

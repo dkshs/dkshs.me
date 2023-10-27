@@ -1,9 +1,11 @@
+"use client";
+
 import type { ContactSectionTypes } from "@/utils/types";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { FORM_SEND_URL } from "@/utils/constants";
+import { env } from "@/env.mjs";
 
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
@@ -53,7 +55,7 @@ export function ContactSection({
       },
     };
     try {
-      await fetch(FORM_SEND_URL!, requestOptions);
+      await fetch(env.NEXT_PUBLIC_FORM_SEND_URL, requestOptions);
       toast.success("Message sent!");
       reset();
     } catch (error) {

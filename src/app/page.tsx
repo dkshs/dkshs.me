@@ -1,6 +1,5 @@
 import { data } from "@/data";
 
-import { Meta } from "@/components/Meta";
 import { Sections } from "@/components/Sections";
 
 export default function HomePage() {
@@ -8,15 +7,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Meta
-        path="/"
-        description={data.description}
-        twitter={data.twitter}
-        image={{
-          src: "/api/og",
-          alt: `${data.name} - ${data.description}`,
-        }}
-      />
       <Sections.Home {...home} />
       <Sections.About {...about} />
       <Sections.Projects {...projects} />

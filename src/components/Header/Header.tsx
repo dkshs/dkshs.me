@@ -1,3 +1,5 @@
+"use client";
+
 import { data } from "@/data";
 
 import Image from "next/image";

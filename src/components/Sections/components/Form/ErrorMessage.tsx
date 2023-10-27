@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 
 export function ErrorMessage({ error }: { error: string | undefined }) {
