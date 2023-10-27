@@ -2,19 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  color-scheme: dark;
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 210 20% 98%;
+    --card: 0, 0%, 0%;
+    --card-foreground: 210 20% 98%;
+    --popover: 0, 0%, 0%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 264 67% 35%;
+    --primary-foreground: 210 20% 98%;
+    --primary-light: 255 92% 76%;
+    --primary-link: 258 90% 66%;
+    --secondary: 240 5% 65%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 240 6% 10%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 240 6% 10%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 5% 26%;
+    --input: 240 6% 10%;
+    --ring: 262 83% 60%;
+    --radius: 0.5rem;
+  }
 }
 
-* {
-  @apply selection:bg-violet-600/40;
-}
-
-body {
-  @apply relative min-h-screen bg-black text-gray-100 antialiased;
-}
-
-.ripple {
-  @apply pointer-events-none absolute animate-ripple rounded-full;
+@layer base {
+  * {
+    @apply border-border selection:bg-primary/40;
+  }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply relative min-h-screen bg-background font-merriweatherSans text-foreground antialiased;
+  }
+  .ripple {
+    @apply pointer-events-none absolute animate-ripple rounded-full;
+  }
 }

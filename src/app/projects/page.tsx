@@ -52,7 +52,7 @@ export default function ProjectsPage() {
           Here you will find some of the personal projects I created.
         </motion.p>
       </div>
-      <div className="h-px w-full bg-zinc-700" />
+      <div className="h-px w-full bg-border" />
       <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:mx-0">
         <div className="grid h-fit grid-cols-1 gap-4">
           {allProjects

@@ -14,12 +14,12 @@ export function ProjectCard({
   description,
   githubUrl,
   demoUrl,
-  slug,
+  path,
   hFit,
 }: ProjectCardProps) {
   return (
     <Card.Root className={hFit ? "h-fit" : ""}>
-      <Card.Container projectUrl={`/projects/${slug}`}>
+      <Card.Container projectUrl={path}>
         <div className="h-1/2 w-full">
           <Card.Title>{title}</Card.Title>
           <Card.Description>{description}</Card.Description>

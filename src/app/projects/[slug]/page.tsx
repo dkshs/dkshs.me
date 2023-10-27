@@ -71,7 +71,9 @@ export default async function ProjectPage({ params }: Props) {
       <div className="container relative mx-auto flex max-w-5xl flex-col justify-center">
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
-          <p className="mt-4 leading-8 text-zinc-300">{project.description}</p>
+          <p className="mt-4 leading-8 text-foreground/80">
+            {project.description}
+          </p>
         </div>
         <div className="mx-auto mt-10 flex max-w-2xl justify-center space-x-3 lg:mx-0 lg:max-w-none">
           <Link
@@ -101,7 +103,7 @@ export default async function ProjectPage({ params }: Props) {
             </Link>
           )}
         </div>
-        <div className="mt-16 h-px w-full bg-zinc-700" />
+        <div className="mt-16 h-px w-full bg-border" />
         <div className="prose prose-invert prose-quoteless mx-auto mb-28 mt-20 max-w-3xl px-4">
           <Mdx code={project.body.code} />
         </div>

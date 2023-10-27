@@ -39,7 +39,7 @@ export function NavMenu({ sections }: NavMenuProps) {
                 animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
                 exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
                 transition={{ duration: 0.5 }}
-                className="fixed inset-0 z-[9999] bg-black/50"
+                className="fixed inset-0 z-[9999] bg-background/50"
               />
             </Dialog.Overlay>
             <Dialog.Content className="fixed right-0 top-0 z-[9999] h-screen w-[calc(100vw-40%)]">
@@ -52,7 +52,7 @@ export function NavMenu({ sections }: NavMenuProps) {
                 }}
                 exit={{ opacity: 0, transform: "translateX(100%)" }}
                 transition={{ duration: 0.5 }}
-                className="h-full w-full bg-violet-900/20 bg-gradient-to-b from-violet-900/30 to-black/60 shadow-2xl shadow-black"
+                className="h-full w-full bg-primary/20 bg-gradient-to-b from-primary/30 to-background/60 shadow-2xl shadow-background"
               >
                 <Dialog.Close asChild>
                   <Button

@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
 
 const merriweatherSans = MerriweatherSans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-merriweather-sans",
 });
 
 export const metadata: Metadata = {
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={merriweatherSans.className}>
+    <html lang="en" className={merriweatherSans.variable}>
       <body>
-        <div className="fixed inset-0 -z-[1] bg-violet-900/10 bg-gradient-to-b from-violet-900/10 to-black/60" />
+        <div className="fixed inset-0 -z-[1] bg-primary/10 bg-gradient-to-b from-primary/10 to-background/60" />
         <ToastContainer
           autoClose={3000}
           limit={3}
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           style={{ zIndex: 99999 }}
           toastStyle={{
             backdropFilter: "blur(5px)",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            backgroundColor: "hsl(var(--background)/0.5)",
             fontWeight: "500",
             fontFamily: merriweatherSans.style.fontFamily,
           }}

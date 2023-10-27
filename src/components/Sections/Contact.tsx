@@ -40,6 +40,7 @@ export function ContactSection({
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
+  console.log(errors);
 
   async function onSubmit(data: FormData) {
     const { name, email, message } = data;
@@ -79,7 +80,7 @@ export function ContactSection({
           <motion.div
             variants={homeAnimation.container}
             transition={{ duration: 0.5 }}
-            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md bg-violet-900/10 bg-gradient-to-b from-violet-900/10 to-black/60 p-6 shadow-xl shadow-violet-900/10 md:p-10"
+            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md bg-primary/10 bg-gradient-to-b from-primary/10 to-background/60 p-6 shadow-xl shadow-primary/10 md:p-10"
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <Form.Fieldset>
@@ -93,7 +94,9 @@ export function ContactSection({
                   required
                   {...register("name")}
                 />
-                <Form.ErrorMessage error={errors.name?.message} />
+                {errors.name && (
+                  <Form.ErrorMessage error={errors.name.message} />
+                )}
               </Form.Fieldset>
               <Form.Fieldset>
                 <Label className="text-md font-bold" htmlFor="email">
@@ -106,7 +109,9 @@ export function ContactSection({
                   required
                   {...register("email")}
                 />
-                <Form.ErrorMessage error={errors.email?.message} />
+                {errors.email && (
+                  <Form.ErrorMessage error={errors.email.message} />
+                )}
               </Form.Fieldset>
               <Form.Fieldset>
                 <Label className="text-md font-bold" htmlFor="message">
@@ -118,7 +123,9 @@ export function ContactSection({
                   required
                   {...register("message")}
                 />
-                <Form.ErrorMessage error={errors.message?.message} />
+                {errors.message && (
+                  <Form.ErrorMessage error={errors.message.message} />
+                )}
               </Form.Fieldset>
               <motion.div
                 variants={homeAnimation.item}

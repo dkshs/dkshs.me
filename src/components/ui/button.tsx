@@ -7,19 +7,19 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn, createRipple } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center relative overflow-hidden justify-center font-medium ring-offset-black duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-900 active:[:not(:disabled)&]:opacity-70 active:[:not(:disabled)&]:scale-95 disabled:cursor-not-allowed disabled:opacity-50",
+  "inline-flex items-center relative overflow-hidden justify-center font-medium ring-offset-background duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:[:not(:disabled)&]:opacity-70 active:[:not(:disabled)&]:scale-95 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-violet-900 hover:[:not(:disabled)&]:bg-violet-900/80",
+        default: "bg-primary hover:[:not(:disabled)&]:bg-primary/80",
         destructive:
-          "bg-red-600 hover:[:not(:disabled)&]:bg-red-600/90 focus-visible:ring-red-600 [&>.ripple]:bg-black/20",
+          "bg-destructive hover:[:not(:disabled)&]:bg-destructive/90 focus-visible:ring-destructive [&>.ripple]:bg-background/20",
         outline:
-          "border border-violet-900 bg-transparent hover:[:not(:disabled)&]:bg-violet-900 focus-visible:bg-violet-900",
+          "border border-primary bg-transparent hover:[:not(:disabled)&]:bg-primary focus-visible:bg-primary",
         secondary:
-          "bg-violet-400 text-violet-950 hover:[:not(:disabled)&]:bg-violet-400/80 focus-visible:ring-violet-400 [&>.ripple]:bg-white/20",
+          "bg-secondary hover:[:not(:disabled)&]:bg-secondary/80 focus-visible:ring-ring [&>.ripple]:bg-white/20",
         ghost:
-          "hover:[:not(:disabled)&]:bg-violet-900 hover:[:not(:disabled)&]:text-violet-100",
+          "hover:[:not(:disabled)&]:bg-accent hover:[:not(:disabled)&]:text-accent-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -47,7 +47,7 @@ const buttonVariants = cva(
       },
       {
         variant: ["default", "outline", "ghost"],
-        className: "[&>.ripple]:bg-violet-600/40",
+        className: "[&>.ripple]:bg-background/60",
       },
     ],
     defaultVariants: {
