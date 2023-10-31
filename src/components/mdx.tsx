@@ -23,7 +23,7 @@ function AnchorLink({
     <Link
       href={href}
       asChild={!!isInside}
-      className={cn("no-underline", className)}
+      className={cn("no-underline [&>code]:py-0", className)}
       {...props}
     >
       {isInside ? <NextLink href={href!}>{children}</NextLink> : children}

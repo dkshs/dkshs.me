@@ -40,7 +40,6 @@ export function ContactSection({
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
-  console.log(errors);
 
   async function onSubmit(data: FormData) {
     const { name, email, message } = data;
