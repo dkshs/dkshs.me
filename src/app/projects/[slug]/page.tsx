@@ -68,14 +68,14 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
-      <div className="container relative mx-auto flex max-w-5xl flex-col justify-center">
-        <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
+      <div className="relative mx-auto max-w-5xl">
+        <div className="flex flex-col items-center px-6 text-center lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
           <p className="mt-4 leading-8 text-foreground/80">
             {project.description}
           </p>
         </div>
-        <div className="mx-auto mt-10 flex max-w-2xl justify-center space-x-3 lg:mx-0 lg:max-w-none">
+        <div className="mt-10 flex justify-center space-x-3">
           <Link
             href={project.githubUrl}
             target="_blank"
@@ -104,7 +104,7 @@ export default async function ProjectPage({ params }: Props) {
           )}
         </div>
         <div className="mt-16 h-px w-full bg-border" />
-        <div className="prose prose-invert prose-quoteless mx-auto mb-28 mt-20 max-w-3xl px-4">
+        <div className="prose prose-invert prose-quoteless mx-auto px-4 pb-28 pt-6 sm:pt-10">
           <Mdx code={project.body.code} />
         </div>
         <div className="my-10 flex justify-center gap-2">
