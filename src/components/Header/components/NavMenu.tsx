@@ -69,7 +69,7 @@ export function NavMenu({ sections }: NavMenuProps) {
                   {Object.entries(sections).map(([key, value], i) => (
                     <li key={key}>
                       <NavLink
-                        href={i === 0 ? "/" : `#${value.id}`}
+                        href={i === 0 ? "/" : `/#${value.id}`}
                         className="text-xl font-medium"
                         onClick={() => setIsOpen(false)}
                       >
