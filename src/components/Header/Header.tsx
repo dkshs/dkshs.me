@@ -28,7 +28,7 @@ export function Header() {
               <Image
                 src={`${github}.png`}
                 alt={`${name} Image`}
-                className="rounded-full"
+                className="rounded-full border"
                 fill
               />
             </div>
