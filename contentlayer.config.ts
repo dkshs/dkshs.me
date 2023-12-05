@@ -43,6 +43,8 @@ export default makeSource({
     rehypePlugins: [
       rehypeSlug,
       [
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         rehypePrettyCode,
         {
           theme: MDX_CODE_THEME,
