@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.3.4
     version: 0.3.4(esbuild@0.19.7)(markdown-wasm@1.2.0)
   framer-motion:
-    specifier: ^10.16.14
-    version: 10.16.14(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^10.16.15
+    version: 10.16.15(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
     specifier: ^0.294.0
     version: 0.294.0(react@18.2.0)
@@ -3084,8 +3084,8 @@ packages:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-poovsXtR7doXRfjqVjUai82Zl2z5yMUFKtYWHnQK+xsDVPhHVUJEU+Kr2kqEnUV4gry+LcRdrDzcMI7OdJlDMg==}
+  /framer-motion@10.16.15(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-BapW1EKc/Sgph1rKEwL9bFt2B79z7bu7jN4Up1jGUaTE78WBsVO+6eCmoUZsQH0hHtRUDnnTqjjBbM7dk9Kp8A==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
