@@ -51,7 +51,7 @@
     "husky": "^8",
     "lint-staged": "^15",
     "postcss": "^8",
-    "prettier-plugin-tailwindcss": "^0.5.10",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
