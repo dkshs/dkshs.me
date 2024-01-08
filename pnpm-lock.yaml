@@ -58,7 +58,7 @@ dependencies:
     version: 9.1.3(react-dom@18.2.0)(react@18.2.0)
   rehype-pretty-code:
     specifier: ^0.12.3
-    version: 0.12.3(shikiji@0.9.17)
+    version: 0.12.3(shikiji@0.9.18)
   rehype-slug:
     specifier: ^6.0.0
     version: 6.0.0
@@ -67,7 +67,7 @@ dependencies:
     version: 3.0.1
   shikiji:
     specifier: 0.9.x
-    version: 0.9.17
+    version: 0.9.18
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -5363,7 +5363,7 @@ packages:
       unified: 11.0.4
     dev: false
 
-  /rehype-pretty-code@0.12.3(shikiji@0.9.17):
+  /rehype-pretty-code@0.12.3(shikiji@0.9.18):
     resolution: {integrity: sha512-6NbIit8A3hLrkKBEbNs862jVnTLeIOM2AmM0VZ/MtyHb+OuNMeCa6UZSx6UG4zrobm5tY9efTwhih1exsGYsiw==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -5373,7 +5373,7 @@ packages:
       hast-util-to-string: 3.0.0
       parse-numeric-range: 1.3.0
       rehype-parse: 9.0.0
-      shikiji: 0.9.17
+      shikiji: 0.9.18
       unified: 11.0.4
       unist-util-visit: 5.0.0
     dev: false
@@ -5607,14 +5607,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shikiji-core@0.9.17:
-    resolution: {integrity: sha512-r1FWTXk6SO2aYqfWgcsJ11MuVQ1ymPSdXzJjK7q8EXuyqu8yc2N5qrQy5+BL6gTVOaF4yLjbxFjF+KTRM1Sp8Q==}
+  /shikiji-core@0.9.18:
+    resolution: {integrity: sha512-PKTXptbrp/WEDjNHV8OFG9KkfhmR0pSd161kzlDDlgQ0HXAnqJYNDSjqsy1CYZMx5bSvLMy42yJj9oFTqmkNTQ==}
     dev: false
 
-  /shikiji@0.9.17:
-    resolution: {integrity: sha512-0z/1NfkhBkm3ijrfFeHg3G9yDNuHhXdAGbQm7tRxj4WQ5z2y0XDbnagFyKyuV2ebCTS1Mwy1I3n0Fzcc/4xdmw==}
+  /shikiji@0.9.18:
+    resolution: {integrity: sha512-/tFMIdV7UQklzN13VjF0/XFzmii6C606Jc878hNezvB8ZR8FG8FW9j0I4J9EJre0owlnPntgLVPpHqy27Gs+DQ==}
     dependencies:
-      shikiji-core: 0.9.17
+      shikiji-core: 0.9.18
     dev: false
 
   /side-channel@1.0.4:
