@@ -81,6 +81,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             fontWeight: "500",
             fontFamily: merriweatherSans.style.fontFamily,
           }}
+          closeOnClick
+          stacked
         />
         <Header />
         {children}
