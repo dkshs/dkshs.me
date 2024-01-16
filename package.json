@@ -31,7 +31,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.3",
-    "react-toastify": "^10.0.1",
+    "react-toastify": "^10.0.3",
     "rehype-pretty-code": "^0.12.3",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^3.0.1",
