@@ -24,7 +24,7 @@
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",
     "framer-motion": "^10.18.0",
-    "lucide-react": "^0.311.0",
+    "lucide-react": "^0.312.0",
     "markdown-wasm": "^1.2.0",
     "next": "14.0.4",
     "next-contentlayer": "^0.3.4",
