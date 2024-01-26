@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint --dir . && eslint . && prettier . -c",
     "lint:fix": "eslint --fix . && prettier . -w",
-    "prepare": "husky install",
+    "prepare": "husky",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
@@ -48,7 +48,7 @@
     "autoprefixer": "^10.4.17",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
-    "husky": "^8",
+    "husky": "^9",
     "lint-staged": "^15",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.5.11",
