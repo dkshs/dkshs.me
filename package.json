@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint --dir . && eslint . && prettier . -c",
     "lint:fix": "eslint --fix . && prettier . -w",
-    "prepare": "husky install",
+    "prepare": "husky",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
