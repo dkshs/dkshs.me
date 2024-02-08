@@ -65,9 +65,9 @@ dependencies:
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
-  shikiji:
-    specifier: 0.10.x
-    version: 0.10.2
+  shiki:
+    specifier: ^1.0.0
+    version: 1.0.0
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -5693,16 +5693,6 @@ packages:
     resolution: {integrity: sha512-rOUGJa3yFGgOrEoiELYxraoBbag3ZWf9bpodlr05Wjm85Scx8OIX+otdSefq9Pk7L47TKEzGodSQb4L38jka6A==}
     dependencies:
       '@shikijs/core': 1.0.0
-    dev: false
-
-  /shikiji-core@0.10.2:
-    resolution: {integrity: sha512-9Of8HMlF96usXJHmCL3Gd0Fcf0EcyJUF9m8EoAKKd98mHXi0La2AZl1h6PegSFGtiYcBDK/fLuKbDa1l16r1fA==}
-    dev: false
-
-  /shikiji@0.10.2:
-    resolution: {integrity: sha512-wtZg3T0vtYV2PnqusWQs3mDaJBdCPWxFDrBM/SE5LfrX92gjUvfEMlc+vJnoKY6Z/S44OWaCRzNIsdBRWcTAiw==}
-    dependencies:
-      shikiji-core: 0.10.2
     dev: false
 
   /side-channel@1.0.4:
