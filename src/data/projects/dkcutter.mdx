@@ -17,7 +17,7 @@ It reads a settings file and interactively prompts the user whether or not to ch
 
 It then takes both and generates an output directory structure from them.
 
-Additionally, the model can provide code (Javascript) to be executed before and after generation (pre-generation and post-generation hooks).
+Additionally, the model can provide code (Javascript, Typescript) to be executed before and after generation (pre-generation and post-generation hooks).
 
 ### Input
 
@@ -26,20 +26,19 @@ This is a directory structure for a simple dkcutter:
 ```bash
 dkcutter-something/
 ├── template/
-│   ├── {{projectSlug}}/    <------ Project template
-├── hooks/                  <------ JavaScript to be executed before and after generation
-│   ├── preGenProject.js
-│   └── postGenProject.js
-├── blah.txt                <------ Non-templated files/dirs
-│                                   go outside
+│   ├── {{dkcutter.projectSlug}}/  <----- Project template
+├── hooks/                         <----- JavaScript to be executed before and after generation
+│   ├── preGenProject.js           <----- can also be `.ts`
+│   └── postGenProject.js          <----- can also be `.ts`
+├── blah.txt                       <----- Non-templated files/dirs go outside
 │
-└── dkcutter.json           <------ Prompts & default values
+└── dkcutter.json                  <----- Prompts & default values
 ```
 
 You must have:
 
 - A `dkcutter.json` file
-- A `template/{{projectSlug}}/` directory, where `projectSlug` is defined in your `dkcutter.json`.
+- A `template/{{dkcutter.projectSlug}}/` directory, where `projectSlug` is defined in your `dkcutter.json`.
 
 Beyond that, you can have whatever files/directories you want.
 
@@ -48,11 +47,11 @@ Beyond that, you can have whatever files/directories you want.
 This is what will be generated locally, in your current directory:
 
 ```bash
-mysomething/    <-------- Value corresponding to what you enter at the
-│                          projectSlug prompt
+mysomething/    <-------- Value corresponding to what you enter at the
+│                         projectSlug prompt
 │
-└── ...         <-------- Files corresponding to those in your
-                          dkcutter's `{{ projectSlug }}/` dir
+└── ...         <-------- Files corresponding to those in your
+                          dkcutter's `{{ dkcutter.projectSlug }}/` dir
 ```
 
 ## Getting Started
