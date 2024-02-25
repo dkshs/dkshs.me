@@ -2,7 +2,7 @@
 
 import type { ProjectsSectionTypes } from "@/utils/types";
 
-import { allProjects } from "contentlayer/generated";
+import { type Project, allProjects } from "contentlayer/generated";
 import { motion } from "framer-motion";
 import { Section } from "./components";
 import { ProjectCard } from "../ProjectCard";
@@ -15,9 +15,12 @@ import { ArrowUpRight } from "lucide-react";
 export function ProjectsSection({
   title,
   description,
+  tops,
   id,
 }: ProjectsSectionTypes) {
-  const projects = allProjects.slice(0, 4);
+  const projects = tops.map((top) =>
+    allProjects.find((project) => project.slug === top),
+  ) as Project[];
 
   return (
     <Section.Root id={id}>

@@ -1,9 +1,10 @@
 "use client";
 
-import { allProjects } from "contentlayer/generated";
+import { type Project, allProjects } from "contentlayer/generated";
 
 import { ProjectCard } from "@/components/ProjectCard";
 import { motion } from "framer-motion";
+import { data } from "@/data";
 
 const projectsContainer = {
   hidden: {
@@ -28,6 +29,14 @@ const projectsItem = {
 };
 
 export default function ProjectsPage() {
+  const topProjects = data.sections.projects.tops.map((top) =>
+    allProjects.find((project) => project.slug === top),
+  ) as Project[];
+  const otherProjects = allProjects.filter(
+    (project) => !topProjects.includes(project),
+  );
+  const projects = [...topProjects, ...otherProjects];
+
   return (
     <motion.div
       variants={projectsContainer}
@@ -55,7 +64,7 @@ export default function ProjectsPage() {
       <div className="h-px w-full bg-border" />
       <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:mx-0">
         <div className="grid h-fit grid-cols-1 gap-4">
-          {allProjects
+          {projects
             .filter((_, i) => i % 2 === 0)
             .map((project) => (
               <motion.div
@@ -69,7 +78,7 @@ export default function ProjectsPage() {
             ))}
         </div>
         <div className="grid h-fit grid-cols-1 gap-4">
-          {allProjects
+          {projects
             .filter((_, i) => i % 2 === 1)
             .map((project) => (
               <motion.div
