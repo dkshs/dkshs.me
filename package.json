@@ -30,7 +30,7 @@
     "next-contentlayer": "^0.3.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.50.1",
+    "react-hook-form": "^7.51.0",
     "react-toastify": "^10.0.4",
     "rehype-pretty-code": "^0.13.0",
     "rehype-slug": "^6.0.0",
