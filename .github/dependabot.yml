@@ -17,10 +17,16 @@ updates:
   # Update npm packages
   - package-ecosystem: "npm"
     directory: "/"
-    ignore:
-      - dependency-name: "@types/*"
+    groups:
+      definitely-typed:
+        patterns:
+          - "@types*"
         update-types:
-          - "version-update:semver-patch"
+          - "minor"
+          - "patch"
+    ignore:
+      - dependency-name: "@types*"
+        update-types: ["version-update:semver-major"]
     schedule:
       interval: "daily"
     labels:
