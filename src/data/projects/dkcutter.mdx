@@ -26,13 +26,13 @@ This is a directory structure for a simple dkcutter:
 ```bash
 dkcutter-something/
 ├── template/
-│   ├── {{dkcutter.projectSlug}}/  <----- Project template
-├── hooks/                         <----- JavaScript to be executed before and after generation
-│   ├── preGenProject.js           <----- can also be `.ts`
-│   └── postGenProject.js          <----- can also be `.ts`
-├── blah.txt                       <----- Non-templated files/dirs go outside
+│   ├── {{dkcutter.projectSlug}}/  <----- Project template
+├── hooks/                         <----- JavaScript to be executed before and after generation
+│   ├── preGenProject.js           <----- can also be `.ts`
+│   └── postGenProject.js          <----- can also be `.ts`
+├── blah.txt                       <----- Non-templated files/dirs go outside
 │
-└── dkcutter.json                  <----- Prompts & default values
+└── dkcutter.json                  <----- Prompts & default values
 ```
 
 You must have:
@@ -47,11 +47,11 @@ Beyond that, you can have whatever files/directories you want.
 This is what will be generated locally, in your current directory:
 
 ```bash
-mysomething/    <-------- Value corresponding to what you enter at the
-│                         projectSlug prompt
+mysomething/    <-------- Value corresponding to what you enter at the
+│                         projectSlug prompt
 │
-└── ...         <-------- Files corresponding to those in your
-                          dkcutter's `{{ dkcutter.projectSlug }}/` dir
+└── ...         <-------- Files corresponding to those in your
+                          dkcutter's `{{ dkcutter.projectSlug }}/` dir
 ```
 
 ## Getting Started
