@@ -167,14 +167,14 @@ export const components = {
     <hr className="my-4 border-border md:my-8" {...props} />
   ),
   table: ({ className, ...props }: HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto">
-      <table className={cn("w-full", className)} {...props} />
+    <div className="w-full overflow-y-auto">
+      <table className={cn("w-full", className, "m-0")} {...props} />
     </div>
   ),
   tr: ({ className, ...props }: HTMLAttributes<HTMLTableRowElement>) => (
     <tr
       className={cn(
-        "m-0 border-t border-border p-0 even:bg-foreground",
+        "border-b border-border duration-200 even:bg-primary/10 focus-within:bg-primary/30 hover:bg-primary/20",
         className,
       )}
       {...props}
@@ -183,7 +183,7 @@ export const components = {
   th: ({ className, ...props }: HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        "border border-border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "h-12 border px-4 text-left align-middle font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         className,
       )}
       {...props}
@@ -192,7 +192,7 @@ export const components = {
   td: ({ className, ...props }: HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        "border border-border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border p-4 text-left align-middle font-medium [&[align=center]]:text-center [&[align=right]]:text-right",
         className,
       )}
       {...props}
