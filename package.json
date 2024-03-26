@@ -12,6 +12,7 @@
     "lint": "next lint --dir . && eslint . && prettier . -c",
     "lint:fix": "eslint --fix . && prettier . -w",
     "prepare": "husky",
+    "commitlint": "commitlint --edit",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
@@ -40,6 +41,8 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "@dkshs/eslint-config": "1.4.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.30",
