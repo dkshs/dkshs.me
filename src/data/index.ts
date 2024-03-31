@@ -3,7 +3,7 @@ import { info } from "./info";
 const name = "DKSHS";
 const description =
   "A Web Developer who creates websites and applications with a focus on Frontend and a bit of Backend.";
-export const MDX_CODE_THEME = "rose-pine"; // Theme used by `Rehype Pretty Code`. More themes: https://unpkg.com/browse/shiki@0.14.2/themes/
+export const MDX_CODE_THEME = "rose-pine"; // Theme used by `Rehype Pretty Code`. More themes: https://shiki.style/themes#bundled-themes
 
 export const data = {
   name,
