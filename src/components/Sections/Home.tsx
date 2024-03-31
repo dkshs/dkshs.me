@@ -25,7 +25,7 @@ export function HomeSection({
         animate="visible"
         transition={{ duration: 0.5 }}
       >
-        <Section.Container className="absolute left-1/2 top-[40%] w-[92%] max-w-[90rem] -translate-x-1/2 -translate-y-1/2">
+        <Section.Container className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2">
           <motion.div
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
@@ -42,7 +42,7 @@ export function HomeSection({
             transition={{ duration: 0.5 }}
             className="mx-auto mt-10 max-w-4xl"
           >
-            <Section.Description className="mb-0 w-3/4 text-center text-xl tracking-wide text-inherit">
+            <Section.Description className="mb-0 text-center text-xl tracking-wide text-inherit">
               {description}
             </Section.Description>
           </motion.div>
