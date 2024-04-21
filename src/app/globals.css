@@ -38,7 +38,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply relative text-md min-h-screen bg-background font-merriweatherSans text-foreground antialiased;
+    @apply relative min-h-screen bg-background font-merriweatherSans text-foreground antialiased;
   }
   .ripple {
     @apply pointer-events-none absolute animate-ripple rounded-full;
