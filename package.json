@@ -2,6 +2,7 @@
   "name": "dkshs.me",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.0.4",
   "description": "Bridge to my projects.",
   "author": "DKSHS",
   "license": "MIT",
@@ -58,7 +59,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md,mdx}": [
-      "pnpm run lint:fix"
+      "pnpm lint:fix"
     ]
   }
 }

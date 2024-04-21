@@ -16,15 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: "18"
+          node-version: 18
       - name: Install dependencies
         run: pnpm install
-      - run: pnpm run lint
+      - run: pnpm lint
 
   lint-commits:
     name: Lint Commits

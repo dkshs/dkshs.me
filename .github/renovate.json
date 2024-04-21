@@ -12,7 +12,7 @@
   "rebaseWhen": "conflicted",
   "rangeStrategy": "bump",
   "constraints": {
-    "pnpm": "8"
+    "pnpm": "9"
   },
   "configMigration": true,
   "packageRules": [
