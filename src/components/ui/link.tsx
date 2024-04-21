@@ -1,11 +1,11 @@
-import { forwardRef, type AnchorHTMLAttributes } from "react";
+import { type AnchorHTMLAttributes, forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
 const linkVariants = cva(
-  "inline-flex items-center justify-center font-medium ring-offset-background underline-offset-4 duration-200 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:opacity-70",
+  "inline-flex items-center justify-center font-medium underline-offset-4 ring-offset-background duration-200 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:opacity-70",
   {
     variants: {
       variant: {
@@ -13,7 +13,7 @@ const linkVariants = cva(
         destructive:
           "text-destructive hover:text-destructive/90 focus-visible:ring-destructive",
         ghost:
-          "px-0.5 shadow-[hsl(var(--primary))_0_-2px_0_0_inset] hover:shadow-[hsl(var(--primary))_0_-30px_0_-1px_inset] hover:no-underline focus-visible:ring-transparent focus-visible:shadow-[hsl(var(--primary))_0_-30px_0_-1px_inset]",
+          "px-0.5 shadow-[hsl(var(--primary))_0_-2px_0_0_inset] hover:no-underline hover:shadow-[hsl(var(--primary))_0_-30px_0_-1px_inset] focus-visible:shadow-[hsl(var(--primary))_0_-30px_0_-1px_inset] focus-visible:ring-transparent",
       },
       size: {
         sm: "text-sm",
@@ -44,7 +44,7 @@ const linkVariants = cva(
 export interface LinkProps
   extends AnchorHTMLAttributes<HTMLAnchorElement>,
     VariantProps<typeof linkVariants> {
-  asChild?: boolean;
+  readonly asChild?: boolean;
 }
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(

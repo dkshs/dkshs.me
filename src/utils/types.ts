@@ -1,5 +1,6 @@
 import type { Project } from "contentlayer/generated";
 import { data } from "@/data";
+
 const { sections } = data;
 
 export type HomeSectionTypes = typeof sections.home;

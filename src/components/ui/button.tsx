@@ -1,33 +1,33 @@
 "use client";
 
-import { forwardRef, type ButtonHTMLAttributes, type MouseEvent } from "react";
+import { type ButtonHTMLAttributes, type MouseEvent, forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 
 import { cn, createRipple } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center relative overflow-hidden justify-center font-medium ring-offset-background duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring active:[:not(:disabled)&]:opacity-70 active:[:not(:disabled)&]:scale-95 disabled:cursor-not-allowed disabled:opacity-50",
+  "relative inline-flex items-center justify-center overflow-hidden font-medium ring-offset-background duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 active:[:not(:disabled)&]:scale-95 active:[:not(:disabled)&]:opacity-70",
   {
     variants: {
       variant: {
         default: "bg-primary hover:[:not(:disabled)&]:bg-primary/80",
         destructive:
-          "bg-destructive hover:[:not(:disabled)&]:bg-destructive/90 focus-visible:ring-destructive [&>.ripple]:bg-background/20",
+          "bg-destructive focus-visible:ring-destructive [&>.ripple]:bg-background/20 hover:[:not(:disabled)&]:bg-destructive/90",
         outline:
-          "border border-primary bg-transparent hover:[:not(:disabled)&]:bg-primary focus-visible:bg-primary",
+          "border border-primary bg-transparent focus-visible:bg-primary hover:[:not(:disabled)&]:bg-primary",
         secondary:
-          "bg-secondary hover:[:not(:disabled)&]:bg-secondary/80 focus-visible:ring-ring [&>.ripple]:bg-white/20",
+          "bg-secondary focus-visible:ring-ring [&>.ripple]:bg-white/20 hover:[:not(:disabled)&]:bg-secondary/80",
         ghost:
           "hover:[:not(:disabled)&]:bg-accent hover:[:not(:disabled)&]:text-accent-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 px-3",
-        md: "py-2 px-4",
+        md: "px-4 py-2",
         lg: "p-4",
         xlg: "px-8 py-4",
-        icon: "h-10 w-10",
+        icon: "size-10",
       },
       radius: {
         sm: "rounded-sm",
@@ -61,7 +61,7 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+  readonly asChild?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {

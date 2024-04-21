@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  type MouseEvent,
-  type HTMLAttributes,
-  type ReactNode,
   type FC,
-  useRef,
-  useEffect,
+  type HTMLAttributes,
+  type MouseEvent,
+  type ReactNode,
   forwardRef,
+  useEffect,
+  useRef,
 } from "react";
 import { motion, useMotionTemplate, useSpring } from "framer-motion";
 import Link from "next/link";
@@ -16,9 +16,9 @@ import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 interface CardRootProps extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode;
-  radialColor?: string;
-  radialWidth?: number;
+  readonly children?: ReactNode;
+  readonly radialColor?: string;
+  readonly radialWidth?: number;
 }
 
 const CardRoot: FC<CardRootProps> = ({
@@ -54,7 +54,7 @@ const CardRoot: FC<CardRootProps> = ({
 
   return (
     <div
-      onMouseMove={onMouseMove}
+      onMouseMove={(e) => onMouseMove(e)}
       ref={ref}
       className={cn(
         "group relative h-full overflow-hidden rounded-xl border border-border/60 bg-background/20 duration-700 focus-within:border-ring focus-within:bg-background/10 hover:border-border hover:bg-background/10 md:gap-8",
@@ -80,8 +80,8 @@ const CardRoot: FC<CardRootProps> = ({
 CardRoot.displayName = "Card.Root";
 
 interface CardContainerProps extends HTMLAttributes<HTMLDivElement> {
-  projectUrl: string;
-  children?: ReactNode;
+  readonly projectUrl: string;
+  readonly children?: ReactNode;
 }
 
 const CardContainer: FC<CardContainerProps> = ({
@@ -93,7 +93,7 @@ const CardContainer: FC<CardContainerProps> = ({
   return (
     <div
       className={cn(
-        "relative flex h-full w-full flex-col px-4 py-6 md:p-8",
+        "relative flex size-full flex-col px-4 py-6 md:p-8",
         className,
       )}
       {...props}
@@ -106,7 +106,7 @@ const CardContainer: FC<CardContainerProps> = ({
 CardContainer.displayName = "Card.Container";
 
 interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
-  asChild?: boolean;
+  readonly asChild?: boolean;
 }
 
 const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(

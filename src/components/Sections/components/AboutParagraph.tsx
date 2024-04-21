@@ -1,7 +1,7 @@
 type AboutParagraphProps = {
-  text: string;
-  i: number;
-  contentLength: number;
+  readonly text: string;
+  readonly i: number;
+  readonly contentLength: number;
 };
 
 export function AboutParagraph({

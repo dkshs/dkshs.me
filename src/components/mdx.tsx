@@ -5,11 +5,11 @@ import type {
 } from "react";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { Link } from "./ui/link";
 import NextLink from "next/link";
+import { Link as LinkIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import { Link as LinkIcon } from "lucide-react";
+import { Link } from "./ui/link";
 
 function AnchorLink({
   href,
@@ -32,7 +32,7 @@ function AnchorLink({
 }
 
 interface HeadingLinkedProps extends HTMLAttributes<HTMLHeadingElement> {
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  readonly as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
 function HeadingLinked({
@@ -153,7 +153,7 @@ export const components = {
     />
   ),
   img: ({ className, alt, ...props }: ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element
+    // eslint-disable-next-line nextjs/no-img-element
     <img
       className={cn(
         "my-0 rounded-md border border-border shadow-xl shadow-primary/10",
@@ -219,14 +219,14 @@ export const components = {
 };
 
 interface MdxProps {
-  code: string;
+  readonly code: string;
 }
 
 export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <div className="mdx">
+    <div>
       <Component components={components} />
     </div>
   );

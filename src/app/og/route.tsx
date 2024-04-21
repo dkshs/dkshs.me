@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { ImageResponse } from "next/og";
 import { z } from "zod";
 
@@ -27,7 +28,7 @@ export async function GET(request: Request) {
     return new ImageResponse(
       (
         <div
-          tw="flex w-full h-full flex-col items-center justify-center text-center text-white bg-[#270B5B]"
+          tw="flex size-full flex-col items-center justify-center bg-[#270B5B] text-center text-white"
           style={{
             backgroundImage: "radial-gradient(circle, #270B5B 0%, #000000 95%)",
           }}
@@ -35,7 +36,7 @@ export async function GET(request: Request) {
           <div
             tw={`flex flex-col ${
               isProject ? "pt-52" : "pt-40"
-            } items-center w-full h-full text-white`}
+            } size-full items-center text-white`}
           >
             <h1
               tw={`${
@@ -44,7 +45,7 @@ export async function GET(request: Request) {
             >
               {title}
             </h1>
-            <div tw="max-w-screen-xl mx-auto flex">
+            <div tw="mx-auto flex max-w-screen-xl">
               <p
                 tw={`${
                   isProject ? "text-4xl" : "text-5xl"
@@ -68,9 +69,8 @@ export async function GET(request: Request) {
         ],
       },
     );
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (err: any) {
-    console.log(`${err.message}`);
+  } catch (error: any) {
+    console.error(`${error.message}`);
     return new Response(`Failed to generate the image`, {
       status: 500,
     });

@@ -5,18 +5,17 @@ import type { ContactSectionTypes } from "@/utils/types";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { env } from "@/env.mjs";
-
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { Form, Section } from "./components";
+import { Loader } from "lucide-react";
+import { env } from "@/env.mjs";
+
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { Form, Section } from "./components";
 import { homeAnimation } from "./animationVariants";
-
-import { Loader } from "lucide-react";
 
 interface ContactSectionProps extends ContactSectionTypes {}
 
@@ -59,7 +58,7 @@ export function ContactSection({
       toast.success("Message sent!");
       reset();
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toast.error("Something went wrong!");
     }
   }
@@ -83,7 +82,7 @@ export function ContactSection({
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <Form.Fieldset>
-                <Label className="text-md font-bold" htmlFor="name">
+                <Label className="text-base font-bold" htmlFor="name">
                   Name
                 </Label>
                 <Input
@@ -93,12 +92,12 @@ export function ContactSection({
                   required
                   {...register("name")}
                 />
-                {errors.name && (
+                {errors.name ? (
                   <Form.ErrorMessage error={errors.name.message} />
-                )}
+                ) : null}
               </Form.Fieldset>
               <Form.Fieldset>
-                <Label className="text-md font-bold" htmlFor="email">
+                <Label className="text-base font-bold" htmlFor="email">
                   Email
                 </Label>
                 <Input
@@ -108,12 +107,12 @@ export function ContactSection({
                   required
                   {...register("email")}
                 />
-                {errors.email && (
+                {errors.email ? (
                   <Form.ErrorMessage error={errors.email.message} />
-                )}
+                ) : null}
               </Form.Fieldset>
               <Form.Fieldset>
-                <Label className="text-md font-bold" htmlFor="message">
+                <Label className="text-base font-bold" htmlFor="message">
                   Message
                 </Label>
                 <Textarea
@@ -122,9 +121,9 @@ export function ContactSection({
                   required
                   {...register("message")}
                 />
-                {errors.message && (
+                {errors.message ? (
                   <Form.ErrorMessage error={errors.message.message} />
-                )}
+                ) : null}
               </Form.Fieldset>
               <motion.div
                 variants={homeAnimation.item}

@@ -1,12 +1,12 @@
-import "react-toastify/dist/ReactToastify.min.css";
-import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import "react-toastify/dist/ReactToastify.min.css";
+import "./globals.css";
 import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 
+import { ToastContainer } from "react-toastify";
 import { env } from "@/env.mjs";
 import { data } from "@/data";
-import { ToastContainer } from "react-toastify";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -65,11 +65,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  readonly children: ReactNode;
+}) {
   return (
     <html lang="en" className={merriweatherSans.variable}>
       <body>
-        <div className="fixed inset-0 -z-[1] bg-primary/10 bg-gradient-to-b from-primary/10 to-background/60" />
+        <div className="fixed inset-0 z-[-1] bg-primary/10 bg-gradient-to-b from-primary/10 to-background/60" />
         <ToastContainer
           autoClose={3000}
           limit={3}

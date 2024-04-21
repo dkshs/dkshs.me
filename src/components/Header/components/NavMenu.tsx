@@ -5,13 +5,12 @@ import type { SectionsTypes } from "@/utils/types";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavLink } from ".";
-import { Button } from "@/components/ui/button";
-
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NavLink } from ".";
 
 interface NavMenuProps {
-  sections: SectionsTypes;
+  readonly sections: SectionsTypes;
 }
 
 export function NavMenu({ sections }: NavMenuProps) {
@@ -31,7 +30,7 @@ export function NavMenu({ sections }: NavMenuProps) {
         </Button>
       </Dialog.Trigger>
       <AnimatePresence>
-        {isOpen && (
+        {isOpen ? (
           <Dialog.Portal forceMount>
             <Dialog.Overlay asChild>
               <motion.div
@@ -52,7 +51,7 @@ export function NavMenu({ sections }: NavMenuProps) {
                 }}
                 exit={{ opacity: 0, transform: "translateX(100%)" }}
                 transition={{ duration: 0.5 }}
-                className="h-full w-full bg-primary/20 bg-gradient-to-b from-primary/30 to-background/60 shadow-2xl shadow-background"
+                className="size-full bg-primary/20 bg-gradient-to-b from-primary/30 to-background/60 shadow-2xl shadow-background"
               >
                 <Dialog.Close asChild>
                   <Button
@@ -65,7 +64,7 @@ export function NavMenu({ sections }: NavMenuProps) {
                     <X size={24} />
                   </Button>
                 </Dialog.Close>
-                <ul className="flex h-full w-full flex-col items-center space-y-10 px-2.5 pb-10 pt-28 uppercase">
+                <ul className="flex size-full flex-col items-center space-y-10 px-2.5 pb-10 pt-28 uppercase">
                   {Object.entries(sections).map(([key, value], i) => (
                     <li key={key}>
                       <NavLink
@@ -81,7 +80,7 @@ export function NavMenu({ sections }: NavMenuProps) {
               </motion.div>
             </Dialog.Content>
           </Dialog.Portal>
-        )}
+        ) : null}
       </AnimatePresence>
     </Dialog.Root>
   );

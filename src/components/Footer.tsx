@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 import { data } from "@/data";
 
-import Image from "next/image";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
 
 export function Footer() {
   const social = Object.entries(data.social);

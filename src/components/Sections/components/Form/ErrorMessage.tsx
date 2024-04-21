@@ -2,10 +2,14 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 
-export function ErrorMessage({ error }: { error: string | undefined }) {
+export function ErrorMessage({
+  error,
+}: {
+  readonly error: string | undefined;
+}) {
   return (
     <AnimatePresence mode="wait">
-      {error && (
+      {error ? (
         <motion.span
           key={error}
           initial={{ opacity: 0 }}
@@ -16,7 +20,7 @@ export function ErrorMessage({ error }: { error: string | undefined }) {
         >
           {error}
         </motion.span>
-      )}
+      ) : null}
     </AnimatePresence>
   );
 }

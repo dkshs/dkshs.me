@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { ImageResponse } from "next/og";
 
 // Route segment config
@@ -15,7 +16,7 @@ export default function Icon() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div tw="flex w-full h-full items-center justify-center bg-black rounded-full" />
+      <div tw="flex size-full items-center justify-center rounded-full bg-black" />
     ),
     { ...size },
   );

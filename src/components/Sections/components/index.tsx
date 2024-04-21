@@ -1,6 +1,6 @@
 import { type HTMLAttributes, forwardRef } from "react";
-import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils";
 
 interface SectionRootProps extends HTMLAttributes<HTMLElement> {}
 
@@ -33,7 +33,7 @@ const SectionContainer = forwardRef<HTMLDivElement, SectionContainerProps>(
 SectionContainer.displayName = "Section.Container";
 
 interface SectionTitleProps extends HTMLAttributes<HTMLHeadingElement> {
-  asChild?: boolean;
+  readonly asChild?: boolean;
 }
 
 const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
@@ -43,7 +43,7 @@ const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
     return (
       <Comp
         className={cn(
-          "after:contents-[''] relative mb-10 block text-center text-4xl font-bold tracking-wide after:absolute after:left-1/2 after:top-[calc(100%+1rem)] after:h-[5px] after:w-12 after:-translate-x-1/2 after:rounded-md after:bg-primary",
+          "relative mb-10 block text-center text-4xl font-bold tracking-wide after:absolute after:left-1/2 after:top-[calc(100%+1rem)] after:h-[5px] after:w-12 after:-translate-x-1/2 after:rounded-md after:bg-primary after:content-none",
           className,
         )}
         ref={ref}

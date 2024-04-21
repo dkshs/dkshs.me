@@ -35,10 +35,10 @@ export function createRipple(
       width: ${rippleSize}px;
       height: ${rippleSize}px;
     `;
-  button.appendChild(span);
+  button.append(span);
 
   span.addEventListener("animationend", () => {
-    button.removeChild(span);
+    span.remove();
   });
 
   if (mouseEvent) {

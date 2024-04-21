@@ -9,7 +9,7 @@ import { AboutParagraph, Section } from "./components";
 import { aboutAnimation as animation } from "./animationVariants";
 
 interface AboutSectionProps extends AboutMeSectionTypes {
-  btnSectionId: string;
+  readonly btnSectionId: string;
 }
 
 export function AboutSection({
@@ -50,7 +50,7 @@ export function AboutSection({
               </motion.h3>
               {getToKnowMe.content.map((text, i) => (
                 <motion.div
-                  key={i}
+                  key={text}
                   variants={animation.item}
                   transition={{
                     delay: i === 0 ? 1 : i === 1 ? 1.2 : i * 0.8,
@@ -58,7 +58,6 @@ export function AboutSection({
                   }}
                 >
                   <AboutParagraph
-                    key={i}
                     text={text}
                     i={i}
                     contentLength={getToKnowMe.content.length}
@@ -88,7 +87,7 @@ export function AboutSection({
                     variants={animation.item}
                     transition={{ delay: i * 0.5, duration: 0.5 }}
                     className="mb-4 mr-4 rounded-md bg-secondary/10 px-5 py-2.5"
-                    key={i}
+                    key={skill}
                   >
                     {skill}
                   </motion.div>

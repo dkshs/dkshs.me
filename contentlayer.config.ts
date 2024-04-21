@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
+  type ComputedFields,
   defineDocumentType,
   makeSource,
-  type ComputedFields,
 } from "contentlayer/source-files";
-import { MDX_CODE_THEME } from "./src/data";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import { MDX_CODE_THEME } from "./src/data";
 
 const computedFields: ComputedFields = {
   path: {

@@ -2,8 +2,8 @@
 
 import { type Project, allProjects } from "contentlayer/generated";
 
-import { ProjectCard } from "@/components/ProjectCard";
 import { motion } from "framer-motion";
+import { ProjectCard } from "@/components/ProjectCard";
 import { data } from "@/data";
 
 const projectsContainer = {
@@ -73,10 +73,11 @@ export default function ProjectsPage() {
                 transition={{ duration: 0.5 }}
                 className="h-fit"
               >
-                <ProjectCard hFit {...project} />
+                <ProjectCard shouldAddHFit {...project} />
               </motion.div>
             ))}
         </div>
+        <a href="/">Home</a>
         <div className="grid h-fit grid-cols-1 gap-4">
           {projects
             .filter((_, i) => i % 2 === 1)
@@ -87,7 +88,7 @@ export default function ProjectsPage() {
                 transition={{ duration: 0.5 }}
                 className="h-fit"
               >
-                <ProjectCard hFit {...project} />
+                <ProjectCard shouldAddHFit {...project} />
               </motion.div>
             ))}
         </div>

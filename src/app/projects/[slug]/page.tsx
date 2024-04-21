@@ -1,20 +1,19 @@
-import "./mdx.css";
 import type { Metadata, ResolvingMetadata } from "next";
+import "./mdx.css";
 
 import { allProjects } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
+import NextLink from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Mdx } from "@/components/mdx";
 import { Link } from "@/components/ui/link";
-import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
-
-import { ArrowUpRight } from "lucide-react";
 
 export const revalidate = 60;
 
 type Props = {
-  params: { user: string; slug: string };
+  readonly params: { user: string; slug: string };
 };
 
 export function generateStaticParams() {
@@ -60,7 +59,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default function ProjectPage({ params }: Props) {
   const project = allProjects.find((project) => project.slug === params.slug);
   if (!project) {
     return notFound();
@@ -88,7 +87,7 @@ export default async function ProjectPage({ params }: Props) {
               className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
           </Link>
-          {project.demoUrl && (
+          {project.demoUrl ? (
             <Link
               href={project.demoUrl}
               target="_blank"
@@ -101,7 +100,7 @@ export default async function ProjectPage({ params }: Props) {
                 className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
             </Link>
-          )}
+          ) : null}
         </div>
         <div className="mt-16 h-px w-full bg-border" />
         <div className="prose prose-invert prose-quoteless mx-auto px-4 pb-28 pt-6 sm:pt-10">

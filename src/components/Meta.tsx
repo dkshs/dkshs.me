@@ -2,23 +2,23 @@ import type { FC, PropsWithChildren } from "react";
 import Head from "next/head";
 
 export interface MetaProps {
-  title?: string;
-  path: string;
-  baseUrl?: string;
-  description?: string;
-  siteName?: string;
-  manifest?: string;
-  image?: {
+  readonly title?: string;
+  readonly path: string;
+  readonly baseUrl?: string;
+  readonly description?: string;
+  readonly siteName?: string;
+  readonly manifest?: string;
+  readonly image?: {
     src: string;
     alt: string;
     isExternalImage?: boolean;
   };
-  type?: string;
-  updatedAt?: string;
-  index?: boolean;
-  follow?: boolean;
-  locale?: string;
-  twitter?: string;
+  readonly type?: string;
+  readonly updatedAt?: string;
+  readonly index?: boolean;
+  readonly follow?: boolean;
+  readonly locale?: string;
+  readonly twitter?: string;
 }
 
 /**
@@ -51,8 +51,8 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
     <Head>
       {/* SEO */}
       <title>{titleSiteName}</title>
-      <meta name="title" content={titleSiteName}></meta>
-      {description && <meta name="description" content={description} />}
+      <meta name="title" content={titleSiteName} />
+      {description ? <meta name="description" content={description} /> : null}
       <meta name="robots" content={`${indexString}, ${followString}`} />
       <link rel="canonical" href={canonicalUrl} />
       <link rel="manifest" href={manifest} />
@@ -63,19 +63,21 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:locale" content={locale} />
-      {description && <meta property="og:description" content={description} />}
-      {image && <meta property="og:image" content={imgUrl} />}
-      {image && <meta property="og:image:alt" content={image.alt} />}
-      {updatedAt && <meta property="og:updated" content={updatedAt} />}
+      {description ? (
+        <meta property="og:description" content={description} />
+      ) : null}
+      {image ? <meta property="og:image" content={imgUrl} /> : null}
+      {image ? <meta property="og:image:alt" content={image.alt} /> : null}
+      {updatedAt ? <meta property="og:updated" content={updatedAt} /> : null}
 
       {/* Twitter */}
-      {twitter && <meta name="twitter:site" content={`@${twitter}`} />}
-      {twitter && <meta name="twitter:creator" content={`@${twitter}`} />}
+      {twitter ? <meta name="twitter:site" content={`@${twitter}`} /> : null}
+      {twitter ? <meta name="twitter:creator" content={`@${twitter}`} /> : null}
       <meta property="twitter:url" content={canonicalUrl} />
       <meta property="twitter:title" content={titleSiteName} />
       <meta property="twitter:description" content={description} />
-      {image && <meta name="twitter:image" content={imgUrl} />}
-      {image && <meta name="twitter:image:alt" content={image.alt} />}
+      {image ? <meta name="twitter:image" content={imgUrl} /> : null}
+      {image ? <meta name="twitter:image:alt" content={image.alt} /> : null}
       <meta
         name="twitter:card"
         content={image ? "summary_large_image" : "summary"}
