@@ -23,7 +23,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@t3-oss/env-nextjs": "^0.10.1",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
     "framer-motion": "^11.1.7",
     "lucide-react": "^0.372.0",
