@@ -85,8 +85,8 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@dkshs/eslint-config':
-        specifier: 2.3.0
-        version: 2.3.0(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.5)
+        specifier: 2.3.2
+        version: 2.3.2(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.5)
       '@tailwindcss/typography':
         specifier: ^0.5.12
         version: 0.5.12(tailwindcss@3.4.3)
@@ -247,8 +247,8 @@ packages:
       '@effect-ts/otel-node':
         optional: true
 
-  '@dkshs/eslint-config@2.3.0':
-    resolution: {integrity: sha512-V2ToFiuM2Mps0q5WrKc0hgVDP3uOWxu+abcVBp+Tk8a0zp3ngz0IOwLW9xQGSS8m9mbQclSwuxmdQis9w3eXVQ==}
+  '@dkshs/eslint-config@2.3.2':
+    resolution: {integrity: sha512-8cM42cglBJdNANOdOP/YMZhtfBbZzLlCbMyofz07kfZeWrQ+BHGTa3cS0xx++VKZvcLw5YDRm1MNNDq5WyUWtw==}
     peerDependencies:
       eslint: '>=8.40.0'
 
@@ -3317,6 +3317,7 @@ packages:
   semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
     engines: {node: '>=10'}
+    hasBin: true
 
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
@@ -4041,7 +4042,7 @@ snapshots:
       ts-pattern: 4.3.0
       type-fest: 3.13.1
 
-  '@dkshs/eslint-config@2.3.0(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.5)':
+  '@dkshs/eslint-config@2.3.2(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.3)(typescript@5.4.5)':
     dependencies:
       '@next/eslint-plugin-next': 14.2.2
       eslint: 8.57.0
