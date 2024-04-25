@@ -1,5 +1,5 @@
-import type { Metadata, ResolvingMetadata } from "next";
 import "./mdx.css";
+import type { Metadata, ResolvingMetadata } from "next";
 
 import { allProjects } from "contentlayer/generated";
 import { notFound } from "next/navigation";
