@@ -45,7 +45,7 @@ export const data = {
       id: "projects",
       title: "Projects",
       description: "Here you will find some of the personal projects I created",
-      tops: ["dkcutter", "dkshs.me", "dkblog", "cookiecutter-django"],
+      tops: ["dkshs.me", "dkcutter", "dkblog", "cookiecutter-django"],
       content: {},
     },
     contact: {
