@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/enforces-shorthand */
 /* eslint-disable react/no-unknown-property */
 import { ImageResponse } from "next/og";
 import { z } from "zod";
@@ -28,7 +29,7 @@ export async function GET(request: Request) {
     return new ImageResponse(
       (
         <div
-          tw="flex size-full flex-col items-center justify-center bg-[#270B5B] text-center text-white"
+          tw="flex h-full w-full flex-col items-center justify-center bg-[#270B5B] text-center text-white"
           style={{
             backgroundImage: "radial-gradient(circle, #270B5B 0%, #000000 95%)",
           }}
@@ -36,7 +37,7 @@ export async function GET(request: Request) {
           <div
             tw={`flex flex-col ${
               isProject ? "pt-52" : "pt-40"
-            } size-full items-center text-white`}
+            } h-full w-full items-center text-white`}
           >
             <h1
               tw={`${

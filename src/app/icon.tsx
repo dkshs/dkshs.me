@@ -1,8 +1,6 @@
+/* eslint-disable tailwindcss/enforces-shorthand */
 /* eslint-disable react/no-unknown-property */
 import { ImageResponse } from "next/og";
-
-// Route segment config
-export const runtime = "edge";
 
 // Image metadata
 export const size = {
@@ -16,7 +14,7 @@ export default function Icon() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div tw="flex size-full items-center justify-center rounded-full bg-black" />
+      <div tw="flex h-full w-full items-center justify-center rounded-full bg-black" />
     ),
     { ...size },
   );

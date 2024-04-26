@@ -8,7 +8,6 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import NextLink from "next/link";
 import { Link as LinkIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 import { Link } from "./ui/link";
 
 function AnchorLink({

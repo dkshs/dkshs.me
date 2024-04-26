@@ -77,7 +77,6 @@ export default function ProjectsPage() {
               </motion.div>
             ))}
         </div>
-        <a href="/">Home</a>
         <div className="grid h-fit grid-cols-1 gap-4">
           {projects
             .filter((_, i) => i % 2 === 1)
