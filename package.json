@@ -2,7 +2,7 @@
   "name": "dkshs.me",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@9.1.2",
+  "packageManager": "pnpm@9.1.3",
   "description": "Bridge to my projects.",
   "author": "DKSHS",
   "license": "MIT",
