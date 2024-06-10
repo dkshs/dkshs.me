@@ -36,8 +36,8 @@ importers:
         specifier: ^11.2.10
         version: 11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
-        specifier: ^0.390.0
-        version: 0.390.0(react@18.3.1)
+        specifier: ^0.391.0
+        version: 0.391.0(react@18.3.1)
       markdown-wasm:
         specifier: ^1.2.0
         version: 1.2.0
@@ -2587,8 +2587,8 @@ packages:
     resolution: {integrity: sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==}
     engines: {node: 14 || >=16.14}
 
-  lucide-react@0.390.0:
-    resolution: {integrity: sha512-APqbfEcVuHnZbiy3E97gYWLeBdkE4e6NbY6AuVETZDZVn/bQCHYUoHyxcUHyvRopfPOHhFUEvDyyQzHwM+S9/w==}
+  lucide-react@0.391.0:
+    resolution: {integrity: sha512-cj0/2Gy4tBeemAeiU5ny5KeYZulQskCGaMA8SEfBYkJBoOKbwCV9GOXPaxJG0KomwNB3bClcZgoS3BKYy6R/0w==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
 
@@ -6661,7 +6661,7 @@ snapshots:
 
   lru-cache@10.2.0: {}
 
-  lucide-react@0.390.0(react@18.3.1):
+  lucide-react@0.391.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
