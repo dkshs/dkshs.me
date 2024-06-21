@@ -85,8 +85,8 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@dkshs/eslint-config':
-        specifier: 2.6.1
-        version: 2.6.1(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.4)(typescript@5.5.2)
+        specifier: 2.7.0
+        version: 2.7.0(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.4)(typescript@5.5.2)
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.4)
@@ -246,8 +246,8 @@ packages:
       '@effect-ts/otel-node':
         optional: true
 
-  '@dkshs/eslint-config@2.6.1':
-    resolution: {integrity: sha512-CJtndA3RX3kEDjOi5NkGa3vX5RbslAGwJzeVCK1FsMHy75JmcAH5z4wfndw5nsdGJm5PjufB29sdVeX5VAETRA==}
+  '@dkshs/eslint-config@2.7.0':
+    resolution: {integrity: sha512-c57W/ttxUWOG8vpFotLSlo8tkVZd7Eu2x2nN6byWI/zjD0PltUbFTtnFvrOXUeTZQ7rrroSnfpJzIw+Qlbv4uA==}
     peerDependencies:
       eslint: '>=8.40.0'
 
@@ -4089,7 +4089,7 @@ snapshots:
       ts-pattern: 4.3.0
       type-fest: 3.13.1
 
-  '@dkshs/eslint-config@2.6.1(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.4)(typescript@5.5.2)':
+  '@dkshs/eslint-config@2.7.0(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.4)(typescript@5.5.2)':
     dependencies:
       '@next/eslint-plugin-next': 14.2.4
       eslint: 8.57.0
