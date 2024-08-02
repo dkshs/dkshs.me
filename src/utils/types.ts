@@ -1,11 +1,11 @@
 import type { Project } from "contentlayer/generated";
-import { data } from "@/data";
+import type { data } from "@/data";
 
-const { sections } = data;
+type Sections = typeof data.sections;
 
-export type HomeSectionTypes = typeof sections.home;
-export type AboutMeSectionTypes = typeof sections.about;
-export type ProjectsSectionTypes = typeof sections.projects;
-export type ContactSectionTypes = typeof sections.contact;
-export type SectionsTypes = typeof sections;
+export type HomeSectionTypes = Sections["home"];
+export type AboutMeSectionTypes = Sections["about"];
+export type ProjectsSectionTypes = Sections["projects"];
+export type ContactSectionTypes = Sections["contact"];
+export type SectionsTypes = Sections;
 export type ProjectType = Project;
