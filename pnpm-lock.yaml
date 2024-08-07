@@ -88,8 +88,8 @@ importers:
         specifier: 2.8.3
         version: 2.8.3(@types/eslint@8.56.11)(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(tailwindcss@3.4.8)(typescript@5.5.4)
       '@tailwindcss/typography':
-        specifier: ^0.5.13
-        version: 0.5.13(tailwindcss@3.4.8)
+        specifier: ^0.5.14
+        version: 0.5.14(tailwindcss@3.4.8)
       '@types/node':
         specifier: ^22.1.0
         version: 22.1.0
@@ -938,8 +938,8 @@ packages:
       typescript:
         optional: true
 
-  '@tailwindcss/typography@0.5.13':
-    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
+  '@tailwindcss/typography@0.5.14':
+    resolution: {integrity: sha512-ZvOCjUbsJBjL9CxQBn+VEnFpouzuKhxh2dH8xMIWHILL+HfOYtlAkWcyoon8LlzE53d2Yo6YO6pahKKNW3q1YQ==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
@@ -4800,7 +4800,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
-  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.8)':
+  '@tailwindcss/typography@0.5.14(tailwindcss@3.4.8)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
