@@ -69,7 +69,7 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       shiki:
-        specifier: ^1.14.0
+        specifier: ^1.14.1
         version: 1.14.1
       tailwind-merge:
         specifier: ^2.5.2
