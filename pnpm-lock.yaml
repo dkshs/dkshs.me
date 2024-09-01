@@ -61,7 +61,7 @@ importers:
         version: 10.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rehype-pretty-code:
         specifier: ^0.14.0
-        version: 0.14.0(shiki@1.15.2)
+        version: 0.14.0(shiki@1.16.0)
       rehype-slug:
         specifier: ^6.0.0
         version: 6.0.0
@@ -69,8 +69,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       shiki:
-        specifier: ^1.15.2
-        version: 1.15.2
+        specifier: ^1.16.0
+        version: 1.16.0
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.5.2
@@ -934,8 +934,11 @@ packages:
       '@types/react':
         optional: true
 
-  '@shikijs/core@1.15.2':
-    resolution: {integrity: sha512-hi6XZuwHYn6bU4wtXZxST8ynM55aiU2+rVU9aPIrSxqKmEKl4d65puwGsggwcZWTET+7zGXKe7AUj46iQ8Aq8w==}
+  '@shikijs/core@1.16.0':
+    resolution: {integrity: sha512-7Uy6nAWNdYY8GKVIgsdC1+JK1kMvA7gy3fl0gz0BGbsTrT1ve8VFUz+x3SkW9yWq0XhqjkunITFG6sCCWXbTOA==}
+
+  '@shikijs/vscode-textmate@9.1.1':
+    resolution: {integrity: sha512-K/Xw/+uLXHtEp9bwTRbcwSB05du8J0k+O/n8nU7Z+J84BS9C+x6dWRUh3q2Pn8F19p+wPV1GU1xWSSimHlk9nA==}
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -3431,8 +3434,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.15.2:
-    resolution: {integrity: sha512-M+7QZQZiZw/cZeizrC/yryG3eeG8pTUhu7ZaHxVyzPNFIRIlN46YBciquoNPCiXiwLnx6JB62f3lSuSYQrus1w==}
+  shiki@1.16.0:
+    resolution: {integrity: sha512-GZGG99Ft3wwuO2cAHExfPEtL5p+iQSDqGPhXako6kjW/dYyFikZi+6eKggZ8554wQatpADkwA+lUOlfl76KBng==}
 
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
@@ -4773,9 +4776,12 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.5
 
-  '@shikijs/core@1.15.2':
+  '@shikijs/core@1.16.0':
     dependencies:
+      '@shikijs/vscode-textmate': 9.1.1
       '@types/hast': 3.0.4
+
+  '@shikijs/vscode-textmate@9.1.1': {}
 
   '@swc/counter@0.1.3': {}
 
@@ -7829,13 +7835,13 @@ snapshots:
       hast-util-from-html: 2.0.1
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.0(shiki@1.15.2):
+  rehype-pretty-code@0.14.0(shiki@1.16.0):
     dependencies:
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.0
       parse-numeric-range: 1.3.0
       rehype-parse: 9.0.0
-      shiki: 1.15.2
+      shiki: 1.16.0
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
@@ -7995,9 +8001,10 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.15.2:
+  shiki@1.16.0:
     dependencies:
-      '@shikijs/core': 1.15.2
+      '@shikijs/core': 1.16.0
+      '@shikijs/vscode-textmate': 9.1.1
       '@types/hast': 3.0.4
 
   side-channel@1.0.6:
