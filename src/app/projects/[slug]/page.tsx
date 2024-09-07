@@ -2,13 +2,12 @@ import "./mdx.css";
 import type { Metadata, ResolvingMetadata } from "next";
 
 import { allProjects } from "contentlayer/generated";
-import { notFound } from "next/navigation";
-
-import NextLink from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import NextLink from "next/link";
+import { notFound } from "next/navigation";
 import { Mdx } from "@/components/mdx";
-import { Link } from "@/components/ui/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/components/ui/link";
 
 export const revalidate = 60;
 

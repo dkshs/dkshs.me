@@ -4,19 +4,18 @@
 import type { ContactSectionTypes } from "@/utils/types";
 
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { toast } from "react-toastify";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { Loader } from "lucide-react";
+import { z } from "zod";
 import { env } from "@/env.mjs";
-
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { Form, Section } from "./components";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
+import { Textarea } from "../ui/textarea";
 import { homeAnimation } from "./animationVariants";
+import { Form, Section } from "./components";
 
 interface ContactSectionProps extends ContactSectionTypes {}
 

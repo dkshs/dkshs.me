@@ -5,8 +5,8 @@ import type { HomeSectionTypes } from "@/utils/types";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
-import { Section } from "./components";
 import { homeAnimation } from "./animationVariants";
+import { Section } from "./components";
 
 interface HomeSectionProps extends HomeSectionTypes {
   readonly btnSectionId: string;

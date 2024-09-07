@@ -4,12 +4,12 @@ import type { ProjectsSectionTypes } from "@/utils/types";
 
 import { type Project, allProjects } from "contentlayer/generated";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { ProjectCard } from "../ProjectCard";
 import { Button } from "../ui/button";
-import { Section } from "./components";
 import { projectsAnimation } from "./animationVariants";
+import { Section } from "./components";
 
 export function ProjectsSection({
   title,

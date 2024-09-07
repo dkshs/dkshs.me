@@ -1,14 +1,14 @@
-import "react-toastify/dist/ReactToastify.min.css";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.min.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 
 import { ToastContainer } from "react-toastify";
-import { env } from "@/env.mjs";
-import { data } from "@/data";
-import { Header } from "@/components/Header";
+import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { data } from "@/data";
+import { env } from "@/env.mjs";
 
 const merriweatherSans = MerriweatherSans({
   subsets: ["latin"],

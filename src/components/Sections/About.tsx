@@ -5,8 +5,8 @@ import type { AboutMeSectionTypes } from "@/utils/types";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
-import { AboutParagraph, Section } from "./components";
 import { aboutAnimation as animation } from "./animationVariants";
+import { AboutParagraph, Section } from "./components";
 
 interface AboutSectionProps extends AboutMeSectionTypes {
   readonly btnSectionId: string;

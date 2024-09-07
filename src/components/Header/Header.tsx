@@ -1,11 +1,11 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { data } from "@/data";
-import { NavLink, NavMenu } from "./components";
 import { animation } from "./animationVariants";
+import { NavLink, NavMenu } from "./components";
 
 export function Header() {
   const { name, github, sections } = data;
