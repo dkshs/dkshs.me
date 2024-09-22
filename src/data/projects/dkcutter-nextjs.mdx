@@ -50,10 +50,12 @@ Answer the prompts with your own desired [options][options-url]. For example:
 ✔ What is the project version? … 0.1.0
 ✔ Do you want to use linters? … No / Yes
 ✔ Do you want to use husky? … No / Yes
+✔ Do you want to use Commitlint? … No / Yes
 ✔ Do you want to use Next.Js app folder? … No / Yes
-✔ What database ORM would you like to use? › Prisma
-✔ Do you want to use Docker compose for the database? … No / Yes
-✔ Do you want to use T3 Env? … No / Yes
+✔ What database ORM would you like to use? › None
+✔ What Authentication Provider would you like to use? › None
+✔ What Automated Dependency Updater do you want to use? › None
+✔ Do you want the project to be configured? … No / Yes
 ✔ Project created!
 ```
 
@@ -77,7 +79,6 @@ If you want to start faster, you can use the following options:
 | `--description <string>`          | The Project description.                                                                         |
 | `--authorName <string>`           | The author name.                                                                                 |
 | `--projectVersion <string>`       | The project version.                                                                             |
-| `--useLinters [boolean]`          | Include linters in the project. Such as ESLint and Prettier.                                     |
 | `--useHusky [boolean]`            | Include [husky](https://github.com/typicode/husky) in the project.                               |
 | `--useLintStaged [boolean]`       | Include [lint-staged](https://github.com/lint-staged/lint-staged) in the project.                |
 | `--useCommitlint [boolean]`       | Include [commitlint](https://commitlint.js.org/#/) in the project.                               |
@@ -86,7 +87,6 @@ If you want to start faster, you can use the following options:
 | `--useDockerCompose [boolean]`    | Include docker compose in the project for the database. If `database` is different from `none`.  |
 | `--authProvider <string>`         | Choose a authentication provider. [See for more info][options-url].                              |
 | `--clerkWebhook [boolean]`        | Includes an endpoint to receive events from the [Clerk](https://clerk.com/).                     |
-| `--useEnvValidator [boolean]`     | Include [T3-env](https://github.com/t3-oss/t3-env) validator in the project.                     |
 | `--automatedDepsUpdater <string>` | Choose Automated Dependency Updater. [See for more info][options-url].                           |
 | `--automaticStart [boolean]`      | This option will install the application packages, start a git repo and make the initial commit. |
 
@@ -94,10 +94,10 @@ If you want to start faster, you can use the following options:
 
 ### Example
 
-The following would be the structure of an application with T3-env:
+The following would be the structure of an application with [Commitlint](https://commitlint.js.org/):
 
 ```bash
-pnpm dlx dkcutter https://github.com/dkshs/dkcutter-nextjs.git --useEnvValidator
+pnpm dlx dkcutter https://github.com/dkshs/dkcutter-nextjs.git --useCommitlint
 ```
 
 If you want to use all the default values with the exception of one or more, you can do it as follows:
