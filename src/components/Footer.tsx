@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { data } from "@/data";
 import { Button } from "./ui/button";
@@ -16,25 +13,22 @@ export function Footer() {
             <h2 className="text-xl font-bold uppercase leading-5">Social</h2>
             <div className="mt-5 flex space-x-1.5">
               {social.map(([key, value]) => (
-                <Button
-                  key={key}
-                  size="icon"
-                  variant="outline"
-                  className="active:scale-100"
-                  asChild
-                >
-                  <motion.a
-                    whileHover={{ transform: "translateY(-2px)" }}
-                    whileTap={{ transform: "translateY(2px)" }}
-                    transition={{ duration: 0.2 }}
+                <Button key={key} size="icon" variant="outline" asChild>
+                  <a
                     title={key}
                     href={value.url}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={key}
                   >
-                    <Image src={value.icon} alt={key} width={24} height={24} />
-                  </motion.a>
+                    <Image
+                      src={value.icon}
+                      alt={key}
+                      width={24}
+                      height={24}
+                      className="size-6"
+                    />
+                  </a>
                 </Button>
               ))}
             </div>

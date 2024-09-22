@@ -3,8 +3,8 @@ const TWITTER_USER = "DK_ShSs";
 
 const social = {
   twitter: {
-    icon: "/icons/twitter-ico.png", // files in the `/public` folder
-    url: `https://twitter.com/${TWITTER_USER}`,
+    icon: "/icons/x-logo.png", // files in the `/public` folder
+    url: `https://x.com/${TWITTER_USER}`,
   },
   github: {
     icon: "/icons/github-ico.png", // files in the `/public` folder
