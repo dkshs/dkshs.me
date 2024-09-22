@@ -8,7 +8,7 @@ import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { data } from "@/data";
-import { env } from "@/env.mjs";
+import { env } from "@/env";
 
 const merriweatherSans = MerriweatherSans({
   subsets: ["latin"],

@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import type { ReactNode } from "react";
 
 import { data } from "@/data";
-import { env } from "@/env.mjs";
+import { env } from "@/env";
 
 export async function generateMetadata(
   _: unknown,

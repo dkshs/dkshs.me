@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { Loader } from "lucide-react";
 import { z } from "zod";
-import { env } from "@/env.mjs";
+import { env } from "@/env";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
