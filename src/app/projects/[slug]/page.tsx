@@ -12,7 +12,7 @@ import { Link } from "@/components/ui/link";
 export const revalidate = 60;
 
 type Props = {
-  readonly params: { user: string; slug: string };
+  readonly params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -22,12 +22,13 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  { params }: Props,
+  props: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
+  const params = await props.params;
   const project = allProjects.find((project) => project.slug === params.slug);
   if (!project) {
-    return notFound();
+    notFound();
   }
 
   const baseUrl = (await parent).metadataBase?.toString().slice(0, -1);
@@ -58,10 +59,11 @@ export async function generateMetadata(
   };
 }
 
-export default function ProjectPage({ params }: Props) {
+export default async function ProjectPage(props: Props) {
+  const params = await props.params;
   const project = allProjects.find((project) => project.slug === params.slug);
   if (!project) {
-    return notFound();
+    notFound();
   }
 
   return (
