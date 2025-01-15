@@ -57,8 +57,8 @@ importers:
         specifier: ^7.54.2
         version: 7.54.2(react@19.0.0)
       react-toastify:
-        specifier: ^11.0.2
-        version: 11.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^11.0.3
+        version: 11.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       rehype-pretty-code:
         specifier: ^0.14.0
         version: 0.14.0(shiki@1.27.2)
@@ -3464,8 +3464,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-toastify@11.0.2:
-    resolution: {integrity: sha512-GjHuGaiXMvbls3ywqv8XdWONwrcO4DXCJIY1zVLkHU73gEElKvTTXNI5Vom3s/k/M8hnkrfsqgBSX3OwmlonbA==}
+  react-toastify@11.0.3:
+    resolution: {integrity: sha512-cbPtHJPfc0sGqVwozBwaTrTu1ogB9+BLLjd4dDXd863qYLj7DGrQ2sg5RAChjFUB4yc3w8iXOtWcJqPK/6xqRQ==}
     peerDependencies:
       react: ^18 || ^19
       react-dom: ^18 || ^19
@@ -8281,7 +8281,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.7
 
-  react-toastify@11.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-toastify@11.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       clsx: 2.1.1
       react: 19.0.0
