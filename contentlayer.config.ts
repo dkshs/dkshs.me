@@ -29,7 +29,7 @@ export const Project = defineDocumentType(() => ({
     title: { type: "string", required: true },
     description: { type: "string", required: true },
     githubUrl: { type: "string", required: true },
-    demoUrl: { type: "string" },
+    siteUrl: { type: "string" },
     image: { type: "string" },
   },
   computedFields,

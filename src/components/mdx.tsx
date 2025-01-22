@@ -172,7 +172,7 @@ export const components = {
   tr: ({ className, ...props }: HTMLAttributes<HTMLTableRowElement>) => (
     <tr
       className={cn(
-        "border-b border-border duration-200 even:bg-primary/10 focus-within:bg-primary/30 hover:bg-primary/20",
+        "border-b border-border duration-200 even:bg-primary/5 focus-within:bg-primary/30 hover:bg-primary/20",
         className,
       )}
       {...props}
@@ -181,7 +181,7 @@ export const components = {
   th: ({ className, ...props }: HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        "h-12 border px-4 text-left align-middle font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "h-12 border p-4 text-left align-middle font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         className,
       )}
       {...props}

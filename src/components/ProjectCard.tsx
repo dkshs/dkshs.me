@@ -12,7 +12,7 @@ export function ProjectCard({
   title,
   description,
   githubUrl,
-  demoUrl,
+  siteUrl,
   path,
   shouldAddHFit,
 }: ProjectCardProps) {
@@ -34,15 +34,15 @@ export function ProjectCard({
               <Github size={20} />
             </a>
           </Button>
-          {demoUrl ? (
+          {siteUrl ? (
             <Button className="z-20 flex items-center space-x-1" asChild>
               <a
-                href={demoUrl}
+                href={siteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/demo"
               >
-                <span>Demo</span>
+                <span>Site</span>
                 <ArrowUpRight
                   size={20}
                   className="duration-300 group-hover/demo:-translate-y-0.5 group-hover/demo:translate-x-0.5"
