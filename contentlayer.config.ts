@@ -2,7 +2,7 @@ import {
   type ComputedFields,
   defineDocumentType,
   makeSource,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
@@ -40,26 +40,6 @@ export default makeSource({
   documentTypes: [Project],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        // @ts-ignore - incorrect typing
-        rehypePrettyCode,
-        {
-          theme: MDX_CODE_THEME,
-          onVisitLine(node: any) {
-            if (node.children.length === 0) {
-              node.children = [{ type: "text", value: " " }];
-            }
-          },
-          onVisitHighlightedLine(node: any) {
-            node.properties.className = ["line--highlighted"];
-          },
-          onVisitHighlightedWord(node: any) {
-            node.properties.className = ["word--highlighted"];
-          },
-        },
-      ],
-    ],
+    rehypePlugins: [rehypeSlug, [rehypePrettyCode, { theme: MDX_CODE_THEME }]],
   },
 });
