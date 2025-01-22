@@ -88,9 +88,9 @@ export default async function ProjectPage(props: Props) {
               className="duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
           </Link>
-          {project.demoUrl ? (
+          {project.siteUrl ? (
             <Link
-              href={project.demoUrl}
+              href={project.siteUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center space-x-2"
