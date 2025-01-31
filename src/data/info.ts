@@ -1,5 +1,5 @@
 const GITHUB = "https://github.com/dkshs";
-const TWITTER_USER = "DK_ShSs";
+const TWITTER_USER = "dkshs_";
 
 const social = {
   twitter: {
