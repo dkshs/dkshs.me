@@ -35,7 +35,7 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
     "react-toastify": "^11.0.5",
-    "shiki": "^2.5.0",
+    "shiki": "^3.2.1",
     "tailwind-merge": "^2.6.0",
     "zod": "^3.24.2"
   },
@@ -58,6 +58,11 @@
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "rehype-pretty-code": "patches/rehype-pretty-code.patch"
+    }
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
