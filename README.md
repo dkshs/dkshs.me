@@ -4,6 +4,12 @@
 
 My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and deployed to [Vercel](https://vercel.com/).
 
+## Technologies used
+
+- [Next.Js](https://nextjs.org/)
+- [TailwindCSS V3](https://v3.tailwindcss.com/)
+- [Contentlayer 2](https://github.com/timlrx/contentlayer2)
+
 ## Install and run the project
 
 ### Global Dependencies
@@ -25,7 +31,7 @@ git clone https://github.com/dkshs/dkshs.me.git
 So after getting the repository, don't forget to install the project's local dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Environment variables
@@ -33,7 +39,7 @@ npm install
 Create a `.env` file similar to [`.env.example`](./.env.example).
 
 - The required variable is the url to the [formspree](https://formspree.io/) form.
-- There are also variables for the site's SEO used in the [`next.config.js`](./next.config.js) files and the [`Meta.tsx`](./src/components/Meta.tsx) component.
+- There are also variables for the site's SEO, see [`env.js`](./src/env.js) and [`layout.tsx`](./src/app/layout.tsx).
 
 ```env
 NEXT_PUBLIC_FORM_SEND_URL="https://formspree.io/f/<your_id>"
@@ -44,7 +50,7 @@ NEXT_PUBLIC_FORM_SEND_URL="https://formspree.io/f/<your_id>"
 # and are located in the `next.config.js` and `Meta.tsx` component
 SITE_NAME=YOUR_SITE_NAME
 SITE_LOCALE=en_US
-SITE_BASEURL=http://localhost:3000 # in PROD put the URL of your project
+SITE_BASEURL=http://localhost:3000
 ```
 
 ### Run the project
@@ -52,7 +58,7 @@ SITE_BASEURL=http://localhost:3000 # in PROD put the URL of your project
 To run the project locally, just run the command below:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 - go to <http://localhost:3000> to see the application.
