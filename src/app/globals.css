@@ -31,7 +31,7 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-primary/40;
+    @apply border-border selection:bg-secondary/20;
   }
   html {
     color-scheme: dark;
