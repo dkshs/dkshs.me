@@ -78,7 +78,7 @@ export function ContactSection({
           <motion.div
             variants={homeAnimation.container}
             transition={{ duration: 0.5 }}
-            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md border bg-primary/0 bg-gradient-to-b from-primary/5 to-background/60 p-6 shadow-xl shadow-primary/10 md:p-10"
+            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md border border-border/60 p-6 shadow-xl shadow-primary/10 md:p-10"
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <Form.Fieldset>
