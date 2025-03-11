@@ -34,9 +34,7 @@ export function Footer() {
             </div>
           </div>
           <div className="w-full max-w-3xl md:order-1 md:w-1/2">
-            <h2 className="text-xl font-bold uppercase leading-5">
-              {data.name}
-            </h2>
+            <h2 className="text-xl font-bold leading-5">{data.name}</h2>
             <p className="mt-5 text-base text-foreground/80">
               {data.description}
             </p>
