@@ -1,36 +1,50 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es5",
+    // Compilation and Target Settings
+    "incremental": false,
+    "target": "ES2022",
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+
+    // Library Definitions
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+
+    // Module Resolution and Detection
+    "moduleDetection": "force",
     "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    // Path Aliases
     "paths": {
       "@/*": ["./src/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
+
+    // JavaScript and Strictness
     "resolveJsonModule": true,
     "allowJs": true,
+    "checkJs": true,
     "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Output and Interoperability
     "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+
+    // Custom Plugins
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    ".next/types/**/*.ts",
     ".contentlayer/generated",
-    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
