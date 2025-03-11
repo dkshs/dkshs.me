@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  rehype-pretty-code:
+    hash: dc2c93f8147e4a2837932e1345f704380da507ee82399057daecb77e6051a961
+    path: patches/rehype-pretty-code.patch
+
 importers:
 
   .:
@@ -107,7 +112,7 @@ importers:
         version: 8.5.3
       rehype-pretty-code:
         specifier: ^0.14.0
-        version: 0.14.0(shiki@3.2.1)
+        version: 0.14.0(patch_hash=dc2c93f8147e4a2837932e1345f704380da507ee82399057daecb77e6051a961)(shiki@3.2.1)
       rehype-slug:
         specifier: ^6.0.0
         version: 6.0.0
@@ -7883,7 +7888,7 @@ snapshots:
       hast-util-from-html: 2.0.3
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.0(shiki@3.2.1):
+  rehype-pretty-code@0.14.0(patch_hash=dc2c93f8147e4a2837932e1345f704380da507ee82399057daecb77e6051a961)(shiki@3.2.1):
     dependencies:
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.1

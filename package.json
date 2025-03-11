@@ -59,6 +59,11 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
   },
+  "pnpm": {
+    "patchedDependencies": {
+      "rehype-pretty-code": "patches/rehype-pretty-code.patch"
+    }
+  },
   "lint-staged": {
     "*": "pnpm lint:fix"
   }
