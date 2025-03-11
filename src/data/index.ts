@@ -1,12 +1,14 @@
 import { info } from "./info";
 
-const name = "DKSHS";
+const name = "Nicolas Contiero";
+const username = "DKSHS";
 const description =
   "A Web Developer who creates websites and applications with a focus on Frontend and a bit of Backend.";
 export const MDX_CODE_THEME = "rose-pine"; // Theme used by `Rehype Pretty Code`. More themes: https://shiki.style/themes#bundled-themes
 
 export const data = {
   name,
+  username,
   description,
   github: info.github,
   twitter: info.twitter,
@@ -15,7 +17,7 @@ export const data = {
   sections: {
     home: {
       id: "home",
-      title: "Hey, I'm DKSHS",
+      title: "Hey, I'm Nicolas",
       description,
       btnSectionId: "projects",
       content: {},

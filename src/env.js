@@ -13,7 +13,7 @@ export const env = createEnv({
       .default("development"),
 
     // these variables are used for the site's SEO
-    SITE_NAME: z.string().default("DKSHS"),
+    SITE_NAME: z.string().default("Nicolas Contiero"),
     SITE_LOCALE: z.string().default("en_US"),
     // URLs
     SITE_BASEURL: z.string().url().default("http://localhost:3000"),

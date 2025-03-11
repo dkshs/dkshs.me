@@ -8,7 +8,7 @@ import { animation } from "./animationVariants";
 import { NavLink, NavMenu } from "./components";
 
 export function Header() {
-  const { name, github, sections } = data;
+  const { name, username, github, sections } = data;
 
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-border/60 bg-secondary/10 backdrop-blur-md md:h-[72px]">
@@ -32,7 +32,7 @@ export function Header() {
               />
             </div>
             <span className="pr-1 text-xl font-bold uppercase duration-200 group-hover:text-primary-light">
-              {name}
+              {username}
             </span>
           </Link>
         </motion.div>
