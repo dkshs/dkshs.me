@@ -34,7 +34,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        merriweatherSans: "var(--font-merriweather-sans)",
+        merriweatherSans: [
+          "var(--font-merriweather-sans)",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       colors: {
         border: "hsl(var(--border))",

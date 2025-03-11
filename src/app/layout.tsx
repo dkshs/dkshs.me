@@ -70,20 +70,14 @@ export default function RootLayout({
   readonly children: ReactNode;
 }) {
   return (
-    <html lang="en" className={merriweatherSans.variable}>
-      <body>
-        <div className="fixed inset-0 z-[-1] bg-primary/10 bg-gradient-to-b from-primary/10 to-background/60" />
+    <html lang="en" suppressHydrationWarning>
+      <body className={merriweatherSans.variable}>
         <ToastContainer
           autoClose={3000}
           limit={3}
           theme="dark"
-          style={{ zIndex: 99999 }}
-          toastStyle={{
-            backdropFilter: "blur(5px)",
-            backgroundColor: "hsl(var(--background)/0.5)",
-            fontWeight: "500",
-            fontFamily: merriweatherSans.style.fontFamily,
-          }}
+          className="z-[99999] bg-background font-merriweatherSans text-foreground"
+          toastClassName="bg-background font-merriweatherSans font-medium text-foreground backdrop-blur-sm"
           closeOnClick
           stacked
         />

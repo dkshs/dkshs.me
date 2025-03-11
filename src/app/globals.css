@@ -35,10 +35,10 @@
   }
   html {
     color-scheme: dark;
-    scroll-behavior: smooth;
+    @apply scroll-smooth antialiased;
   }
   body {
-    @apply relative min-h-screen bg-background font-merriweatherSans text-foreground antialiased;
+    @apply relative min-h-screen bg-background font-merriweatherSans text-foreground;
   }
   .ripple {
     @apply pointer-events-none absolute animate-ripple rounded-full;
