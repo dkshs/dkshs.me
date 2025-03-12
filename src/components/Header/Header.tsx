@@ -8,7 +8,7 @@ import { animation } from "./animationVariants";
 import { NavLink, NavMenu } from "./components";
 
 export function Header() {
-  const { name, username, github, sections } = data;
+  const { name, sections } = data;
 
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-border/60 bg-secondary/10 backdrop-blur-md md:h-[72px]">
@@ -21,18 +21,19 @@ export function Header() {
         >
           <Link
             href="/"
-            className="group flex items-center space-x-2 rounded-full ring-2 ring-transparent duration-200 focus:outline-none focus:ring-ring active:opacity-70 md:px-3"
+            className="group flex items-center space-x-2 rounded-full ring-ring duration-200 focus:outline-none focus:ring-2 active:opacity-70 md:pr-3"
           >
             <div className="relative size-10 md:size-[50px]">
               <Image
-                src={`${github}.png`}
+                src="/icon"
                 alt={`${name} Image`}
                 className="rounded-full border"
                 fill
+                quality={100}
               />
             </div>
-            <span className="pr-1 text-xl font-bold uppercase duration-200 group-hover:text-primary-light">
-              {username}
+            <span className="pr-1 text-xl font-bold duration-200 group-hover:text-primary-light">
+              {name.split(" ")[0]}
             </span>
           </Link>
         </motion.div>
