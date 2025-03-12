@@ -17,7 +17,7 @@ export function ProjectCard({
   shouldAddHFit,
 }: ProjectCardProps) {
   return (
-    <Card.Root className={shouldAddHFit ? "h-fit" : ""}>
+    <Card.Root className={shouldAddHFit ? "h-fit" : ""} radialWidth={512}>
       <Card.Container projectUrl={path}>
         <div className="h-1/2 w-full">
           <Card.Title>{title}</Card.Title>
