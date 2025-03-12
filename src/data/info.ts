@@ -22,6 +22,7 @@ const skills = [
   "Django",
   "GIT",
   "Github",
+  "Docker",
 ];
 
 export const info = {

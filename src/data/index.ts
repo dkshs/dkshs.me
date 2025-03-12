@@ -1,14 +1,12 @@
 import { info } from "./info";
 
 const name = "Nicolas Contiero";
-const username = "DKSHS";
 const description =
-  "A Web Developer who creates websites and applications with a focus on Frontend and a bit of Backend.";
+  "Full-Stack Web Developer passionate about transforming ideas into innovative digital experiences. Experience in React, Node.js, and Python.";
 export const MDX_CODE_THEME = "rose-pine"; // Theme used by `Rehype Pretty Code`. More themes: https://shiki.style/themes#bundled-themes
 
 export const data = {
   name,
-  username,
   description,
   github: info.github,
   twitter: info.twitter,
@@ -32,9 +30,9 @@ export const data = {
         getToKnowMe: {
           title: "Get to know me!",
           content: [
-            "I’m a web developer who masters frontend technologies such as HTML, CSS and JavaScript. Check out some of my work in the Projects section.",
-            "I also have experience with backend, using the Python language. I can use it to create dynamic and secure websites that connect to databases and APIs.",
-            "I like to create websites and applications that are functional, responsive and attractive to users. I enjoy solving problems and finding creative solutions to web development challenges. I always try to update myself on the news and trends of the web market.",
+            "I'm a web developer with experience in frontend technologies like React, HTML, CSS, and JavaScript. Check out some of my work in the Projects section.",
+            "I have experience with backend development, using Python and Django to create robust and scalable applications.",
+            "I like to create websites and applications that are functional, responsive and attractive to users. I enjoy solving problems and finding creative solutions to web development challenges. I always strive to stay updated on the latest news and trends in the web market.",
           ],
         },
         mySkills: {
