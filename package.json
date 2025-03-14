@@ -28,7 +28,7 @@
     "clsx": "^2.1.1",
     "contentlayer2": "^0.5.4",
     "framer-motion": "^12.5.0",
-    "lucide-react": "^0.479.0",
+    "lucide-react": "^0.480.0",
     "next": "15.2.2",
     "next-contentlayer2": "^0.5.4",
     "react": "^19.0.0",
@@ -54,16 +54,11 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "postcss": "^8.5.3",
-    "rehype-pretty-code": "^0.14.0",
+    "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "rehype-pretty-code": "patches/rehype-pretty-code.patch"
-    }
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
