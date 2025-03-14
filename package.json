@@ -14,6 +14,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "pre-commit": "lint-staged"
