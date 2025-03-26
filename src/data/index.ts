@@ -2,8 +2,9 @@ import { info } from "./info";
 
 const name = "Nicolas Contiero";
 const description =
-  "Full-Stack Web Developer passionate about transforming ideas into innovative digital experiences. Experience in React, Node.js, and Python.";
-export const MDX_CODE_THEME = "rose-pine"; // Theme used by `Rehype Pretty Code`. More themes: https://shiki.style/themes#bundled-themes
+  "Full-Stack Web Developer dedicated to transforming ideas into innovative digital experiences. With expertise in React, Next.js, Node.js, TypeScript, Python, and Django, I build complete and robust web solutions from front-end to back-end.";
+
+export const MDX_CODE_THEME = "rose-pine";
 
 export const data = {
   name,
@@ -24,15 +25,16 @@ export const data = {
       id: "about",
       title: "About Me",
       description:
-        "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology",
+        "Here you will find more information about me, what I do, and my current skills, mostly in programming and technology.",
       btnSectionId: "contact",
       content: {
         getToKnowMe: {
           title: "Get to know me!",
           content: [
-            "I'm a web developer with experience in frontend technologies like React, HTML, CSS, and JavaScript. Check out some of my work in the Projects section.",
-            "I have experience with backend development, using Python and Django to create robust and scalable applications.",
-            "I like to create websites and applications that are functional, responsive and attractive to users. I enjoy solving problems and finding creative solutions to web development challenges. I always strive to stay updated on the latest news and trends in the web market.",
+            "I'm a web developer with experience in front-end technologies like React, Next.js, HTML5, CSS3, and JavaScript. Explore some of my work in the Projects section.",
+            "I have experience in back-end development, using Node.js, TypeScript, Python, and Django to create robust and scalable applications.",
+            "I enjoy creating functional, responsive, and user-friendly websites and applications. I like to solve problems and find creative solutions to web development challenges. I always strive to stay updated on the latest news and trends in the web market.",
+            "I am a results-oriented developer, passionate about learning new technologies and applying them to my projects to create efficient solutions.",
           ],
         },
         mySkills: {
@@ -44,7 +46,8 @@ export const data = {
     projects: {
       id: "projects",
       title: "Projects",
-      description: "Here you will find some of the personal projects I created",
+      description:
+        "Here you will find some of the personal projects I created.",
       tops: ["dkshs.me", "dkcutter", "dkblog", "eslint-config"],
       content: {},
     },
@@ -52,7 +55,7 @@ export const data = {
       id: "contact",
       title: "Contact",
       description:
-        "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible",
+        "Feel free to contact me by submitting the form below and I will get back to you as soon as possible.",
       content: {},
     },
   },
