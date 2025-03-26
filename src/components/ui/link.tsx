@@ -9,7 +9,7 @@ const linkVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-primary-link",
+        default: "text-primary",
         destructive:
           "text-destructive hover:text-destructive/90 focus-visible:ring-destructive",
         ghost:

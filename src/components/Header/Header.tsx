@@ -21,18 +21,18 @@ export function Header() {
         >
           <Link
             href="/"
-            className="group flex items-center space-x-2 rounded-full ring-ring duration-200 focus:outline-none focus:ring-2 active:opacity-70 md:pr-3"
+            className="group flex items-center space-x-2 rounded-full underline-offset-4 ring-ring duration-300 hover:underline hover:brightness-200 focus-visible:outline-none focus-visible:ring-2 active:opacity-70 md:pr-3"
           >
             <div className="relative size-10 md:size-[50px]">
               <Image
                 src="/icon"
                 alt={`${name} Image`}
-                className="rounded-full border"
+                className="rounded-full border-2"
                 fill
                 quality={100}
               />
             </div>
-            <span className="pr-1 text-xl font-bold duration-200 group-hover:text-primary-light">
+            <span className="pr-1 text-xl font-bold duration-200">
               {name.split(" ")[0]}
             </span>
           </Link>

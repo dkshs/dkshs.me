@@ -48,8 +48,6 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          light: "hsl(var(--primary-light))",
-          link: "hsl(var(--primary-link))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

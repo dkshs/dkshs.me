@@ -29,7 +29,11 @@ export function NavMenu({ sections }: NavMenuProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="border-border/60 bg-background/80 shadow-xl shadow-secondary/10 backdrop-blur-md md:w-48">
         {Object.entries(sections).map(([key, value], i) => (
-          <DropdownMenuItem key={key} asChild className="p-2 text-base">
+          <DropdownMenuItem
+            key={key}
+            asChild
+            className="p-2 text-base capitalize"
+          >
             <Link href={i === 0 ? "/" : `/#${value.id}`}>{value.id}</Link>
           </DropdownMenuItem>
         ))}
