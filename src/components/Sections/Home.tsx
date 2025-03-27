@@ -1,10 +1,7 @@
-"use client";
-
 import type { HomeSectionTypes } from "@/utils/types";
-
-import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
+import { MotionDiv } from "../motion/div";
 import { homeAnimation } from "./animationVariants";
 import { Section } from "./components";
 
@@ -18,15 +15,15 @@ export function HomeSection({
   btnSectionId,
 }: HomeSectionProps) {
   return (
-    <Section.Root className="relative h-screen xl:py-20">
-      <motion.div
+    <Section.Root className="relative h-screen">
+      <MotionDiv
         variants={homeAnimation.container}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5 }}
       >
         <Section.Container>
-          <motion.div
+          <MotionDiv
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
           >
@@ -36,8 +33,8 @@ export function HomeSection({
             >
               <h1>{title}</h1>
             </Section.Title>
-          </motion.div>
-          <motion.div
+          </MotionDiv>
+          <MotionDiv
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
             className="mx-auto mt-10 max-w-4xl"
@@ -45,8 +42,8 @@ export function HomeSection({
             <Section.Description className="mb-0 text-center text-xl tracking-wide text-inherit">
               {description}
             </Section.Description>
-          </motion.div>
-          <motion.div
+          </MotionDiv>
+          <MotionDiv
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}
             className="mt-14 text-center md:mt-16"
@@ -54,9 +51,9 @@ export function HomeSection({
             <Button size="xlg" asChild className="capitalize">
               <NextLink href={`#${btnSectionId}`}>{btnSectionId}</NextLink>
             </Button>
-          </motion.div>
+          </MotionDiv>
         </Section.Container>
-      </motion.div>
+      </MotionDiv>
     </Section.Root>
   );
 }

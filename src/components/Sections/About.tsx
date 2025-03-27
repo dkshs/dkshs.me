@@ -1,10 +1,8 @@
-"use client";
-
 import type { AboutMeSectionTypes } from "@/utils/types";
-
-import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Button } from "@/components/ui/button";
+import { MotionDiv } from "../motion/div";
+import { MotionH3 } from "../motion/h3";
 import { aboutAnimation as animation } from "./animationVariants";
 import { AboutParagraph, Section } from "./components";
 
@@ -23,7 +21,7 @@ export function AboutSection({
 
   return (
     <Section.Root id={id}>
-      <motion.div
+      <MotionDiv
         variants={animation.container}
         initial="hidden"
         whileInView="visible"
@@ -33,7 +31,7 @@ export function AboutSection({
         <Section.Container>
           <Section.Title>{title}</Section.Title>
           <Section.Description>{description}</Section.Description>
-          <motion.div
+          <MotionDiv
             variants={animation.content}
             initial="hidden"
             whileInView="visible"
@@ -41,15 +39,15 @@ export function AboutSection({
             className="grid gap-14 mdlg:grid-cols-2 mdlg:gap-40"
           >
             <div>
-              <motion.h3
+              <MotionH3
                 variants={animation.item}
                 transition={{ delay: 0.8, duration: 0.5 }}
                 className="mb-8 text-2xl font-bold tracking-wide"
               >
                 {getToKnowMe.title}
-              </motion.h3>
+              </MotionH3>
               {getToKnowMe.content.map((text, i) => (
-                <motion.div
+                <MotionDiv
                   key={text}
                   variants={animation.item}
                   transition={{
@@ -62,41 +60,41 @@ export function AboutSection({
                     i={i}
                     contentLength={getToKnowMe.content.length}
                   />
-                </motion.div>
+                </MotionDiv>
               ))}
-              <motion.div
+              <MotionDiv
                 variants={animation.item}
                 transition={{ delay: 2, duration: 0.5 }}
               >
                 <Button size="xlg" asChild className="capitalize">
                   <NextLink href={`#${btnSectionId}`}>{btnSectionId}</NextLink>
                 </Button>
-              </motion.div>
+              </MotionDiv>
             </div>
             <div>
-              <motion.h3
+              <MotionH3
                 variants={animation.item}
                 transition={{ delay: 0.8, duration: 0.5 }}
                 className="mb-8 text-2xl font-bold tracking-wide"
               >
                 {mySkills.title}
-              </motion.h3>
+              </MotionH3>
               <div className="flex flex-wrap">
                 {mySkills.content.map((skill, i) => (
-                  <motion.div
+                  <MotionDiv
                     variants={animation.item}
                     transition={{ delay: i * 0.5, duration: 0.5 }}
                     className="mb-4 mr-4 rounded-md bg-secondary/10 px-5 py-2.5 duration-200 hover:bg-secondary/15"
                     key={skill}
                   >
                     {skill}
-                  </motion.div>
+                  </MotionDiv>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </MotionDiv>
         </Section.Container>
-      </motion.div>
+      </MotionDiv>
     </Section.Root>
   );
 }

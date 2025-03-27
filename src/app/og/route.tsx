@@ -1,4 +1,3 @@
-/* eslint-disable node/no-unsupported-features/node-builtins */
 /* eslint-disable tailwindcss/enforces-shorthand */
 /* eslint-disable react/no-unknown-property */
 import { ImageResponse } from "next/og";

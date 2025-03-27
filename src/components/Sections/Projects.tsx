@@ -1,11 +1,8 @@
-"use client";
-
 import type { ProjectsSectionTypes } from "@/utils/types";
-
 import { type Project, allProjects } from "contentlayer/generated";
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { MotionDiv } from "../motion/div";
 import { ProjectCard } from "../ProjectCard";
 import { Button } from "../ui/button";
 import { projectsAnimation } from "./animationVariants";
@@ -23,7 +20,7 @@ export function ProjectsSection({
 
   return (
     <Section.Root id={id}>
-      <motion.div
+      <MotionDiv
         variants={projectsAnimation.container}
         initial="hidden"
         whileInView="visible"
@@ -35,16 +32,16 @@ export function ProjectsSection({
           <Section.Description>{description}</Section.Description>
           <div className="grid gap-6 px-2 md:px-10 mdlg:grid-cols-2 mdlg:px-0">
             {projects.map((project) => (
-              <motion.div
+              <MotionDiv
                 key={project._id}
                 variants={projectsAnimation.item}
                 transition={{ duration: 0.5 }}
               >
                 <ProjectCard {...project} />
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
-          <motion.div
+          <MotionDiv
             variants={projectsAnimation.item}
             transition={{ duration: 0.5 }}
             className="mt-10 flex items-center justify-center"
@@ -61,9 +58,9 @@ export function ProjectsSection({
                 />
               </Link>
             </Button>
-          </motion.div>
+          </MotionDiv>
         </Section.Container>
-      </motion.div>
+      </MotionDiv>
     </Section.Root>
   );
 }

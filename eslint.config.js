@@ -6,4 +6,12 @@ export default dkshs({
       classRegex: "^(class(Name)?|tw)$",
     },
   },
+  javascript: {
+    overrides: {
+      "node/no-unsupported-features/node-builtins": [
+        "error",
+        { allowExperimental: true },
+      ],
+    },
+  },
 });

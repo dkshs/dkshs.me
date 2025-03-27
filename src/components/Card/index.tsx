@@ -145,9 +145,4 @@ const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
 );
 CardDescription.displayName = "Card.Description";
 
-export const Card = {
-  Root: CardRoot,
-  Container: CardContainer,
-  Title: CardTitle,
-  Description: CardDescription,
-};
+export { CardContainer, CardDescription, CardRoot, CardTitle };

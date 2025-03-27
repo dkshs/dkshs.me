@@ -12,6 +12,9 @@ export const env = createEnv({
       .enum(["development", "test", "production"])
       .default("development"),
 
+    // Formspree
+    FORM_SEND_URL: z.string().url(),
+
     // these variables are used for the site's SEO
     SITE_NAME: z.string().default("Nicolas Contiero"),
     SITE_LOCALE: z.string().default("en_US"),
@@ -23,12 +26,12 @@ export const env = createEnv({
    * isn't built with invalid env vars. To expose them to the client, prefix them with
    * `NEXT_PUBLIC_`.
    */
-  client: {
-    NEXT_PUBLIC_FORM_SEND_URL: z.string().url(),
-  },
+  client: {},
   runtimeEnv: {
     // Node
     NODE_ENV: process.env.NODE_ENV,
+    // Formspree
+    FORM_SEND_URL: process.env.FORM_SEND_URL,
     // SEO
     SITE_NAME: process.env.SITE_NAME,
     SITE_LOCALE: process.env.SITE_LOCALE,
@@ -36,7 +39,6 @@ export const env = createEnv({
 
     // Client
     // ----------------------------
-    NEXT_PUBLIC_FORM_SEND_URL: process.env.NEXT_PUBLIC_FORM_SEND_URL,
   },
   skipValidation: !!process.env.CI || !!process.env.SKIP_ENV_VALIDATION,
   /**

@@ -62,6 +62,9 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "lint-staged": {
     "*": "pnpm lint:fix"
   }
