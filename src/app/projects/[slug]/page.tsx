@@ -104,7 +104,7 @@ export default async function ProjectPage(props: Props) {
           ) : null}
         </div>
         <div className="mt-16 h-px w-full bg-border" />
-        <div className="prose prose-invert prose-quoteless mx-auto px-4 pb-28 pt-6 sm:pt-10">
+        <div className="prose prose-quoteless mx-auto px-4 pb-28 pt-6 dark:prose-invert sm:pt-10">
           <Mdx code={project.body.code} />
         </div>
         <div className="my-10 flex justify-center gap-2">

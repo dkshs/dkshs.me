@@ -4,7 +4,7 @@ const name = "Nicolas Contiero";
 const description =
   "Full-Stack Web Developer dedicated to transforming ideas into innovative digital experiences. With expertise in React, Next.js, Node.js, TypeScript, Python, and Django, I build complete and robust web solutions from front-end to back-end.";
 
-export const MDX_CODE_THEME = "rose-pine";
+export const MDX_CODE_THEME = "dracula";
 
 export const data = {
   name,

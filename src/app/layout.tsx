@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-
 import { ToastContainer } from "react-toastify";
+import { ThemeProvider } from "next-themes";
 import { Merriweather_Sans as MerriweatherSans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -72,18 +72,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={merriweatherSans.variable}>
-        <ToastContainer
-          autoClose={3000}
-          limit={3}
-          theme="dark"
-          className="z-[99999] bg-background font-merriweatherSans text-foreground"
-          toastClassName="bg-background font-merriweatherSans font-medium text-foreground backdrop-blur-sm"
-          closeOnClick
-          stacked
-        />
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class">
+          <ToastContainer
+            autoClose={3000}
+            limit={3}
+            theme="dark"
+            className="z-[99999] bg-background font-merriweatherSans text-foreground"
+            toastClassName="bg-background font-merriweatherSans font-medium text-foreground backdrop-blur-sm"
+            closeOnClick
+            stacked
+          />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

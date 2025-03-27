@@ -23,7 +23,7 @@ interface CardRootProps extends HTMLAttributes<HTMLDivElement> {
 
 const CardRoot: FC<CardRootProps> = ({
   className,
-  radialColor = "hsl(var(--primary)/0.4)",
+  radialColor = "hsl(var(--primary)/0.5)",
   radialWidth = 240,
   children,
   ...props
@@ -57,19 +57,19 @@ const CardRoot: FC<CardRootProps> = ({
       onMouseMove={(e) => onMouseMove(e)}
       ref={ref}
       className={cn(
-        "group relative h-full overflow-hidden rounded-xl border border-border/40 bg-background/40 duration-700 focus-within:border-ring focus-within:bg-background/10 hover:border-ring/60 hover:bg-background/10 md:gap-8",
+        "group relative h-full overflow-hidden rounded-xl border border-border/60 bg-background/40 duration-700 focus-within:border-ring focus-within:bg-background/10 hover:border-ring/60 hover:bg-background/10 dark:border-border/40 md:gap-8",
         className,
       )}
       {...props}
     >
       <div className="pointer-events-none">
-        <div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
+        <div className="absolute inset-0 z-0 duration-1000 [mask-image:linear-gradient(black,transparent)]" />
         <motion.div
-          className="absolute inset-0 z-10 bg-gradient-to-br via-primary/30 opacity-70 transition duration-1000 group-hover:opacity-50"
+          className="absolute inset-0 z-10 bg-gradient-to-br via-primary/30 opacity-70 duration-1000 group-hover:opacity-60 dark:opacity-50 dark:group-hover:opacity-40"
           style={style}
         />
         <motion.div
-          className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
+          className="absolute inset-0 z-10 opacity-0 mix-blend-overlay duration-1000 group-hover:opacity-100"
           style={style}
         />
       </div>

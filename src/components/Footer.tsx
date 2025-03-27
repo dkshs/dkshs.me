@@ -26,7 +26,7 @@ export function Footer() {
                       alt={key}
                       width={24}
                       height={24}
-                      className="size-6"
+                      className="size-6 rounded-full bg-foreground dark:bg-transparent"
                     />
                   </a>
                 </Button>

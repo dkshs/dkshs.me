@@ -6,6 +6,7 @@ import Link from "next/link";
 import { data } from "@/data";
 import { animation } from "./animationVariants";
 import { NavLink, NavMenu } from "./components";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const { name, sections } = data;
@@ -39,7 +40,7 @@ export function Header() {
         </motion.div>
         <div className="flex items-center">
           <motion.ul
-            className="hidden space-x-2 uppercase md:flex"
+            className="hidden items-center space-x-2 uppercase md:flex"
             variants={animation.list}
             initial="hidden"
             animate="visible"
@@ -56,6 +57,9 @@ export function Header() {
                 </NavLink>
               </motion.li>
             ))}
+            <motion.li variants={animation.item} transition={{ duration: 0.6 }}>
+              <ThemeToggle />
+            </motion.li>
           </motion.ul>
           <NavMenu sections={sections} />
         </div>

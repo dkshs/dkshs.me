@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.tsx",
     "./src/data/projects/**/*.mdx",
   ],
+  darkMode: ["class"],
   theme: {
     container: {
       center: true,

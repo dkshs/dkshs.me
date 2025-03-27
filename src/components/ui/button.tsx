@@ -11,11 +11,12 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary/50 hover:[:not(:disabled)&]:bg-primary/80",
+        default:
+          "bg-primary/80 text-primary-foreground dark:bg-primary/60 hover:[:not(:disabled)&]:bg-primary",
         destructive:
           "bg-destructive focus-visible:ring-destructive [&>.ripple]:bg-background/20 hover:[:not(:disabled)&]:bg-destructive/90",
         outline:
-          "border border-primary/80 bg-transparent focus-visible:bg-primary/80 hover:[:not(:disabled)&]:bg-primary/80",
+          "border border-primary/80 bg-transparent hover:text-primary-foreground focus-visible:bg-primary/80 focus-visible:text-primary-foreground hover:[:not(:disabled)&]:bg-primary/80",
         secondary:
           "bg-secondary focus-visible:ring-ring [&>.ripple]:bg-white/20 hover:[:not(:disabled)&]:bg-secondary/80",
         ghost:

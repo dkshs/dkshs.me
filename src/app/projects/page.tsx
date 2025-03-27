@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         <motion.p
           variants={projectsItem}
           transition={{ duration: 0.5 }}
-          className="mt-4 text-zinc-300"
+          className="mt-4 text-foreground/70"
         >
           Here you will find some of the personal projects I created.
         </motion.p>
