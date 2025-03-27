@@ -18,14 +18,14 @@ export function HomeSection({
   btnSectionId,
 }: HomeSectionProps) {
   return (
-    <Section.Root className="relative h-screen">
+    <Section.Root className="relative h-screen xl:py-20">
       <motion.div
         variants={homeAnimation.container}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5 }}
       >
-        <Section.Container className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2">
+        <Section.Container>
           <motion.div
             variants={homeAnimation.item}
             transition={{ duration: 0.5 }}

@@ -17,17 +17,11 @@ export function NavMenu({ sections }: NavMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          type="button"
-          className="mr-2 flex items-center gap-2 p-2 md:hidden"
-          size="icon"
-          variant="ghost"
-          radius="full"
-        >
+        <Button type="button" size="icon" variant="ghost" radius="full">
           <Menu size={24} />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="border-border/60 bg-background/80 shadow-xl shadow-secondary/10 backdrop-blur-md md:w-48">
+      <DropdownMenuContent className="border-border/60 bg-background/60 shadow-xl shadow-secondary/10 backdrop-blur-md dark:bg-background/80 md:w-48">
         {Object.entries(sections).map(([key, value], i) => (
           <DropdownMenuItem
             key={key}

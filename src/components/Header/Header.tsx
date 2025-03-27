@@ -12,7 +12,7 @@ export function Header() {
   const { name, sections } = data;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[9999] h-16 border-b border-border/60 bg-secondary/10 backdrop-blur-md md:h-[72px]">
+    <header className="sticky inset-x-0 top-0 z-[9999] h-16 border-b border-border/60 bg-secondary/10 backdrop-blur-md md:h-[72px]">
       <nav className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
         <motion.div
           variants={animation.item}
@@ -61,7 +61,10 @@ export function Header() {
               <ThemeToggle />
             </motion.li>
           </motion.ul>
-          <NavMenu sections={sections} />
+          <div className="flex items-center gap-2 md:hidden">
+            <NavMenu sections={sections} />
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
     </header>
