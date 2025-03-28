@@ -47,7 +47,26 @@ export function useFormState<T extends ZodType>(props: UseFormStateProps<T>) {
         return;
       }
 
-      const state = await props.action(data);
+      let state: FormState<T> | null = null;
+      try {
+        state = await props.action(data);
+      } catch (error) {
+        if (error instanceof Error) {
+          state = {
+            success: false,
+            message: error.message,
+            errors: null,
+            data: null,
+          };
+        } else {
+          state = {
+            success: false,
+            message: "An unknown error occurred",
+            errors: null,
+            data: null,
+          };
+        }
+      }
 
       if (state.success && props.onSuccess) {
         props.onSuccess(state.message);

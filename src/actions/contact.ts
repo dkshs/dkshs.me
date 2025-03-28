@@ -18,12 +18,7 @@ export async function contactAction(
   });
 
   if (!res.ok) {
-    return {
-      success: false,
-      message: "Something went wrong. Please try again later.",
-      errors: null,
-      data: null,
-    };
+    throw new Error("Something went wrong. Please try again later.");
   }
 
   return {
