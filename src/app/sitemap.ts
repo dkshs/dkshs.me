@@ -17,9 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2025-03-31",
       priority: 0.8,
     },
-    ...allProjects.map((project) => ({
-      url: toUrl(`/projects/${project.slug}/`),
-      lastModified: project.lastModified,
-    })),
+    ...allProjects
+      .sort((a, b) => b.lastModified.localeCompare(a.lastModified))
+      .map((project) => ({
+        url: toUrl(`/projects/${project.slug}/`),
+        lastModified: project.lastModified,
+      })),
   ];
 }
