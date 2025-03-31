@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  manifest: `${env.SITE_BASEURL}/manifest.json`,
   robots: {
     index: true,
     follow: true,
