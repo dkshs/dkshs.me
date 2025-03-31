@@ -67,7 +67,7 @@ export default async function ProjectPage(props: Props) {
   }
 
   return (
-    <div className="min-h-screen pt-24 md:pt-28 lg:pt-32">
+    <div className="min-h-screen pt-16">
       <div className="relative mx-auto max-w-5xl">
         <div className="flex flex-col items-center px-6 text-center lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>

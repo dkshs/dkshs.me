@@ -1,4 +1,4 @@
-# [dkshs.me](https://dkshs.me)
+# [ncontiero.com](https://ncontiero.com)
 
 [![license mit](https://img.shields.io/badge/licence-MIT-6C47FF)](LICENSE)
 
@@ -23,7 +23,7 @@ Do you use `nvm`? Then you can run `nvm install` in the project folder to instal
 ### Get the repository
 
 ```bash
-git clone https://github.com/dkshs/dkshs.me.git
+git clone https://github.com/dkshs/ncontiero.com.git
 ```
 
 ### Local Dependencies
