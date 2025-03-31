@@ -74,6 +74,17 @@ export default async function ProjectPage(props: Props) {
           <p className="mt-4 leading-8 text-foreground/80">
             {project.description}
           </p>
+          <time
+            dateTime={project.lastModified}
+            className="mt-2 text-sm text-foreground/60"
+          >
+            Last updated:{" "}
+            {Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }).format(new Date(project.lastModified))}
+          </time>
         </div>
         <div className="mt-10 flex justify-center space-x-3">
           <Link

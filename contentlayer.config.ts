@@ -31,6 +31,7 @@ export const Project = defineDocumentType(() => ({
     githubUrl: { type: "string", required: true },
     siteUrl: { type: "string" },
     image: { type: "string" },
+    lastModified: { type: "string", required: true },
   },
   computedFields,
 }));

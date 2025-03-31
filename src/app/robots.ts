@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { env } from "@/env";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
+    sitemap: new URL("sitemap.xml", env.SITE_BASEURL).toString(),
   };
 }

@@ -10,6 +10,7 @@ const nextConfig = {
     webpackBuildWorker: true,
     turbo: {},
   },
+  trailingSlash: true,
 };
 
 export default withContentlayer(nextConfig);
