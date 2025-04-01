@@ -32,7 +32,7 @@ export function Header() {
             className="group flex items-center space-x-2 rounded-full underline-offset-4 ring-ring duration-300 hover:underline hover:brightness-200 focus-visible:outline-none focus-visible:ring-2 active:opacity-70 md:pr-3"
           >
             <Image
-              src="/icon"
+              src="/icon/"
               alt={`${name} Image`}
               className="size-[52px] rounded-full border-2"
               width={52}
