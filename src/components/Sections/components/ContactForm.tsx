@@ -16,7 +16,7 @@ import { Form } from ".";
 import { homeAnimation } from "../animationVariants";
 
 export function ContactForm() {
-  const form = useForm<ContactSchema>({
+  const form = useForm({
     resolver: zodResolver(contactSchema),
   });
 
