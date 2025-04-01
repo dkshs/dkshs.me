@@ -1,4 +1,4 @@
-const GITHUB = "https://github.com/dkshs";
+const GITHUB = "https://github.com/ncontiero";
 const TWITTER_USER = "dkshs_";
 
 const social = {

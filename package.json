@@ -5,7 +5,7 @@
   "private": true,
   "packageManager": "pnpm@10.7.0",
   "description": "Bridge to my projects.",
-  "author": "DKSHS",
+  "author": "Nicolas Contiero <https://github.com/ncontiero>",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently --kill-others --names \"contentlayer,next\" -c \"magenta,black\" \"contentlayer2 dev\" \"next dev --turbopack\"",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@dkshs/eslint-config": "4.6.0",
+    "@ncontiero/eslint-config": "5.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.12",
