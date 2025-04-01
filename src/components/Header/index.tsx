@@ -74,7 +74,13 @@ export function Header() {
           <div className="flex items-center gap-2 md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button type="button" size="icon" variant="ghost" radius="full">
+                <Button
+                  type="button"
+                  size="icon"
+                  variant="ghost"
+                  radius="full"
+                  aria-label="Toggle navigation menu"
+                >
                   <Menu size={24} />
                 </Button>
               </DropdownMenuTrigger>

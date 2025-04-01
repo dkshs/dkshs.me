@@ -98,7 +98,11 @@ const CardContainer: FC<CardContainerProps> = ({
       )}
       {...props}
     >
-      <Link href={projectUrl} className="absolute inset-0 z-10" />
+      <Link
+        href={projectUrl}
+        className="absolute inset-0 z-10"
+        aria-label="View project"
+      />
       {children}
     </div>
   );
