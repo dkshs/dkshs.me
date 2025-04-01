@@ -26,7 +26,7 @@ export function ContactSection({
           <MotionDiv
             variants={homeAnimation.container}
             transition={{ duration: 0.5 }}
-            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md border border-border/60 p-6 shadow-xl shadow-primary/10 md:p-10"
+            className="mx-auto w-full max-w-4xl overflow-hidden rounded-md border border-border/60 bg-background/25 p-6 shadow-xl shadow-primary/10 md:p-10"
           >
             <ContactForm />
           </MotionDiv>

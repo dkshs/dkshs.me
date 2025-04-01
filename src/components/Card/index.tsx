@@ -57,7 +57,7 @@ const CardRoot: FC<CardRootProps> = ({
       onMouseMove={(e) => onMouseMove(e)}
       ref={ref}
       className={cn(
-        "group relative h-full overflow-hidden rounded-xl border border-border/60 bg-background/40 duration-700 focus-within:border-ring focus-within:bg-background/10 hover:border-ring/60 hover:bg-background/10 dark:border-border/40 md:gap-8",
+        "group relative h-full overflow-hidden rounded-xl border border-border/60 bg-background/60 duration-700 focus-within:border-ring focus-within:bg-background/10 hover:border-ring/60 hover:bg-background/30 dark:border-border/40 md:gap-8",
         className,
       )}
       {...props}

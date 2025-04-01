@@ -19,7 +19,7 @@ export function Header() {
   const { name, sections } = data;
 
   return (
-    <header className="sticky inset-x-0 top-0 z-[9999] h-16 border-b border-border/60 bg-secondary/10 backdrop-blur-md md:h-[72px]">
+    <header className="sticky inset-x-0 top-0 z-[9999] h-16 border-b-2 border-dashed border-border backdrop-blur-md md:h-[72px]">
       <nav className="flex h-full items-center justify-between px-4 sm:px-6 md:px-12">
         <MotionDiv
           variants={animation.item}
