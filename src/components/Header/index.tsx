@@ -28,7 +28,7 @@ export function Header() {
           transition={{ delay: 0.1, duration: 0.5 }}
         >
           <Link
-            href="/"
+            href={`/#${sections.home.id}`}
             className="group flex items-center space-x-2 rounded-full underline-offset-4 ring-ring duration-300 hover:underline hover:brightness-200 focus-visible:outline-none focus-visible:ring-2 active:opacity-70 md:pr-3"
           >
             <Image
@@ -52,7 +52,7 @@ export function Header() {
             animate="visible"
             transition={{ duration: 0.5 }}
           >
-            {Object.entries(sections).map(([key, value], i) => (
+            {Object.entries(sections).map(([key, value]) => (
               <MotionLi
                 key={key}
                 variants={animation.item}
@@ -60,7 +60,7 @@ export function Header() {
               >
                 <Link
                   className="rounded-full p-4 underline-offset-4 ring-ring duration-200 hover:text-primary hover:underline focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 active:opacity-60"
-                  href={i === 0 ? "/" : `/#${value.id}`}
+                  href={`/#${value.id}`}
                 >
                   {value.id}
                 </Link>
